@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>토페스</title>
+        <link rel="icon" href="admin/images/favicon.jpg" sizes="32x32">
+        <style type="text/css">
+            body, td, th, div, span, p, a {font-size:12px; margin: 0; padding: 0; font-family: "Malgun Gothic", "맑은 고딕", "돋움", "dotum";}
+            body, div, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p, form, fieldset, input, table, tr, th, td, a, span, em, button, textarea, header, footer, nav, section, aside.all_menu, article {margin: 0; padding: 0; box-sizing: border-box;}
+            body {padding-bottom:20px;}
+            ul, ol, li {list-style: none;}
+
+            .blind {display:none;}
+            .header {position:relative; background:#22591b; padding:10px; color:#fff; font-size:16px; font-weight:bold;}
+            .content_tab {margin:15px 0 0 15px;}
+            .content_tab ul li {display:inline-block; *display:inline-block; margin-right:15px; zoom:1;}
+            .content_tab ul li a {margin:10px; text-decoration:none; outline-style:none; color:#787878; font-size:16px; font-weight:normal;}
+            .content_tab ul li a:hover, a:active, a:visited {text-decoration: none;}
+            .content_tab ul li.active a {color:#22591b;font-weight: bold;}
+
+            .content {padding:15px;}
+            .content table {width:100%; border-collapse:collapse; border-spacing:0;}
+            .content table.mt15 {margin-top:15px;}
+            .content th {background:#e3e3e3;}
+            .content th, .content td {border:1px solid #ddd; border-spacing:0; padding:5px; text-align:center;}
+
+            table tbody:nth-child(2n-1) tr {background: rgb(243, 243, 243);}
+
+        </style>
+        <script type="text/javascript" src="js/lib/jquery-1.12.4.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#tab_list").find("ul").find("li").find("a").on("click", function () {
+                    var currentIdx = $(this).parent().index();
+                    console.log(currentIdx);
+                    $('#tab_list ul li').removeClass("active");
+                    $(this).parent().addClass("active");
+                    $(".content").addClass("blind");
+                    $(".content").eq(currentIdx).removeClass("blind");
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">토페스 퍼블리싱 리스트</div>
+        <div id="tab_list" class="content_tab">
+            <ul style="float: left;">
+                <li class="active"><a href="javascript:;">사용자 국문</a></li>
+                <!-- <li><a href="javascript:;">사용자 영문</a></li> -->
+            </ul>
+        </div>
+        <div style="float: right; padding: 0 15px 15px;">
+            ○ : 작업 중 
+            ● : 작업 완료
+        </div>
+        <!-- 사용자 국문 -->
+        <div class="content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>1depth</th>
+                        <th>2depth</th>
+                        <th>3depth</th>
+                        <th>4depth</th>
+                        <th>5depth</th>
+                        <th>비고</th>
+                        <th>화면 ID</th>
+                        <th width="100">PC</th>
+                        <th width="100">Mobile</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>메인</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/FD-00-01-001.html" target="_blank">FD-00-00-001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>    
+                    <tr>
+                        <td rowspan="3">공통</td>
+                        <td>sitemap</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="include/sitemap.html" target="_blank">sitemap.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>header</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="include/header.html" target="_blank">header.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>footer</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="include/footer.html" target="_blank">footer.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td rowspan="5">스마트 단속관리</td>
+                        <td>속도/신호위반/구간 단속 시스템</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/FD-01-01-0001.html" target="_blank">FD-01-01-0001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>이륜차/헬멧 단속 시스템</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/FD-01-02-0001.html" target="_blank">FD-01-02-0001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>꼬리물기 단속 시스템</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/FD-01-03-0001.html" target="_blank">FD-01-03-0001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>불법 주정차 단속 시스템</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/FD-01-04-0001.html" target="_blank">FD-01-04-0001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>노후 경유차량 단속 시스템</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/FD-01-05-0001.html" target="_blank">FD-01-05-0001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td rowspan="7">지능형 교통관리</td>
+                        <td>교통안전 복합 솔루션</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/FD-02-01-0001.html" target="_blank">FD-02-01-0001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>교통정보 수집 시스템</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/FD-02-02-0001.html" target="_blank">FD-02-02-0001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>도로노면 관리 솔루션</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/FD-02-03-0001.html" target="_blank">FD-02-03-0001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>차량세부제원 추출 솔루션</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/FD-02-04-0001.html" target="_blank">FD-02-04-0001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>차축조작 과적차량 단속 솔루션</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/FD-02-05-0001.html" target="_blank">FD-02-05-0001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>스마트 CCTV-ITV</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/FD-02-06-0001.html" target="_blank">FD-02-06-0001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>스마트 CCTV-영상콘텐츠</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/FD-02-07-0001.html" target="_blank">FD-02-07-0001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td rowspan="5">스마트 교통관리 플랫폼</td>
+                        <td>스마트 교통 플랫폼</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/FD-03-01-0001.html" target="_blank">FD-03-01-0001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/FD-03-02-0001.html" target="_blank">FD-03-02-0001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/FD-03-03-0001.html" target="_blank">FD-03-03-0001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/FD-03-04-0001.html" target="_blank">FD-03-04-0001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/FD-03-05-0001.html" target="_blank">FD-03-05-0001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td rowspan="3">고객지원</td>
+                        <td>공지사항</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/FD-04-01-0001.html" target="_blank">FD-04-01-0001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>자주하는 질문(FAQ)</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/FD-04-02-0001.html" target="_blank">FD-04-02-0001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>견적문의</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/FD-04-03-0001.html" target="_blank">FD-04-03-0001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td rowspan="4">회사소개</td>
+                        <td>About Us</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/FD-05-01-0001.html" target="_blank">FD-05-01-0001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>토페스 특장점</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/FD-05-02-0001.html" target="_blank">FD-05-02-0001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>채용안내</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/FD-05-03-0001.html" target="_blank">FD-05-03-0001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>오시는길</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/FD-05-04-0001.html" target="_blank">FD-05-04-0001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+
+
+            </table>
+        </div>
+
+
+
+
+
+        <!-- //////////////////////////////////////////////////////////////// 사용자 영문 //////////////////////////////////////////////////////////////// -->
+
+
+
+
+    </body>
+
+</html>
