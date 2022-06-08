@@ -2,20 +2,19 @@
 /* FONT */
 
 /* ------------------------------------noto sans kr----------------------------------- */
-@font-face {
+/* @font-face {
     font-family: 'NS';
     font-weight: 50;
     src: local(※),
     url(../font/NotoSansCJKkr-Thin.eot?#iefix) format('embedded-opentype'),
     url(../font/NotoSansCJKkr-Thin.woff) format('woff'),
     url(../font/NotoSansCJKkr-Thin.ttf) format('truetype');
-}
+} */
 @font-face {
     font-family: 'NS';
     font-weight: 100;
     src: local(※),
     url(../font/NotoSansCJKkr-Light.eot?#iefix) format('embedded-opentype'),
-    url(../font/NotoSansCJKkr-Light.woff) format('woff'),
     url(../font/NotoSansCJKkr-Light.ttf) format('truetype');
 }
 @font-face {
@@ -23,7 +22,6 @@
     font-weight: 150;
     src: local(※),
     url(../font/NotoSansCJKkr-DemiLight.eot?#iefix) format('embedded-opentype'),
-    url(../font/NotoSansCJKkr-DemiLight.woff) format('woff'),
     url(../font/NotoSansCJKkr-DemiLight.ttf) format('truetype');
 }
 @font-face {
@@ -33,7 +31,6 @@
     font-weight: 200;
     src: local(※),
     url(../font/NotoSansCJKkr-Regular.eot?#iefix) format('embedded-opentype'),
-    url(../font/NotoSansCJKkr-Regular.woff) format('woff'),
     url(../font/NotoSansCJKkr-Regular.ttf) format('truetype');
 }
 @font-face {
@@ -41,7 +38,6 @@
     font-weight: 300;
     src: local(※),
     url(../font/NotoSansCJKkr-Medium.eot?#iefix) format('embedded-opentype'),
-    url(../font/NotoSansCJKkr-Medium.woff) format('woff'),
     url(../font/NotoSansCJKkr-Medium.ttf) format('truetype');
 }
 
@@ -50,16 +46,15 @@
     font-weight: 400;
     src: local(※),
     url(../font/NotoSansCJKkr-Bold.eot?#iefix) format('embedded-opentype'),
-    url(../font/NotoSansCJKkr-Bold.woff) format('woff'),
     url(../font/NotoSansCJKkr-Bold.ttf) format('truetype');
 }
-@font-face {
+/* @font-face {
     font-family: 'NS';
     font-weight: 500;
     src: local(※),
     url(../font/NotoSansCJKkr-Black.eot?#iefix) format('embedded-opentype'),
     url(../font/NotoSansCJKkr-Black.otf) format('truetype');
-}
+} */
 
 /* ------------------------------------play----------------------------------- */
 @font-face {
@@ -70,7 +65,7 @@
 }
 @font-face {
     font-family: 'play';
-    font-weight: 200;
+    font-weight: 400;
     src: local(※),
     url(../font/Play-Bold.ttf) format('truetype');
 }

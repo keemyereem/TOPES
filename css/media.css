@@ -1,0 +1,49 @@
+@media screen and (max-width:767px) {
+    /* 공통부분 */
+    br.br_pc, br.br_t {display: none;}
+    br.br_m {display: block;}
+
+    .header {height: 5.5rem; ;line-height: 5.5rem;}
+    .header .header_wrap {width: calc(100% - 4rem);}
+    .header h1 {padding-top: 1.8rem;}
+    .header h1 .logo {background: url(../images/common/header_logo_m.png) 0 0 no-repeat;width: 8rem;height: 1.9rem;background-size: contain;}
+    .header .gnb {display: none;}
+    .header .lang_select {display: none;}
+    .header .top_sitemap > div {font-size: 1.2rem;}
+    .header .top_sitemap button{height: 1.5rem;}
+    .header .top_sitemap button span{width: 2rem; height: .2rem; margin-bottom: .5rem; margin-left: 1.5rem; }
+    .header .top_sitemap button span:nth-child(2) { width: 1.4rem; margin-left: 2.1rem; }
+
+
+    /* 메인 */
+    .cont_main .main_visual .swiper-slide:nth-of-type(1) {background: url(../images/main/main_visual01_m.png) no-repeat 50% 50%;background-size: cover;}
+    .cont_main .main_visual .swiper-slide > .vis_tag {font-size: 1.4rem; left: 2.25rem; top: 14.1rem;}
+    .cont_main .main_visual .swiper-slide > p {font-size: 3rem; font-weight: 100; letter-spacing: -.225rem; left: 2rem; top: 18.1rem; transform: translateY(0);}
+    .cont_main .main_visual .swiper-nav {padding: 0 2rem; top: initial; bottom: 5rem; transform: translateY(0);}
+    .cont_main .main_visual .swiper-nav .arrow {width: 3.5rem; height: 3.5rem;}
+    .cont_main .main_visual .swiper-nav .swiper-button-prev {margin-top: -10.6rem;}
+    .cont_main .main_visual .swiper-nav .swiper-button-next {margin-top: 0;}
+    .cont_main .main_visual .swiper-nav .arrow span {font-size: 1.3rem; line-height: 3.5rem;}
+    .cont_main .main_visual .swiper-nav .swiper-button-prev span {transform: rotate(180deg) translateY(-8rem);}
+    .cont_main .main_visual .swiper-nav .swiper-button-next span {transform: translateY(calc(-100% - 4.5rem));}
+    .cont_main .main_visual .swiper-nav .arrow img {width: 1.1rem;}
+    .cont_main .main_visual .swiper-nav .swiper-button-prev img {top: 1.5rem;}
+    .cont_main .main_visual .swiper-nav .swiper-button-next img {bottom: 1.5rem;}
+
+    .cont_main .floating_area {display: none;}
+
+    .cont_main .section1 .section_inner {margin: 0;}
+    .cont_main .section1 .section_inner .title {font-size: 3.5rem;}
+    .cont_main .section1 .section_inner .sub_tit {font-size: 1.4rem; font-weight: 150;}
+    .cont_main .section1 .section_inner .s1_tab {flex-wrap: wrap; max-width: 100%; margin: 0 auto;}
+    .cont_main .section1 .section_inner .s1_tab li {width: 50%; border-radius: 0; height: 4rem; margin-right: 0;}
+    .cont_main .section1 .section_inner .s1_tab li:nth-child(1), .cont_main .section1 .section_inner .s1_tab li:nth-child(3) {border-right: 0;}
+    .cont_main .section1 .section_inner .s1_tab li:nth-child(3), .cont_main .section1 .section_inner .s1_tab li:nth-child(4) {border-top: 0;}
+    .cont_main .section1 .section_inner .s1_tab li:nth-child(1).on, .cont_main .section1 .section_inner .s1_tab li:nth-child(3).on {border-right: 0;}
+    .cont_main .section1 .section_inner .s1_tab li:nth-child(3).on, .cont_main .section1 .section_inner .s1_tab li:nth-child(4).on {border-top: 0;}
+    .cont_main .section1 .section_inner .s1_tab li a {padding: 0; font-size: 1.3rem;}
+
+
+
+
+}
