@@ -239,7 +239,7 @@ br.br_t, br.br_m {display: none;}
 .container .sub_visual .sub_visual_nav .sub_visual_nav_next { right:0; }
 .container .sub_visual .sub_visual_nav .sub_visual_nav_prev { left:0; }
 
-.container .sub_visual .sub_visual_menu { max-width: 144rem; margin: auto; width: 100%; }
+.container .sub_visual .sub_visual_menu { max-width: 144rem; margin: auto; width: 100%; z-index: 1; }
 .container .sub_visual .sub_visual_menu ul { display: flex; justify-content: space-around; }
 .container .sub_visual .sub_visual_menu ul li { width: 100%; text-align: center; font-size: 1.8rem; }
 .container .sub_visual .sub_visual_menu ul li:not(:last-child) a { border-right: .1rem solid rgba(255, 255, 255, .2); }

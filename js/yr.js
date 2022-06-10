@@ -56,7 +56,7 @@ var commonEvent = {
         $(document).ready(function() {
             setTimeout(function() {
                 $('.sub_visual').addClass('ani');
-            }, 100)
+            }, 200)
         })
 
     },
@@ -91,7 +91,9 @@ var mainEvent = {
     },
 
     mainS1: function(){
-        $(".cont_main .swiper-container").each(function(index,){
+        var Tabs = $('.cont_main .section1 .s1_tab li');
+
+        $(".swiper-container").each(function(index,){
             var s1Swiper = new Swiper('.cont_main .section1 .tab_swiper0' + index, {
                 observer: true,
                 observeParents: true,
@@ -130,14 +132,14 @@ var mainEvent = {
                 }, 
             });
     
-            var Tabs = $('.cont_main .section1 .s1_tab li');
+            
             Tabs.on("click", function() {
                 $(this).addClass('on');
                 $(this).siblings().removeClass('on');
                 var Tabs_cont = Tabs.index(this)+1;
     
-                $('.cont_main .section1 .tab_contents').removeClass('on');
-                $('.cont_main .section1 .tab_content0' + Tabs_cont).addClass('on');
+                $('.cont_main .section1 .tab_contents').hide().removeClass('on');
+                $('.cont_main .section1 .tab_content0' + Tabs_cont).addClass('on').fadeIn();
                 
                 setTimeout(function(){
                     s1Swiper.slideTo(0);
