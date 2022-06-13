@@ -1,12 +1,20 @@
 $(function(){
-
 });
 
 var commonEvent = {
     init:function(){
+       this.headerEvent();
        this.menu();
        this.goTopEvent();
        this.bgAni();
+    },
+
+    headerEvent:function(){
+        // 번역페이지 버튼 온/오프
+        $(document).on('click', '.lang_choice li', function(){
+            $('.lang_choice li').removeClass('on');
+            $(this).addClass('on');  
+        });
     },
 
     menu: function(){

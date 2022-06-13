@@ -1,7 +1,19 @@
+@media screen and (max-width:1820px) {
+    .header .gnb {left: 28rem;}
+    .header .gnb > ul {justify-content: left;} 
+}
+@media screen and (max-width:1780px) {
+    .header .header_wrap {width: calc(100% - 10rem);}
+    .header .gnb {left: 19rem;}
+}
+@media screen and (max-width:1600px) {
+    .header .gnb>ul>li .gnb_tit {padding: 0 3rem;}
+}
 @media screen and (max-width:1440px) {
     .cont_main .section3 .s3_awards {justify-content: left; padding: 3rem 2rem;}
 }
 
+/* -------------------- 모바일 -------------------- */
 @media screen and (max-width:767px) {
     /* 공통부분 */
     br.br_pc, br.br_t {display: none;}
@@ -32,7 +44,8 @@
     .input_search a img:last-child { display: block; width: 1.6rem; object-fit: contain; margin:-.3rem 1.5rem 0; }
 
     /* container*/
-    .container .sub_visual { height: 32.5rem; display: block; }
+    .container .sub_visual { height: 32.5rem; display: block; overflow: unset; }
+    .container .sub_visual:after { display:none; }
     .container .sub_visual .sub_visual_nav h2 { font-size: 3rem; }
     .container .sub_visual .sub_visual_nav h2 span { font-size: 1.4rem; padding-bottom: 1.5rem; }
     .container .sub_visual .sub_visual_nav .sub_visual_nav_next,
@@ -108,9 +121,10 @@
     .cont_main .section1 .section_inner .sub_tit {font-size: 1.4rem; font-weight: 150; margin-top: 1rem;}
     .cont_main .section1 .section_inner .s1_tab {flex-wrap: wrap; max-width: 100%; margin: 2.5rem auto 2rem;}
     .cont_main .section1 .section_inner .s1_tab li {width: 50%; border-radius: 0; height: 4rem; margin-right: 0;}
-    .cont_main .section1 .section_inner .s1_tab li:nth-child(2), .cont_main .section1 .section_inner .s1_tab li:nth-child(4) {margin-left: -1px;}
-    .cont_main .section1 .section_inner .s1_tab li:nth-child(2).on, .cont_main .section1 .section_inner .s1_tab li:nth-child(4).on {border-left: 0;}
-    .cont_main .section1 .section_inner .s1_tab li:nth-child(3), .cont_main .section1 .section_inner .s1_tab li:nth-child(4) {margin-top: -1px;}
+    .cont_main .section1 .section_inner .s1_tab li.on {position: relative; z-index: 1; border: none;}
+    .cont_main .section1 .section_inner .s1_tab li:nth-child(2n) {margin-left: -.1rem;}
+    .cont_main .section1 .section_inner .s1_tab li:nth-child(n+3):nth-child(-n+4) {margin-top: -.1rem;}
+
     .cont_main .section1 .section_inner .s1_tab li a {padding: 0; font-size: 1.3rem;}
 
     .cont_main .section1 .section_inner .tabcon_wrap {height: auto;}
@@ -189,8 +203,6 @@
     .cont_main .section3 .s3_awards > div:nth-of-type(2) .logo > img, .cont_main .section3 .s3_awards > div:nth-of-type(3) .logo > img {width: 1.8rem;}
     .cont_main .section3 .s3_awards > div:nth-of-type(4) .logo > img {width: 3.9rem;}
     
-    /* ---------------------서브페이지--------------------- */
-    .container .sub_visual.ani:after { top:0; } 
 
 
     /* 고객지원 - 공지사항 */
@@ -232,6 +244,14 @@
     .cont_cs .tb_view .view_nav dl dd a { } 
     .cont_cs .tb_view .btn_box .btn_line a {  margin: 6rem auto 0 auto; }
 
+    /* 고객지원 - 자주하는 질문(FAQ) */
+    .cont_recruit .recruit_contents .faq {margin: 13px 1rem 0;}
+    .cont_recruit .recruit_contents .faq > div > p:before {font-size: 1.9rem;padding: 0 1.5rem 0 1rem;}
+    .cont_recruit .recruit_contents .faq .que > p:before {line-height: normal;}
+    .cont_recruit .recruit_contents .faq .que {padding: 2.6rem 0;font-size: 1.6rem;letter-spacing: -.055rem;}
+    .cont_recruit .recruit_contents .faq .que > p {background: url(../images/recruit/faq_arrow.png) no-repeat calc(100% - 1rem) 50%;background-size: .95rem .5rem;}
+    .cont_recruit .recruit_contents .faq .que.on > p {background: none;}
+    .cont_recruit .recruit_contents .faq .ans {padding: 2.8rem 0;font-size: 1.5rem;line-height: 1.46;}
 
 
     /* 회사소개 - 채용안내 */
@@ -258,4 +278,8 @@
     .cont_company .recruit_contents .job_ad .btn_wrap a:first-of-type {margin-bottom: 2rem;}
     .cont_company .recruit_contents .job_ad .btn_wrap a > span:after {width: 1.1rem; height: 1.1rem; margin-left: 1.1rem;}
 
+}
+@media screen and (max-width:348px) {
+    .cont_main .section2 .section_inner .s2_tab {justify-content: space-between;}
+    .cont_main .section2 .section_inner .s2_tab li:first-child:after {display: none;}
 }
