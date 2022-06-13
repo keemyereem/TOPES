@@ -171,8 +171,8 @@
 
 
 /* 고객지원 - 공지사항 */
-.cont_cs .contents_inner {max-width: 144rem; }
-.cont_cs .contents_inner .inner {max-width: 120rem;} 
+.cont_cs .announce_contents {max-width: 144rem; }
+.cont_cs .announce_contents .inner {max-width: 120rem;} 
 .cont_cs .tb_top { position: relative; }
 .cont_cs .tb_top:after { content: ""; display: block; clear: both; }
 .cont_cs .tb_top .total { float: left; padding-top: 1.3rem; font-size: 1.5rem; color:#222; }
@@ -228,6 +228,56 @@
 .cont_cs  .faq_contents .faq .que.on:after { background: url(../images/cs/faq_arrow_open.png) 50% 50% no-repeat; }
 .cont_cs  .faq_contents .faq .ans {display: none;overflow: hidden;padding: 5rem 0 6rem;background: rgba(5, 15, 94, .03);font-size: 1.8rem;color: #555;line-height: 2.22;}
 .cont_cs  .faq_contents .faq .ans a { color:#050f5e; font-weight: 300; }
+
+/* 고객지원 - 견적문의 */
+.cont_cs .estimate_contents {background: #f9f9f9; padding: 8rem 0;}
+.cont_cs .estimate_contents .inner {max-width: 144rem;}
+.cont_cs .estimate_contents .estimate_inquiry { background: #fff; padding: 8rem 8rem 10rem; box-shadow: 1px 2px 19.6px 0.4px rgba(0, 0, 0, 0.2);}
+.cont_cs .estimate_contents .estimate_inquiry .tb_row {margin-bottom: 3rem;}
+.cont_cs .estimate_contents .estimate_inquiry .tit_cell {font-size: 2.2rem; font-weight: 400; letter-spacing: -.11rem; margin-bottom: 2rem;}
+.cont_cs .estimate_contents .estimate_inquiry .tit_cell .es {color: #ffa200;}
+.cont_cs .estimate_contents .estimate_inquiry .section1 {border: 1px solid red; display: flex; justify-content: space-between; margin-bottom: 5rem;}
+.cont_cs .estimate_contents .estimate_inquiry .section1 > div {width: calc(50% - 2rem);}
+.cont_cs .estimate_contents .estimate_inquiry .section1 .left .bottom {display: flex; flex-wrap: wrap; justify-content: space-between;}
+.cont_cs .estimate_contents .estimate_inquiry .section1 .left .bottom .tb_row {width: calc(50% - 2rem);}
+.cont_cs .estimate_contents .estimate_inquiry .section1 .left .bottom .tb_row:nth-of-type(n+3):nth-of-type(-n+4) {margin-bottom: 0;}
+.cont_cs .estimate_contents .estimate_inquiry .section1 .left .bottom .tit_cell {font-size: 1.8rem;}
+.cont_cs .estimate_contents .estimate_inquiry .section1 .right textarea {width: 100%; min-height: 32.5rem; border: 1px solid #ccc;}
+.cont_cs .estimate_contents .estimate_inquiry .section2 {}
+.cont_cs .estimate_contents .estimate_inquiry .section2 .agree_info {height: 35.5rem; border: 1px solid #ccc; padding : 5rem; overflow-y: auto; margin-bottom: 2rem;}
+.cont_cs .estimate_contents .estimate_inquiry .section2 .agree_info p {font-size: 1.6rem; color: #999; line-height: 1.5;}
+.cont_cs .estimate_contents .estimate_inquiry .section2 .btn_box {margin-top: 5rem;}
+
+.cont_cs .estimate_contents .estimate_inquiry .section2 .btn_box .btn_line a{position: relative; display: block; width: 100%; height: 100%; border: 1px solid #222; font-size: 1.6rem; color: #222; text-align: center; line-height: 7rem;}
+.cont_cs .estimate_contents .estimate_inquiry .section2 .btn_box .btn_line a:after {content: "";width: 0;height: 100%;position: absolute;top: 0;left: 0;background: #222;transition: all .5s ease-out;}
+.cont_cs .estimate_contents .estimate_inquiry .section2 .btn_box .btn_line a:hover{color: #fff;}
+.cont_cs .estimate_contents .estimate_inquiry .section2 .btn_box .btn_line a:hover:after{width: 100%;z-index: -1;}
+
+
+/* 회사소개 - About Us */
+.cont_company .about_contents .section1 .title { font-family: 'play'; text-transform: uppercase; font-weight: 400; }
+.cont_company .about_contents .section1 .sec1_box { margin-top: 5.4rem; border: .1rem solid #e8e8e8; display: flex; flex-direction: column; align-items: center; padding: 10.5rem 0; }
+.cont_company .about_contents .section1 .sec1_box .part1 p { text-align: center; font-size: 1.6rem; color: #888888; padding-top: 1.5rem; line-height: 1; }
+.cont_company .about_contents .section1 .sec1_box .part2 ul { margin-top: 4.6rem; height: 7rem; }
+.cont_company .about_contents .section1 .sec1_box .part2 ul li { position: absolute; transform: translateX(-50%); width: 40rem; height: 7rem; text-align: center; font-size: 1.8rem; line-height: 7rem; color:#222222; font-weight: 300; border-radius: 3.5rem; background: #f7f7f7; z-index: 1; }
+.cont_company .about_contents .section1 .sec1_box .part2 ul li:nth-child(1) { transform: translateX(-53rem); z-index: 2; }
+.cont_company .about_contents .section1 .sec1_box .part2 ul li:nth-child(3) { transform: translateX(13rem); z-index: 0; }
+.cont_company .about_contents .section1 .sec1_box .part2 ul li:not(:last-child):after { content: ''; background:#fff url(../images/company/about_sec01_plus.png) 50% 50% no-repeat; position: absolute; right: 0; width: 7rem; height: 7rem; border-radius: 100%; }
+.cont_company .about_contents .section1 .sec1_box .part3 ul { margin-top: 10.2rem; height: 30rem; }
+.cont_company .about_contents .section1 .sec1_box .part3 ul li { position: absolute; transform: translateX(-50%); width: 30rem; height: 30rem; text-align: center; border-radius: 100%; }
+.cont_company .about_contents .section1 .sec1_box .part3 ul li img,
+.cont_company .about_contents .section1 .sec1_box .part3 ul li p { position: absolute; right: 0; left: 0; top: auto; margin: auto; bottom: 12.7rem; }
+.cont_company .about_contents .section1 .sec1_box .part3 ul li p { bottom: 8rem; font-family: 'play'; font-size: 2rem; color:#888888; font-weight: 400; }
+.cont_company .about_contents .section1 .sec1_box .part3 ul li:nth-child(even) { background: rgba(5, 15, 94, 0.05); }
+.cont_company .about_contents .section1 .sec1_box .part3 ul li:nth-child(even) p b { color: #050f5e; }
+.cont_company .about_contents .section1 .sec1_box .part3 ul li:nth-child(odd) { background: rgba(224, 0, 109, 0.05); }
+.cont_company .about_contents .section1 .sec1_box .part3 ul li:nth-child(odd) p b { color: #e0006d; }
+.cont_company .about_contents .section1 .sec1_box .part3 ul li:nth-child(1) { transform: translateX(-65.6rem); }
+.cont_company .about_contents .section1 .sec1_box .part3 ul li:nth-child(2) { transform: translateX(-40.3rem); }
+.cont_company .about_contents .section1 .sec1_box .part3 ul li:nth-child(4) { transform: translateX(10.3rem); }
+.cont_company .about_contents .section1 .sec1_box .part3 ul li:nth-child(5) { transform: translateX(35.6rem); }
+
+
 
 /* 회사소개 - 토페스 특장점 */
 .cont_company .features_contents .section1 .sub_tit {display: flex; align-items: center;}

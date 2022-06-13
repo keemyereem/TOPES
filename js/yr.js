@@ -255,5 +255,18 @@ var companyEvent={
         });
     },
 
+    /* About Us - 연혁 */
+    historyTab: function(){
+        var Tabs = $('.cont_company .about_contents .section2 .au1_tab li');
+        Tabs.on("click", function() {
+            $(this).addClass('on');
+            $(this).siblings().removeClass('on');
+            
+            var Tabs_cont = Tabs.index(this)+1;
+            $('.cont_company .about_contents .tab_contents').removeClass('on');
+            $('.cont_company .about_contents .tab_content0' + Tabs_cont).addClass('on');
+        });
+    },
+
 };
 

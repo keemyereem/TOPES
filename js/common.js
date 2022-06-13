@@ -12,6 +12,7 @@ var commonEvent = {
        this.menu();
        this.goTopEvent();
        this.bgAni();
+       this.tabFunction();
     }, 
     
     headerEvent:function(){
@@ -29,6 +30,18 @@ var commonEvent = {
                 $(this).parent().toggleClass('on');
             });
         }    
+    },
+
+    tabFunction: function(){
+        var Tabs = $('.tabs li');
+        Tabs.on("click", function() {
+            $(this).addClass('on');
+            $(this).siblings().removeClass('on');
+            
+            var Tabs_cont = Tabs.index(this)+1;
+            $('.tab_contents').removeClass('on');
+            $('.tab_content0' + Tabs_cont).addClass('on');
+        });
     },
 
     goTopEvent:function() {
@@ -218,6 +231,7 @@ var companyEvent={
         this.featuresSlide();
         this.featuresTab();
         this.locationTab();
+        this.historyTab();
     },
 
     /* 토페스 특장점 */
@@ -246,31 +260,6 @@ var companyEvent={
                 },
 
             }, 
-        });
-    },
-
-    featuresTab: function(){
-        var Tabs = $('.features_contents .section2 .s2_tab li');
-        Tabs.on("click", function() {
-            $(this).addClass('on');
-            $(this).siblings().removeClass('on');
-            
-            var Tabs_cont = Tabs.index(this)+1;
-            $('.features_contents .section2 .tab_contents').removeClass('on');
-            $('.features_contents .section2 .tab_content0' + Tabs_cont).addClass('on');
-        });
-    },
-
-    /* 오시는 길 */
-    locationTab: function(){
-        var Tabs = $('.cont_company .location_contents .location_tab li');
-        Tabs.on("click", function() {
-            $(this).addClass('on');
-            $(this).siblings().removeClass('on');
-            
-            var Tabs_cont = Tabs.index(this)+1;
-            $('.cont_company .location_contents .tab_contents').removeClass('on');
-            $('.cont_company .location_contents .tab_content0' + Tabs_cont).addClass('on');
         });
     },
 

@@ -1,0 +1,4259 @@
+/*
+|----------------------------------|
+ v.0.1 (주연) 최초 작업 -- 2021.09.01
+|----------------------------------|
+*/
+$min-width: 1244px;
+
+/* 공통 */
+.modal .btn-close:focus {
+  box-shadow: none;
+}
+
+.macrogen {
+  /* s 공통 */
+  .badge {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 10px;
+    height: 26px;
+    line-height: 26px;
+    font-size: 14px;
+    letter-spacing: -0.75px;
+    color: $gray-909090;
+    border: 1px solid $line-d9d9d9;
+    border-radius: 3px;
+    margin-left: 15px;
+  }
+
+  .color-white {
+    color: $gray-ffffff !important;
+  }
+
+  /* e 공통 */
+
+  &.full-bg {
+    position: relative;
+    background-image: url(../img/@temp/macrogen/macrogen_bg_1.png);
+    background-size: 1920px 980px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    animation-duration: 2s;
+    transition: 2s;
+    animation-name: subAnimation;
+    background-attachment: fixed;
+
+    .frame {
+      position: relative;
+      height: calc(100% - 124px);
+      margin: 0 auto;
+
+      .hero-title {
+        margin-bottom: 130px;
+        line-height: 58px;
+        letter-spacing: -2px;
+
+        &.en {
+          line-height: 75px;
+          letter-spacing: -0.5px;
+          margin-bottom: 0;
+        }
+      }
+
+      .slogan {
+        &.ko {
+          font-size: 80px;
+          line-height: 98px;
+          letter-spacing: -6px;
+        }
+      }
+
+      .slogan-sub {
+        line-height: 38px;
+      }
+
+      &.frameC {
+        height: auto;
+      }
+    }
+
+    /*인터렉션추가로 인한 css 수정*/
+    .scroll-wrap {
+      z-index: 11;
+      box-sizing: border-box;
+      margin: 0;
+      min-width: 0;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+
+      &:before {
+        content: '';
+        width: 4px;
+        height: 4px;
+        background: $gray-ffffff;
+        position: absolute;
+        top: -14px;
+        left: -1px;
+        border-radius: 2px;
+      }
+
+      .scroll {
+        box-sizing: border-box;
+        margin: 0;
+        min-width: 0;
+        width: 1px;
+        position: relative;
+        height: 100px;
+        overflow: hidden;
+
+        &:before {
+          content: '';
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          border-left: 2px solid #ffffff;
+          opacity: 0.2;
+        }
+
+        &:after {
+          content: '';
+          width: 100%;
+          height: 50%;
+          position: absolute;
+          border-left: 2px solid #ffffff;
+          -webkit-animation: scrollMove 1.5s ease-in infinite;
+          animation: scrollMove 1.5s ease-in infinite;
+        }
+
+        @keyframes scrollMove {
+          0% {
+            top: -100%;
+          }
+          100% {
+            top: 100%;
+          }
+        }
+      }
+    }
+
+    /*.scroll-wrap {
+      position: absolute;
+      bottom: 100px;
+      left: 0;
+
+      .scroll {
+        position: absolute;
+        width: 2px;
+        height: 100px;
+        background-color: rgba(255, 255, 255, 0.2);
+
+        .bar {
+          position: absolute;
+          width: 2px;
+          height: 60px;
+          background-color: #fff;
+          bottom: 0;
+          left: 0;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: -14px;
+          left: -1px;
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          background-color: #fff;
+        }
+      }
+    }*/
+
+    /* 수정 요청사항으로 인한 딤드 제거
+     &::before {
+         content: '';
+         position: absolute;
+         left: 0;
+         top: 0;
+         width: 100%;
+         height: 100%;
+         background-color: rgba(14, 22, 33, 0.45);
+       }*/
+
+    &.no-bg {
+      background-image: none;
+      animation: none;
+
+      &::before {
+        content: none;
+      }
+    }
+  }
+
+  &.company-overview {
+    .section-info {
+      padding-top: 180px;
+      margin-bottom: 152px;
+
+      .title {
+        width: $min-width;
+        font-weight: 700;
+        font-size: 92px;
+        line-height: 86px;
+        align-items: center;
+        letter-spacing: -0.5px;
+        text-transform: uppercase;
+        margin: 0 0 28px;
+        padding-left: 337px;
+      }
+
+      .title-sm {
+        width: $min-width;
+        font-size: 26px;
+        line-height: 38px;
+        letter-spacing: -0.75px;
+        margin: 0 0 100px;
+        padding-left: 337px;
+      }
+
+      .text-box {
+        width: $min-width;
+        margin: 0 0 108px;
+        padding-left: 428px;
+
+        .font-body-h {
+          display: inline-block;
+          font-weight: 400;
+          text-align: left;
+          color: $gray-454545;
+        }
+      }
+
+      .img-box {
+        word-break: keep-all;
+        width: 100%;
+        height: 602px;
+        margin-bottom: 152px;
+        overflow: hidden;
+        padding-left: 428px;
+        padding-right: 239px;
+
+        .inner {
+          position: relative;
+          width: 100%;
+          height: 602px;
+          min-width: 1920px;
+
+          .img {
+            width: 1370px;
+            text-align: right;
+          }
+
+
+          .list {
+            position: absolute;
+            left: 12.1167% /*166px*/
+          ;
+            top: 23.089% /*139px*/
+          ;
+
+            li {
+              position: relative;
+              font-weight: 700;
+              font-size: 36px;
+              line-height: 52px;
+              letter-spacing: -1px;
+              color: $gray-ffffff;
+              margin-bottom: 22px;
+
+              &::before {
+                content: '';
+                position: absolute;
+                width: 30px;
+                height: 4px;
+                background-color: $gray-ffffff;
+                left: -48px;
+                top: 22px;
+              }
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .section-overview {
+      width: 100%;
+      height: 1375px;
+      background-color: $bg-f7f7f7;
+      padding-top: 150px;
+
+      .inner {
+        width: $min-width;
+        margin: 0 auto;
+      }
+
+      .title-sm {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 46px;
+        letter-spacing: -1px;
+        margin-bottom: 50px;
+      }
+
+      .year {
+        position: relative;
+        display: inline-block;
+        font-weight: 700;
+        font-size: 110px;
+        line-height: 112px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 80px;
+          height: 6px;
+          background-color: $bg-000000;
+          right: -89px;
+          bottom: 8px;
+        }
+      }
+
+      .desc {
+        font-size: 18px;
+        line-height: 32px;
+        letter-spacing: -0.75px;
+        color: $gray-454545;
+        margin-bottom: 100px;
+      }
+
+      .overview-list {
+        padding-left: 217px;
+
+        .item {
+          float: left;
+          width: 200px;
+          margin-right: 74px;
+          text-align: center;
+
+          .img {
+            display: block;
+            width: 100%;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 22px;
+
+            img {
+              @include img-100;
+            }
+          }
+
+          .val {
+            display: block;
+            font-weight: 700;
+            font-size: 44px;
+            line-height: 54px;
+            white-space: nowrap;
+            font-family: "Proxima Nova Bold", sans-serif;
+
+            span {
+              font-size: 36px;
+            }
+          }
+
+          .desc {
+            display: block;
+            white-space: nowrap;
+            font-size: 18px;
+            line-height: 26px;
+            text-align: center;
+            letter-spacing: -0.75px;
+          }
+
+          &:nth-child(4n) {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    .section-business {
+      position: relative;
+      @include background-img($width: 100%, $height: 920px, $category: 'macrogen', $img: 'macrogen_thumb_lg_2.png');
+      background-size: 1920px 920px;
+      background-repeat: no-repeat;
+      padding-top: 150px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        @include background-img($width: 100%, $height: 100%, $category: '@temp/macrogen', $img: 'macrogen_thumb02.png');
+      }
+
+      .swiper-container {
+        position: relative;
+        width: $min-width;
+        height: 100%;
+        margin: 0 auto;
+        z-index: 1;
+
+        .pagination-wrap {
+          position: absolute;
+          width: 100%;
+          height: 45px;
+          bottom: 118px;
+          right: 0;
+          z-index: 2;
+
+          .navigation {
+            position: static;
+            top: auto;
+            left: auto;
+            text-align: right;
+
+            .page-item {
+              position: static;
+
+              &.prev {
+                margin-right: 8px;
+
+                .page-link {
+                  background-image: url(../img/macrogen/btn-nav-prev.svg);
+                }
+              }
+
+              &.next {
+                .page-link {
+                  background-image: url(../img/macrogen/btn-nav-next.svg);
+                }
+              }
+            }
+          }
+        }
+
+        .swiper-pagination {
+          bottom: auto;
+          top: 55px;
+          right: 0;
+          text-align: right;
+
+          .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.2);
+            opacity: 1;
+            margin: 0 7.5px;
+
+            &.swiper-pagination-bullet-active {
+              background-color: $bg-ffffff;
+            }
+          }
+        }
+      }
+
+      .inner {
+        position: relative;
+        width: $min-width;
+        margin: 0 auto;
+        z-index: 1;
+      }
+
+      .title-sm {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 46px;
+        letter-spacing: -1px;
+        color: $gray-ffffff;
+        margin-bottom: 50px;
+      }
+
+      .title {
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 81px;
+        letter-spacing: -3px;
+        color: $gray-ffffff;
+        margin-bottom: 20px;
+      }
+
+      .desc {
+        font-size: 18px;
+        line-height: 32px;
+        letter-spacing: -0.75px;
+        color: $gray-ffffff;
+        margin-bottom: 80px;
+      }
+
+      .category-list {
+        li {
+          position: relative;
+          float: left;
+          width: 194px + 12px;
+          height: 145px;
+          text-align: center;
+          padding: 0 8px;
+
+          &::after {
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 145px;
+            right: 0;
+            top: 0;
+            background-color: rgba(255, 255, 255, .1);
+          }
+
+          .img {
+            width: 86px;
+            height: 86px;
+            margin: 0 auto 32px;
+
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          .tit {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 27px;
+            letter-spacing: 0.5px;
+            color: $gray-ffffff;
+          }
+
+          &:first-child {
+            padding-left: 0;
+          }
+
+          &:last-child {
+            padding-right: 0;
+
+            &::after {
+              content: none;
+            }
+          }
+        }
+
+        &.category-list-lg {
+          li {
+            width: 194px + 80px;
+            padding: 0 40px;
+          }
+        }
+      }
+    }
+
+    .section-business-detail {
+      position: relative;
+      width: 1210px;
+      height: 1858px;
+      margin: -163px auto 150px;
+
+      .item {
+        position: absolute;
+        width: 560px;
+
+        .img {
+          position: relative;
+          width: 535px;
+          height: 560px;
+          margin-bottom: 40px;
+
+          &::after {
+            content: '';
+            position: absolute;
+            width: 435px;
+            height: 1px;
+            left: 50px;
+            bottom: 156px;
+            background-color: rgba(255, 255, 255, .2);
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+
+          .title-sm {
+            position: absolute;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;
+            color: $gray-ffffff;
+            bottom: 104px;
+            left: 52px;
+            letter-spacing: 0;
+            text-transform: uppercase;
+          }
+
+          .title {
+            position: absolute;
+            font-weight: 700;
+            font-size: 44px;
+            line-height: 64px;
+            letter-spacing: -2px;
+            color: $gray-ffffff;
+            bottom: 40px;
+            left: 50px;
+          }
+        }
+
+        .desc {
+          font-weight: 700;
+          font-size: 22px;
+          line-height: 32px;
+          letter-spacing: -0.75px;
+          margin-bottom: 20px;
+        }
+
+        .desc-sm {
+          font-size: 16px;
+          line-height: 30px;
+          letter-spacing: -0.75px;
+          color: $gray-454545;
+        }
+
+        &.item-1 {
+          top: 0;
+          left: 0;
+        }
+
+        &.item-2 {
+          right: 0;
+          top: 243px;
+        }
+
+        &.item-3 {
+          top: 903px;
+          left: 0;
+        }
+
+        &.item-4 {
+          right: 0;
+          top: 1116px;
+        }
+      }
+    }
+
+    .section-ci {
+      position: relative;
+      height: 560px;
+      background-size: 1920px 560px;
+      background-repeat: no-repeat;
+      padding-top: 150px;
+
+      &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        @include background-img($width: 100%, $height: 560px, $category: '@temp/macrogen', $img: 'macrogen_thumb03.png');
+      }
+
+      .inner {
+        width: $min-width;
+        margin: 0 auto;
+      }
+
+      .title-sm {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 44px;
+        letter-spacing: 0.5px;
+        color: $gray-ffffff;
+        margin-bottom: 40px;
+      }
+
+      .text {
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 81px;
+        letter-spacing: -3px;
+        color: $gray-ffffff;
+      }
+    }
+
+    .section-symbol {
+      margin-top: 120px;
+
+      .inner {
+        width: $min-width;
+        margin: 0 auto;
+      }
+
+      .item {
+        overflow: hidden;
+        margin-bottom: 150px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .title {
+          float: left;
+          width: 318px;
+          font-weight: 700;
+          font-size: 22px;
+          line-height: 27px;
+          letter-spacing: 0.5px;
+        }
+
+        .desc {
+          float: left;
+          width: calc(100% - 318px);
+
+          .bg-logo {
+            @include background-img($width: 923px, $height: 475px, $category: 'macrogen', $img: 'box-logo.png');
+            border: 1px solid $line-d9d9d9;
+            padding-top: 110px;
+            padding-left: 127px;
+            margin-bottom: 40px;
+
+            img {
+              width: 673px;
+              height: 252px;
+            }
+          }
+
+          .content {
+            font-size: 18px;
+            line-height: 32px;
+            letter-spacing: -0.75px;
+            color: $gray-454545;
+            margin-bottom: 59px;
+          }
+
+          .download-area {
+            .btn-download {
+              display: inline-block;
+
+              span {
+                display: inline-block;
+                vertical-align: middle;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 22px;
+                color: $gray-000000;
+
+                &:first-child {
+                  margin-right: 15px;
+                }
+              }
+            }
+          }
+
+          .color-list {
+            overflow: hidden;
+
+            li {
+              float: left;
+              width: 212px;
+              height: 270px;
+
+              .color {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                margin: 0 auto 30px;
+
+                &.color-1 {
+                  background-color: #001E62;
+                }
+
+                &.color-2 {
+                  background-color: #00BFB2;
+                }
+
+                &.color-3 {
+                  background-color: #84BD00;
+                }
+
+                &.color-4 {
+                  background-color: #E50050;
+                }
+              }
+
+              .value {
+                padding-left: 19px;
+
+                span:first-child {
+                  display: inline-block;
+                  width: 49px;
+                  font-weight: 700;
+                  font-size: 16px;
+                  line-height: 30px;
+                  color: $gray-454545;
+                  margin-right: 30px;
+                }
+
+                span:nth-child(2) {
+                  display: inline-block;
+                  font-size: 16px;
+                  line-height: 30px;
+                  color: $gray-454545;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.macrogen-authorization {
+    .slide-tab-wrap {
+      margin-top: 153px;
+      margin-bottom: 139px;
+    }
+
+    .section {
+      padding-top: 80px;
+
+      &#qualityManagementSystem {
+        padding-top: 0;
+        margin-top: 0;
+
+        > .title {
+          border-top: none;
+        }
+      }
+
+      .btn-sm {
+        padding: 7px 25px 5px;
+        min-width: 124px;
+      }
+
+      > .title {
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 81px;
+        letter-spacing: -3px;
+        color: $gray-000000;
+        border-top: 10px solid #f5f5f5;
+        padding-top: 120px;
+
+        .tooltip-box {
+          display: inline-block;
+          vertical-align: text-bottom;
+
+          .text-box {
+            top: 66px;
+          }
+        }
+      }
+
+      .title-sm {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 46px;
+        letter-spacing: -1px;
+        color: $gray-000000;
+        margin-bottom: 16px;
+
+        span {
+          display: inline-block;
+          vertical-align: middle;
+        }
+
+        > div {
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+
+      .desc {
+        display: block;
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: -0.75px;
+        color: $gray-454545;
+        margin-bottom: 30px;
+
+        &.with-date {
+          margin-bottom: 10px;
+        }
+      }
+
+      .date {
+        display: block;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.75px;
+        color: $gray-909090;
+        margin-bottom: 30px;
+      }
+
+      .img-wrap {
+        padding-top: 30px;
+        overflow: hidden;
+
+        .img {
+          float: left;
+          width: 381px;
+          height: auto;
+          text-align: center;
+          margin-right: 43px;
+          margin-bottom: 0;
+
+          &:first-child,
+          &:nth-child(2),
+          &:nth-child(3) {
+            margin-bottom: 70px;
+
+            .tit {
+              padding-top: 30px;
+            }
+          }
+
+          .tit {
+            display: block;
+            width: 100%;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 26px;
+            letter-spacing: -0.75px;
+            color: $gray-000000;
+            text-align: left;
+            margin-bottom: 20px;
+          }
+
+          img {
+            display: block;
+            width: 100%;
+            height: 233px;
+            margin-bottom: 23px;
+          }
+
+          &:nth-child(3n) {
+            margin-right: 0;
+          }
+        }
+      }
+
+      .img {
+        width: 381px;
+        height: 233px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      > .box {
+        padding: 80px 0;
+        border-bottom: 1px solid $line-e9e9e9;
+
+        &:last-of-type {
+          padding-bottom: 0;
+        }
+
+        &::after {
+          content: '';
+          display: block;
+          clear: both;
+        }
+
+        &:last-child {
+          border-bottom: 0;
+        }
+
+        &.box-full-sm {
+          margin-top: 20px;
+
+          &.box-full {
+            padding-bottom: 120px;
+          }
+
+          .desc {
+            margin-bottom: 0;
+          }
+        }
+
+        &.box-full {
+          padding-bottom: 80px;
+
+          .left {
+            float: none;
+            width: 100%;
+            margin-right: 0;
+          }
+        }
+
+        .left {
+          float: left;
+          width: 816px;
+          margin-right: 44px;
+        }
+
+        .right {
+          float: left;
+          width: calc(100% - 816px - 44px);
+        }
+      }
+    }
+
+    .tooltip-box {
+      .text-box {
+        top: 46px;
+      }
+    }
+  }
+
+  &.recruitment-info {
+    .section {
+      padding-bottom: 100px;
+      border-bottom: 1px solid #e9e9e9;
+      margin-bottom: 100px;
+
+      .btn-sm {
+        padding: 7px 25px 5px;
+        min-width: 124px;
+      }
+
+      &:last-child {
+        padding-bottom: 0;
+        border-bottom: 0;
+        margin-bottom: 0;
+      }
+
+      > .title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 52px;
+        letter-spacing: -1px;
+        color: $gray-000000;
+      }
+
+      > .desc {
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: -0.75px;
+        color: $gray-707070;
+        margin-top: 15px;
+        margin-bottom: 60px;
+      }
+
+      .select-box {
+        margin: 60px 0 30px 20px;
+        border-bottom: 0;
+        padding-left: 10px;
+
+        .select_default {
+          width: 135px;
+          color: $gray-000000;
+          font-size: 18px;
+          line-height: 40px;
+        }
+      }
+
+      .img-recruitment-info {
+        margin-top: 60px;
+        width: 1244px;
+        height: 317px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .file-download {
+        padding-bottom: 20px;
+
+        .item {
+          .title {
+            color: $gray-454545;
+          }
+        }
+
+        .icon {
+          margin-right: 40px;
+        }
+      }
+
+      .attachment-box {
+        position: relative;
+        padding: 30px 30px 26px 144px;
+        background-color: $bg-f7f7f7;
+
+        .file {
+          display: inline-block;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 30px;
+          letter-spacing: -0.5px;
+          color: $gray-454545;
+          margin-right: 40px;
+          max-width: 1060px;
+          @include ellipsis($line: 1);
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 1px;
+          height: 21px;
+          left: 104px;
+          top: 50%;
+          transform: translateY(-50%);
+          background-color: $line-e9e9e9;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 40px;
+          top: 50%;
+          transform: translateY(-50%);
+          @include background-img($width: 24px, $height: 24px, $category: 'macrogen', $img: 'ic-attach.svg');
+        }
+      }
+
+      .board {
+        .detail {
+          .heading {
+            .department {
+              font-weight: 700;
+              font-size: 26px;
+              line-height: 38px;
+              letter-spacing: -0.75px;
+              color: $gray-000000;
+              margin-bottom: 6px;
+            }
+
+            &.with-badge {
+              position: relative;
+
+              .title {
+                width: calc(100% - 110px);
+              }
+
+              .badge-recruit {
+                top: 0;
+                right: 0;
+                transform: none;
+              }
+            }
+          }
+        }
+
+        .list {
+          .item {
+            &:hover {
+
+              .tit-sub {
+                color: $point-active;
+              }
+
+              .tit {
+                color: $point-active;
+              }
+
+              .date {
+                color: $point-active;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.global-macrogen {
+    .section-map {
+      padding-top: 151px;
+      margin-bottom: 150px;
+
+      > .title {
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 78px;
+        letter-spacing: 0.5px;
+        color: $gray-000000;
+        margin-bottom: 21px;
+      }
+
+      > .desc {
+        font-size: 18px;
+        line-height: 32px;
+        letter-spacing: -0.75px;
+        color: $gray-000000;
+        margin-bottom: 120px;
+      }
+
+      .map {
+        position: relative;
+        @include background-img($width: 1244px, $height: 608px, $category: 'macrogen', $img: 'bg-map.png');
+
+        .pin {
+          position: absolute;
+          padding: 0 16px 0 40px;
+          height: 38px;
+          line-height: 36px;
+          background-color: #FFFFFF;
+          border: 1px solid $line-c9c9c9;
+          box-sizing: border-box;
+          box-shadow: 0 8px 8px rgba(0, 0, 0, 0.08);
+          border-radius: 100px;
+          font-weight: 700;
+          font-size: 13px;
+          letter-spacing: 0.02em;
+          text-transform: uppercase;
+          color: $gray-000000;
+          background-image: url(../img/macrogen/ic-pin.svg);
+          background-size: 16px 16px;
+          background-position: left 16px center;
+          background-repeat: no-repeat;
+
+          &:hover, &.active {
+            background-color: $point-active;
+            border-color: $point-active;
+            box-shadow: 0 25px 20px rgba(0, 0, 0, 0.2);
+            color: $gray-ffffff;
+            background-image: url(../img/macrogen/ic-pin-foc.svg);
+          }
+
+          &.amsterdam {
+            top: 76px;
+            left: 71px;
+          }
+
+          &.seoul {
+            top: 76px;
+            left: 512px;
+          }
+
+          &.boston {
+            top: 76px;
+            left: 854.5px;
+          }
+
+          &.tokyo {
+            top: 134px;
+            left: 587.5px;
+          }
+
+          &.virginia {
+            top: 134px;
+            left: 794px;
+          }
+
+          &.madrid {
+            top: 192px;
+            left: 5.5px;
+          }
+
+          &.kyoto {
+            top: 192px;
+            left: 492.5px;
+          }
+
+          &.newyork {
+            top: 192px;
+            left: 932.5px;
+          }
+
+          &.synapse {
+            top: 250px;
+            left: 358px;
+          }
+
+          &.rockville {
+            top: 250px;
+            left: 846px;
+          }
+        }
+      }
+    }
+
+    .section-map-detail {
+      .box {
+        position: relative;
+        //overflow: hidden;
+        //border-bottom: 1px solid $line-e9e9e9;
+        margin-bottom: 280px;
+
+        &:last-of-type {
+          &:before {
+            background-color: transparent;
+          }
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 1px;
+          background-color: $line-e9e9e9;
+          bottom: -140px;
+          left: 0;
+        }
+
+        &::after {
+          content: '';
+          display: block;
+          clear: both;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+          border-bottom: 0;
+        }
+
+        > .title {
+          float: left;
+          width: 281px;
+          font-weight: 700;
+          font-size: 56px;
+          line-height: 81px;
+          letter-spacing: -3px;
+        }
+
+        > .detail {
+          float: left;
+          width: calc(100% - 281px);
+
+          .item {
+            margin-bottom: 120px;
+
+            /*  scroll-margin-top: 200px;*/
+            &.height_fix {
+              margin-top: -200px;
+              padding-top: 200px;
+            }
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            .name {
+              font-weight: 700;
+              font-size: 36px;
+              line-height: 52px;
+              letter-spacing: -1px;
+              margin-bottom: 40px;
+
+              .badge {
+                font-weight: 500;
+                line-height: 25px;
+              }
+            }
+
+            .img {
+              width: 923px;
+              height: 420px;
+              margin-bottom: 30px;
+
+              img {
+                width: 100%;
+                height: 100%;
+              }
+            }
+
+            .info {
+              ul {
+                margin-bottom: 20px;
+
+                li {
+                  margin-bottom: 8px;
+
+                  &:last-child {
+                    margin-bottom: 0;
+                  }
+
+                  span {
+                    display: inline-block;
+                    vertical-align: middle;
+                    line-height: 32px;
+
+                    &:first-child {
+                      position: relative;
+                      vertical-align: middle;
+                      font-weight: 700;
+                      font-size: 18px;
+                      letter-spacing: -0.75px;
+                      padding-left: 13px;
+                      margin-right: 15px;
+
+                      &::before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 15px;
+                        width: 5px;
+                        height: 5px;
+                        border-radius: 50%;
+                        background-color: $bg-000000;
+                        vertical-align: middle;
+                      }
+                    }
+
+                    &:nth-child(2) {
+                      font-size: 18px;
+                      line-height: 32px;
+                      letter-spacing: -0.75px;
+                    }
+                  }
+                }
+              }
+
+              .address {
+                font-size: 16px;
+                line-height: 30px;
+                letter-spacing: -0.75px;
+                color: $gray-707070;
+                margin-bottom: 8px;
+              }
+
+              .tel {
+                span {
+                  position: relative;
+                  font-weight: 700;
+                  font-size: 16px;
+                  line-height: 30px;
+                  color: $gray-707070;
+                  margin-right: 8px;
+
+                  &:nth-child(3) {
+                    &::before {
+                      content: '';
+                      position: absolute;
+                      width: 1px;
+                      height: 16px;
+                      left: -21px;
+                      top: 1px;
+                      background-color: #e9e9e9;
+                    }
+                  }
+                }
+
+                a {
+                  font-size: 16px;
+                  line-height: 30px;
+                  color: $gray-707070;
+                  margin-right: 41px;
+
+                  &:last-child {
+                    margin-right: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.ethical-management {
+    .btn-sm {
+      padding: 7px 25px 5px;
+      min-width: 124px;
+    }
+
+    .section-description {
+      padding: 150px 0;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+
+      .inner {
+        position: relative;
+        width: 1244px;
+        margin: 0 auto;
+        z-index: 1;
+      }
+
+      .text-lg {
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 81px;
+        letter-spacing: -3px;
+        color: $gray-000000;
+        margin-bottom: 28px;
+      }
+
+      .desc {
+        font-size: 18px;
+        line-height: 32px;
+        letter-spacing: -0.75px;
+        color: $gray-000000;
+      }
+    }
+
+    .section-bg {
+      padding: 150px 0;
+      position: relative;
+      @include background-img($width: 100%, $height: 1180px, $category: 'macrogen', $img: 'bg-sub-ethical-management.png');
+      background-size: 1920px 1180px;
+      background-repeat: no-repeat;
+
+      .inner {
+        position: relative;
+        width: 1244px;
+        margin: 0 auto;
+        z-index: 1;
+      }
+
+      .text-lg {
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 81px;
+        letter-spacing: -3px;
+        color: $gray-000000;
+        margin-bottom: 20px;
+      }
+
+      .content {
+        margin-top: 150px;
+        width: 1137px;
+
+        li {
+          float: left;
+          width: 281px;
+          height: 186px;
+          margin-right: 147px;
+          margin-bottom: 100px;
+
+          &:nth-child(3n) {
+            margin-right: 0;
+          }
+
+          .tit {
+            margin-bottom: 20px;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 46px;
+            letter-spacing: -1px;
+            color: $gray-ffffff;
+          }
+
+          .desc {
+            font-size: 16px;
+            line-height: 30px;
+            letter-spacing: -0.75px;
+            color: $gray-ffffff;
+          }
+        }
+      }
+
+      /* 딤드제거
+       &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(180deg, rgba(100, 109, 118, 0.35) 0%, rgba(42, 76, 83, 0.7) 100%);
+        }*/
+    }
+
+    .section-tip {
+      padding: 150px 0;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+
+      .inner {
+        position: relative;
+        width: 1244px;
+        margin: 0 auto;
+        z-index: 1;
+      }
+
+      .row {
+        margin-left: 0;
+        padding-right: 0;
+        margin-bottom: 10px;
+
+        > * {
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+
+      .text-md {
+        font-weight: 700;
+        font-size: 44px;
+        line-height: 64px;
+        letter-spacing: -2px;
+        color: $gray-000000;
+        margin-bottom: 20px;
+      }
+
+      .desc {
+        font-size: 18px;
+        line-height: 32px;
+        letter-spacing: -0.75px;
+        color: $gray-000000;
+      }
+
+      .subject-to-report {
+        padding-bottom: 120px;
+        margin-top: 120px;
+        margin-bottom: 120px;
+        border-bottom: 1px solid $line-e9e9e9;
+
+        .tit {
+          position: relative;
+          font-weight: 700;
+          font-size: 32px;
+          line-height: 46px;
+          letter-spacing: -1px;
+          color: $gray-000000;
+          margin-bottom: 40px;
+        }
+
+        .row {
+          margin-left: -10px;
+          margin-right: -10px;
+          margin-bottom: 20px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        .col {
+          padding-left: 10px;
+          padding-right: 10px;
+
+          .desc {
+            font-size: 16px;
+            line-height: 30px;
+            letter-spacing: -0.75px;
+            color: $gray-666666;
+          }
+
+          .item {
+            background-color: $bg-f7f7f7;
+            height: 160px;
+            font-size: 16px;
+            line-height: 30px;
+            letter-spacing: -0.75px;
+            color: $gray-454545;
+            padding: 40px 0 40px 40px;
+          }
+        }
+      }
+
+      .subject-to-report-step {
+        .item {
+          display: flex;
+          height: 261px;
+          margin-bottom: 120px;
+
+          &:last-child {
+            margin-bottom: 0;
+
+            .img {
+              &:after {
+                border: none;
+              }
+            }
+          }
+
+          .img {
+            position: relative;
+            width: 261px;
+            height: 261px;
+            border-radius: 50%;
+
+            &:after {
+              content: '';
+              display: inline-block;
+              border-right: 1px dashed #909090;
+              width: 1px;
+              height: 80px;
+              position: absolute;
+              left: 50%;
+              bottom: -100px;
+            }
+
+            .label {
+              position: absolute;
+              width: 40px;
+              height: 40px;
+              line-height: 41px;
+              top: 85px;
+              left: 50%;
+              transform: translateX(-50%);
+              border-radius: 50%;
+              background-color: $bg-ffffff;
+              font-weight: 700;
+              font-size: 18px;
+              text-align: center;
+              color: $gray-000000;
+            }
+
+            .tit {
+              position: absolute;
+              top: 135px;
+              left: 50%;
+              transform: translateX(-50%);
+              font-weight: 700;
+              font-size: 32px;
+              line-height: 46px;
+              text-align: center;
+              letter-spacing: -1px;
+              color: #FFFFFF;
+              text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+          }
+
+          .info {
+            display: flex;
+            width: calc(100% - 261px);
+            height: 261px;
+            justify-content: center;
+            flex-direction: column;
+            padding-left: 60px;
+
+            .desc {
+              font-weight: 700;
+              font-size: 32px;
+              line-height: 46px;
+              letter-spacing: -2px;
+              margin-bottom: 0;
+            }
+
+            .tip {
+              position: relative;
+              font-size: 18px;
+              line-height: 32px;
+              letter-spacing: -0.75px;
+              color: $gray-909090;
+              padding-left: 27px;
+              margin-top: 21px;
+
+              &::after {
+                content: '';
+                position: absolute;
+                @include background-img($width: 20px, $height: 20px, $category: 'macrogen', $img: 'ic-tip.svg');
+                left: 0;
+                top: 8px;
+              }
+            }
+
+            .link {
+              font-weight: 700;
+              font-size: 18px;
+              line-height: 22px;
+              letter-spacing: 0.5px;
+              color: $point-primary;
+              margin-top: 40px;
+              text-decoration: underline;
+            }
+
+            .desc-sm {
+              font-weight: 700;
+              font-size: 18px;
+              line-height: 26px;
+              letter-spacing: -0.75px;
+              color: $point-primary;
+              margin-top: 40px;
+            }
+
+            .desc-xs {
+              font-size: 16px;
+              line-height: 30px;
+              letter-spacing: -0.75px;
+              color: $gray-454545;
+              margin-top: 10px;
+            }
+
+            ul {
+              margin-top: 40px;
+
+              li {
+                margin-bottom: 10px;
+
+                &:last-child {
+                  margin-bottom: 0;
+                }
+
+                span {
+                  display: inline-block;
+
+                  &:first-child {
+                    position: relative;
+                    width: 174px;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 30px;
+                    letter-spacing: -0.75px;
+                    color: $gray-000000;
+                    padding-left: 15px;
+
+                    &::before {
+                      content: '';
+                      position: absolute;
+                      width: 5px;
+                      height: 5px;
+                      left: 0;
+                      top: 11px;
+                      background-color: $bg-000000;
+                      border-radius: 50%;
+                    }
+                  }
+
+                  &:nth-child(2) {
+                    font-size: 16px;
+                    line-height: 30px;
+                    letter-spacing: -0.75px;
+                    color: $gray-454545;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .section-banner {
+      @include background-img($width: 100%, $height: 560px, $category: 'macrogen', $img: 'bg-ethical-banner-1.png');
+      background-size: 1920px 560px;
+      background-repeat: no-repeat;
+      background-position: center;
+      padding-top: 240px;
+
+      .inner {
+        position: relative;
+        width: 1244px;
+        margin: 0 auto;
+        z-index: 1;
+      }
+
+      .font-slogan {
+        line-height: 98px;
+        margin-bottom: 30px;
+      }
+
+      .desc {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 46px;
+      }
+    }
+
+    .section-reward {
+      padding-top: 120px;
+      padding-bottom: 150px;
+
+      .inner {
+        position: relative;
+        width: 1244px;
+        margin: 0 auto;
+        z-index: 1;
+      }
+
+      .list {
+        .item {
+          padding: 100px 0;
+          border-bottom: 1px solid $line-e9e9e9;
+
+          &::after {
+            content: '';
+            display: block;
+            clear: both;
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: 0;
+          }
+
+          &:first-child {
+            padding-top: 0;
+          }
+
+          .list-header {
+            float: left;
+            width: calc(100% - 816px);
+
+            .title {
+              font-weight: 700;
+              font-size: 56px;
+              line-height: 81px;
+              letter-spacing: -3px;
+              color: $gray-000000;
+              margin-bottom: 40px;
+            }
+          }
+
+          .list-body {
+            float: left;
+            width: 816px;
+            overflow: hidden;
+
+            .pagination-wrap {
+              margin: 20px 0 0;
+
+              .navigation {
+                position: static;
+
+                .page-item {
+                  position: static;
+                  margin-right: 8px;
+
+                  &:focus {
+                    outline: none;
+                    box-shadow: none;
+                  }
+
+                  &:last-child {
+                    margin-right: 0;
+                  }
+                }
+              }
+            }
+
+            .desc {
+              font-size: 16px;
+              line-height: 30px;
+              letter-spacing: -0.75px;
+              color: $gray-454545;
+              margin-bottom: 50px;
+            }
+
+            .reward {
+              width: 816px;
+
+              .swiper-slide {
+                width: 816px;
+
+                .box {
+                  padding: 40px;
+                  background-color: $bg-f7f7f7;
+                  overflow: hidden;
+
+                  .img {
+                    float: left;
+                    width: 280px;
+                    height: 346px;
+                    margin-right: 40px;
+                    position: relative;
+
+                    &:after {
+                      content: '';
+                      display: inline-block;
+                      @include background-img($width: 61px, $height: 54px, $category: 'macrogen', $img: 'img-trophy.png');
+                      position: absolute;
+                      left: 20px;
+                      bottom: 20px;
+                    }
+
+                    img {
+                      width: 100%;
+                      height: 100%;
+                    }
+                  }
+
+                  .info {
+                    float: left;
+                    width: calc(100% - 280px - 40px);
+
+                    .sub {
+                      font-weight: 700;
+                      font-size: 18px;
+                      line-height: 26px;
+                      letter-spacing: -0.75px;
+                      color: $point-primary;
+                      margin-bottom: 15px;
+                    }
+
+                    .name {
+                      font-weight: 700;
+                      font-size: 36px;
+                      line-height: 52px;
+                      letter-spacing: -1px;
+                      color: $gray-000000;
+                      margin-bottom: 6px;
+                    }
+
+                    .job {
+                      position: relative;
+                      font-size: 16px;
+                      line-height: 23px;
+                      letter-spacing: -0.75px;
+                      color: $gray-707070;
+                      padding-bottom: 30px;
+                      margin-bottom: 30px;
+
+                      &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        @include background-img($width: 416px, $height: 1px, $category: 'macrogen', $img: 'bg-line.png');
+                      }
+                    }
+
+                    .career {
+                      margin-bottom: 50px;
+
+                      .tit {
+                        font-size: 16px;
+                        line-height: 24px;
+                        letter-spacing: -0.75px;
+                        margin-bottom: 10px;
+                      }
+
+                      ul {
+                        li {
+                          position: relative;
+                          font-size: 16px;
+                          line-height: 30px;
+                          letter-spacing: -0.75px;
+                          color: $gray-454545;
+                          padding-left: 15px;
+                          margin-bottom: 2px;
+                          @include ellipsis($line: 2);
+
+                          &:last-child {
+                            margin-bottom: 0;
+                          }
+
+                          &::before {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            top: 11px;
+                            width: 5px;
+                            height: 5px;
+                            border-radius: 50%;
+                            background-color: $gray-454545;
+                            vertical-align: middle;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .section-activity {
+      padding: 150px 0 30px;
+
+      .main-img {
+        width: 100%;
+        height: 610px;
+        background-image: url(../img/macrogen/ethical-activity-thumb-1.png);
+        background-size: 1582px 610px;
+        background-position: 323px 0;
+        background-repeat: no-repeat;
+        margin-bottom: 120px;
+        overflow: hidden;
+
+
+        //
+        //img {
+        //  width: 1582px;
+        //  height: 610px;
+        //}
+      }
+
+      .box {
+        position: relative;
+        overflow: hidden;
+        margin: 0 auto;
+        width: $min-width;
+
+        > .title {
+          font-weight: 700;
+          font-size: 56px;
+          line-height: 81px;
+          letter-spacing: -3px;
+          color: $gray-000000;
+          margin-bottom: 20px;
+        }
+
+        > .desc {
+          font-size: 18px;
+          line-height: 32px;
+          letter-spacing: -0.75px;
+          color: $gray-454545;
+          margin-bottom: 80px;
+        }
+
+        .multi-stage {
+          width: 100%;
+
+          .row {
+            display: block;
+            flex: none;
+            overflow: hidden;
+            margin-left: 0;
+            margin-right: 0;
+
+            .col {
+              display: block;
+              width: 580px;
+              float: left;
+              flex: none;
+              padding: 0;
+
+              &:first-child {
+                margin-right: 84px;
+
+                .item {
+                  &.item-img {
+                    margin-top: 80px;
+                    margin-bottom: 0;
+                  }
+                }
+              }
+
+              .item {
+                .tit {
+                  font-weight: 700;
+                  font-size: 22px;
+                  line-height: 36px;
+                  letter-spacing: -0.75px;
+                  color: $gray-000000;
+                  margin-bottom: 20px;
+                }
+
+                .desc {
+                  font-size: 16px;
+                  line-height: 30px;
+                  letter-spacing: -0.75px;
+                  color: $gray-454545;
+                }
+
+                &.item-img {
+                  margin-bottom: 80px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.macrogen-talent {
+    .section-description {
+      padding: 150px 0 120px;
+
+      .inner {
+        width: 1244px;
+        margin: 0 auto;
+      }
+
+      .underline {
+        display: inline-block;
+        width: 60px;
+        height: 5px;
+        background-color: $gray-000000;
+        margin-left: 12px;
+      }
+
+      .text-lg {
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 81px;
+        letter-spacing: -3px;
+        color: $gray-000000;
+        margin-bottom: 28px;
+      }
+
+      .desc {
+        font-size: 18px;
+        line-height: 32px;
+        letter-spacing: -0.75px;
+        color: $gray-000000;
+      }
+    }
+
+    .section-bg {
+      position: relative;
+      width: 100%;
+      height: 600px;
+      background-image: url(../img/macrogen/bg-talent-banner.png);
+      background-size: 1820px 600px;
+      background-position: 50px 0;
+      background-repeat: no-repeat;
+      //
+      //
+      //.inner {
+      //  position: absolute;
+      //  width: $min-width;
+      //  height: 600px;
+      //  left: 50%;
+      //  transform: translateX(-50%);
+      //  top: 0;
+      //}
+      //
+      //.img {
+      //  width: 100%;
+      //  padding: 0 50px;
+      //
+      //  img {
+      //    width: 100%;
+      //    height: auto;
+      //  }
+      //}
+      //
+      //.txt-box {
+      //  position: absolute;
+      //  right: 82px;
+      //  top: 50%;
+      //  transform: translateY(-50%);
+      //
+      //  li {
+      //    position: relative;
+      //    font-weight: 700;
+      //    font-size: 36px;
+      //    line-height: 52px;
+      //    letter-spacing: -1px;
+      //    color: $gray-ffffff;
+      //    margin-bottom: 22px;
+      //
+      //    &::before {
+      //      content: '';
+      //      position: absolute;
+      //      width: 30px;
+      //      height: 4px;
+      //      background-color: $gray-ffffff;
+      //      left: -48px;
+      //      top: 23px;
+      //    }
+      //
+      //    &:last-child {
+      //      margin-bottom: 0;
+      //    }
+      //  }
+      //}
+    }
+
+    .section-core-talent {
+      position: relative;
+      width: 100%;
+      height: calc(2268px - 150px);
+      padding-top: 180px;
+      padding-bottom: 2px;
+      overflow: hidden;
+
+      .inner {
+        position: relative;
+        width: 1244px;
+        margin: 0 auto;
+      }
+
+      .font-h6 {
+        margin-bottom: 30px;
+      }
+
+      .list {
+        .item {
+          width: 100%;
+          height: 540px;
+          overflow: hidden;
+          margin-bottom: 120px;
+
+          &:nth-child(2) {
+            .img {
+              margin-right: 100px;
+            }
+
+            .desc-area {
+              width: calc(100% - 540px - 100px);
+            }
+          }
+
+          .desc-area {
+            float: left;
+            display: flex;
+            width: calc(100% - 540px);
+            height: 100%;
+            justify-content: center;
+            flex-direction: column;
+
+            .font-h3 {
+              margin-bottom: 60px;
+            }
+
+            .font-body-h {
+              color: $point-primary;
+              margin-bottom: 20px;
+            }
+
+            .font-8 {
+              font-weight: normal;
+            }
+          }
+
+          .img {
+            float: left;
+            width: 540px;
+            height: 540px;
+
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    .DNA {
+      position: absolute;
+      background-size: contain;
+
+      &.DNA-1 {
+        @include background-img($width: 732px, $height: 777px, $category: 'macrogen', $img: 'img-DNA.png');
+        top: 1000px;
+        left: 30%;
+      }
+
+      &.DNA-2 {
+        @include background-img($width: 732px, $height: 777px, $category: 'macrogen', $img: 'img-DNA2.png');
+        bottom: -1700px;
+        left: 30%;
+      }
+    }
+
+    @media (max-width: 1440px) {
+      .DNA {
+        display: none;
+      }
+    }
+  }
+
+  &.macrogen-management {
+    .section-chairman {
+      position: relative;
+      padding-top: 150px;
+      margin-bottom: 180px;
+      //width: fit-content;
+      //margin-left: auto;
+      overflow: hidden;
+      //padding-left: 338px;
+      padding-left: 323px;
+
+      //&::after {
+      //  content: '';
+      //  position: absolute;
+      //  bottom: 0;
+      //  right: 0;
+      //  width: 940px;
+      //  height: 850px;
+      //  background-image: url(../img/macrogen/img-chairman.png);
+      //  background-size: 940px 850px;
+      //  background-position: right 0 bottom -72px;
+      //  background-repeat: no-repeat;
+      //}
+
+
+      .inner {
+        .font-h3 {
+          margin-bottom: 100px;
+        }
+
+        .chairman-info {
+          overflow: hidden;
+          margin-bottom: 180px;
+          background-image: url(../img/macrogen/img-chairman.png);
+          background-size: 940px 850px;
+          background-position: 642px -72px;
+          background-repeat: no-repeat;
+
+          .info {
+            float: left;
+            width: 582px;
+            margin-right: 60px;
+
+            .font-h7 {
+              margin-bottom: 60px;
+              line-height: 40px;
+              word-break: keep-all;
+            }
+
+            .font-body {
+              font-weight: normal;
+              color: $gray-454545;
+              margin-bottom: 15.2941% /*130px*/
+            ;
+              word-break: keep-all;
+
+            }
+
+            .sign {
+              text-align: right;
+              height: 46px;
+
+              .font-body-h {
+                font-weight: normal;
+                display: inline-block;
+                vertical-align: bottom;
+                margin-right: 10px;
+              }
+
+              .font-h6 {
+                display: inline-block;
+                vertical-align: bottom;
+              }
+            }
+          }
+
+          .img {
+            float: left;
+            width: 940px;
+
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+
+    .section-ceo {
+      padding-top: 150px;
+      padding-right: 17.4479% /*335px*/;
+      padding-bottom: 180px;
+
+      .img {
+        width: 100%;
+        height: 640px;
+        margin-bottom: 100px;
+        background-image: url(../img/macrogen/img-ceo.png);
+        background-size: 1582px 640px;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+      }
+
+      .inner {
+        /* width: 1244px;
+         margin: 0 auto;*/
+        padding-left: 21.3248% /*338px*/;
+
+        .font-h3 {
+          margin-bottom: 80px;
+        }
+
+        .info {
+          .item {
+            margin-bottom: 80px;
+            overflow: hidden;
+          }
+
+          .font-h7 {
+            float: left;
+            width: 37.6904% /*460px / 1247px*/
+          ;
+            margin-right: 4.8115%; /*60px / 1247px*/
+            word-break: keep-all;
+          }
+
+          .font-body {
+            word-break: keep-all;
+            float: left;
+            width: 56.8564% /*709px / 1247px*/
+          ;
+            font-weight: normal;
+            color: $gray-454545;
+            letter-spacing: -0.85px;
+          }
+        }
+
+        .sign {
+          text-align: right;
+          height: 46px;
+
+          .font-body-h {
+            font-weight: normal;
+            display: inline-block;
+            vertical-align: bottom;
+            margin-right: 10px;
+          }
+
+          .font-h6 {
+            display: inline-block;
+            vertical-align: bottom;
+          }
+        }
+      }
+    }
+
+    .section-chairman-career {
+      padding-top: 130px;
+      @include background-img($width: 1920px, $height: 1009px, $category: 'macrogen', $img: 'bg-chairman-career.png');
+      width: auto;
+      background-position: center;
+      margin: 0 auto;
+
+      .inner {
+        width: 1244px;
+        margin: 0 auto;
+
+        .item {
+          overflow: hidden;
+          margin-bottom: 60px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          .title {
+            float: left;
+            position: relative;
+            width: 214px;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 52px;
+            letter-spacing: -1px;
+            color: $gray-ffffff;
+
+            span {
+              position: relative;
+              display: inline-block;
+
+              &::after {
+                content: '';
+                position: absolute;
+                width: 50px;
+                height: 3px;
+                right: -60px;
+                bottom: 7px;
+                background: $bg-ffffff;
+              }
+            }
+          }
+
+          .list {
+            float: left;
+            width: calc(100% - 214px);
+            padding-top: 35px;
+
+            .row {
+              padding: 0;
+              margin: 0;
+
+              .col {
+                padding: 0;
+                margin: 0;
+              }
+            }
+
+            li {
+              overflow: hidden;
+              width: 500px;
+              margin-bottom: 10px;
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+
+              span {
+                float: left;
+                white-space: nowrap;
+                display: inline-block;
+
+                em {
+                  font-style: normal;
+                  letter-spacing: -0.75px;
+                  font-size: 18px;
+                  font-weight: 700;
+                }
+
+                &:first-child {
+                  position: relative;
+                  width: 155px;
+                  font-weight: 700;
+                  font-size: 22px;
+                  line-height: 28px;
+                  letter-spacing: 0.5px;
+                  color: $gray-ffffff;
+                  padding-left: 20px;
+                  margin-right: 20px;
+
+                  &::before {
+                    content: '';
+                    position: absolute;
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 50%;
+                    background-color: $bg-ffffff;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                  }
+                }
+
+                &:nth-child(2) {
+                  display: inline-block;
+                  width: 325px;
+                  font-size: 16px;
+                  line-height: 30px;
+                  letter-spacing: -1.3px;
+                  color: $gray-ffffff;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .section-ceo-career {
+      padding-top: 130px;
+      @include background-img($width: 1920px, $height: 800px, $category: 'macrogen', $img: 'bg-ceo-career.png');
+      width: auto;
+      background-position: center;
+      margin: 0 auto;
+
+      .inner {
+        width: 1244px;
+        margin: 0 auto;
+
+        .item {
+          overflow: hidden;
+          margin-bottom: 60px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          .title {
+            float: left;
+            position: relative;
+            width: 312px;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 52px;
+            letter-spacing: -1px;
+            color: $gray-ffffff;
+
+            span {
+              position: relative;
+              display: inline-block;
+
+              &::after {
+                content: '';
+                position: absolute;
+                width: 50px;
+                height: 3px;
+                right: -58px;
+                bottom: 12px;
+                background: $bg-ffffff;
+              }
+            }
+          }
+
+          .list {
+            float: left;
+            width: calc(100% - 312px);
+            padding-top: 37px;
+
+            .row {
+              padding: 0;
+              margin: 0;
+
+              .col {
+                padding: 0;
+                margin: 0;
+              }
+            }
+
+            li {
+              overflow: hidden;
+              width: 510px;
+              margin-bottom: 10px;
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+
+              span {
+                float: left;
+                white-space: nowrap;
+                display: inline-block;
+
+                em {
+                  font-style: normal;
+                  letter-spacing: -0.75px;
+                  font-size: 18px;
+                  font-weight: 700;
+                }
+
+                &:first-child {
+                  position: relative;
+                  width: 155px;
+                  font-weight: 700;
+                  font-size: 22px;
+                  line-height: 28px;
+                  letter-spacing: 0.5px;
+                  color: $gray-ffffff;
+                  padding-left: 20px;
+                  margin-right: 20px;
+
+                  &::before {
+                    content: '';
+                    position: absolute;
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 50%;
+                    background-color: $bg-ffffff;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                  }
+                }
+
+                &:nth-child(2) {
+                  display: inline-block;
+                  width: 335px;
+                  font-size: 16px;
+                  line-height: 30px;
+                  letter-spacing: -1.3px;
+                  color: $gray-ffffff;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.macrogen-history {
+    .slide-tab-wrap {
+      width: $min-width;
+      margin: 0 auto;
+      padding-top: 140px;
+    }
+
+    .section-wrap {
+      overflow: hidden;
+
+    }
+
+    .section {
+      padding: 140px 0 0;
+
+      .inner {
+        width: $min-width;
+        margin: 0 auto;
+
+        .year {
+          font-weight: 700;
+          font-size: 32px;
+          line-height: 39px;
+          letter-spacing: 0.5px;
+          margin-bottom: 5px;
+        }
+
+        .title {
+          position: relative;
+          display: inline-block;
+          font-weight: 700;
+          font-size: 64px;
+          line-height: 93px;
+          letter-spacing: -3px;
+          color: $point-primary;
+          margin-bottom: 68px;
+
+          &::before {
+            content: '';
+            display: block;
+          }
+
+          &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 60px;
+            height: 5px;
+            background-color: $point-primary;
+            right: -70px;
+            bottom: 20px;
+          }
+        }
+      }
+
+      .history-slider {
+        position: relative;
+        width: 100%;
+        height: 740px;
+
+        .inner {
+          position: absolute;
+          width: $min-width;
+          height: 740px;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 2;
+
+          .year {
+            position: absolute;
+            font-weight: 700;
+            font-size: 150px;
+            line-height: 183px;
+            letter-spacing: -2px;
+            color: $gray-ffffff;
+            bottom: 102px;
+            left: 0;
+            margin-bottom: 0;
+          }
+
+          .desc {
+            position: absolute;
+            font-size: 22px;
+            line-height: 33px;
+            letter-spacing: -0.75px;
+            color: $gray-ffffff;
+            bottom: 80px;
+            left: 0;
+          }
+        }
+
+        .swiper-container {
+          text-align: center;
+
+          .swiper-slide {
+            position: relative;
+
+            &::after {
+              content: '';
+              display: block;
+              position: absolute;
+              @include background-img($width: 1260px, $height: 600px, $category: 'macrogen', $img: 'bg-history-circle.png');
+              left: 0;
+              bottom: 0;
+              z-index: 1;
+            }
+          }
+        }
+
+        .pagination-wrap {
+          position: absolute;
+          width: 100%;
+          height: 45px;
+          bottom: 80px;
+          right: 0;
+
+          .navigation {
+            position: static;
+            top: auto;
+            left: auto;
+            text-align: right;
+
+            .page-item {
+              position: static;
+
+              &.prev {
+                margin-right: 8px;
+
+                .page-link {
+                  background-image: url(../img/macrogen/btn-nav-prev.svg);
+                }
+              }
+
+              &.next {
+                .page-link {
+                  background-image: url(../img/macrogen/btn-nav-next.svg);
+                }
+              }
+            }
+          }
+        }
+
+        .swiper-pagination {
+          bottom: auto;
+          top: 55px;
+          right: 0;
+          text-align: right;
+
+          .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.2);
+            opacity: 1;
+            margin: 0 7.5px;
+
+            &.swiper-pagination-bullet-active {
+              background-color: $bg-ffffff;
+            }
+          }
+        }
+      }
+
+
+      .history-list {
+        position: relative;
+        padding-top: 57px + 66px;
+        overflow: hidden;
+
+        .year-info {
+          position: absolute;
+          width: 428px;
+
+          li {
+            position: relative;
+            padding-left: 107px;
+            margin-bottom: 40px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            span {
+              position: relative;
+              display: block;
+              font-weight: 700;
+              font-size: 23px;
+              line-height: 39px;
+              letter-spacing: 0.5px;
+              color: $disabled-d9d9d9;
+
+              &::before {
+                content: '';
+                position: absolute;
+                width: 6px;
+                height: 6px;
+                background-color: $gray-000000;
+                left: -99px;
+                top: 50%;
+                transform: translateY(-50%);
+                border-radius: 50%;
+              }
+
+              &::after {
+                content: '';
+                position: absolute;
+                @include background-img($width: 2px, $height: 50px, $category: 'macrogen', $img: 'bg-history-line.svg');
+                left: -97px;
+                bottom: -49px;
+              }
+            }
+
+            &.active {
+              span {
+                font-size: 58px;
+                /*line-height: 71px;*/
+                line-height: 1;
+                color: $gray-000000;
+
+                &::before {
+                  content: '';
+                  position: absolute;
+                  left: -107px;
+                  background-color: transparent;
+                  @include background-img($width: 23px, $height: 23px, $category: 'macrogen', $img: 'bg-history-dot.svg');
+                }
+
+                &::after {
+                  bottom: -41px;
+                }
+              }
+            }
+
+            &:first-child {
+              &::before {
+                content: '';
+                position: absolute;
+                @include background-img($width: 2px, $height: 50px, $category: 'macrogen', $img: 'bg-history-line.svg');
+                left: 10px;
+                top: -41px;
+              }
+
+              &::after {
+                content: '';
+                position: absolute;
+                width: 6px;
+                height: 6px;
+                background-color: $gray-909090;
+                border-radius: 50%;
+                left: 8px;
+                top: -62px;
+              }
+
+
+            }
+
+            &:last-child {
+              span {
+                &::after {
+                  content: none;
+                }
+              }
+            }
+          }
+        }
+
+        .desc-info {
+          padding-left: 428px;
+
+          ul {
+            margin-bottom: 100px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            li {
+              margin-bottom: 22px;
+              overflow: hidden;
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+
+              .num {
+                float: left;
+                display: inline-block;
+                width: 67px;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 23px;
+                color: $gray-000000;
+              }
+
+              .desc {
+                float: left;
+                display: inline-block;
+                width: calc(100% - 67px);
+                font-size: 16px;
+                line-height: 23px;
+                letter-spacing: -0.75px;
+                color: $gray-454545;
+
+
+                &.desc-lg {
+                  line-height: 30px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &.macrogen-human-resource {
+    .inner {
+      width: $min-width;
+      margin: 0 auto;
+    }
+
+    .section-management {
+      padding-top: 150px;
+      padding-bottom: 179px;
+
+      .font-h7 {
+        line-height: 38px;
+        margin-bottom: 60px;
+      }
+
+      .font-h3 {
+        line-height: 81px;
+        margin-bottom: 154px;
+      }
+
+      .step {
+        .row {
+          .col {
+            .item {
+              @include background-img($width: 388px, $height: 580px, $category: 'macrogen', $img: 'thumb-human-resource-1.png');
+              padding: 50px;
+
+              .tit {
+                font-weight: 700;
+                font-size: 36px;
+                line-height: 52px;
+                letter-spacing: -1px;
+                margin-bottom: 15px;
+              }
+
+              .desc {
+                font-size: 16px;
+                line-height: 30px;
+                letter-spacing: -0.75px;
+                color: $gray-454545;
+              }
+
+              &.item-2 {
+                margin-top: -50px;
+                background-image: url(../img/macrogen/thumb-human-resource-2.png);
+              }
+
+              &.item-3 {
+                margin-top: -100px;
+                background-image: url(../img/macrogen/thumb-human-resource-3.png);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .section-rank-system {
+      @include background-img($width: 1821px, $height: 1100px, $category: 'macrogen', $img: 'bg-human-resource-2.png');
+      width: auto;
+      padding: 170px 50px 0;
+
+      .font-h7 {
+        line-height: 38px;
+        margin-bottom: 60px;
+        color: $gray-ffffff;
+      }
+
+      .font-h3 {
+        line-height: 81px;
+        margin-bottom: 120px;
+        color: $gray-ffffff;
+      }
+
+      .flow-bg {
+        @include background-img($width: 1244px, $height: 333px, $category: 'macrogen', $img: 'human-resource-flow.png');
+      }
+    }
+
+    .section-welfare {
+      padding: 150px 50px 0;
+
+      .inner {
+        position: relative;
+        height: 338px;
+        margin-bottom: 120px;
+      }
+
+      .font-h7 {
+        line-height: 38px;
+        margin-bottom: 60px;
+      }
+
+      .font-h3 {
+        line-height: 81px;
+        margin-bottom: 198px;
+      }
+
+      .click-area {
+        position: absolute;
+        width: 380px;
+        bottom: 0;
+        right: 0;
+
+        .font-body-h {
+          font-weight: normal;
+          margin-bottom: 60px;
+        }
+      }
+
+      .item {
+        @include background-img($width: 1821px, $height: 580px, $category: 'macrogen', $img: 'banner-human-resource-1.png');
+        width: auto;
+        padding: 140px 50px 0;
+        margin-bottom: 80px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .font-h5 {
+          margin-bottom: 138px;
+          color: $gray-ffffff;
+        }
+
+        li {
+          float: left;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 230px;
+          height: 150px;
+          font-size: 22px;
+          line-height: 36px;
+          text-align: center;
+          letter-spacing: -0.75px;
+          color: $gray-000000;
+          @include background-img($width: 230px, $height: 150px, $category: 'macrogen', $img: 'bg-human-resource-rect.png');
+          margin-right: 22px;
+          border-radius: 5px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+
+        &.item-2 {
+          background-image: url(../img/macrogen/banner-human-resource-2.png);
+        }
+
+        &.item-3 {
+          background-image: url(../img/macrogen/banner-human-resource-3.png);
+        }
+      }
+    }
+  }
+
+  &.macrogen-vision {
+    position: relative;
+
+    .inner {
+      width: $min-width;
+      margin: 0 auto;
+    }
+
+    .section-vision {
+      padding: 150px 0;
+
+      .inner {
+        position: relative;
+        z-index: 3;
+      }
+
+      .title {
+        font-size: 130px;
+        line-height: 144px;
+        text-transform: uppercase;
+        margin-bottom: 35px;
+      }
+
+      .diagram {
+        text-align: right;
+
+        .img {
+          display: inline-block;
+          width: 1030px;
+          height: 384px;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .txt {
+          display: inline-block;
+          width: 1030px;
+
+          .row {
+            margin-left: 0;
+            margin-right: 0;
+          }
+
+          .col {
+            text-align: left;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 32px;
+            letter-spacing: -0.75px;
+            padding-left: 0;
+            padding-right: 0;
+
+            &:first-child {
+              margin-right: 40px;
+            }
+          }
+        }
+      }
+    }
+
+    .section-slogan {
+      padding: 0 50px;
+      min-width: $min-width;
+
+      .bg {
+        position: relative;
+        @include background-img($width: 1820px, $height: 1200px, $category: 'macrogen', $img: 'bg-humanizing-genomics.png');
+        background-position: center;
+        width: auto;
+        margin: 0 auto;
+
+        .inner {
+          position: relative;
+          z-index: 5;
+          padding-top: 180px;
+          color: $gray-ffffff;
+          width: 62.85% /* 1144px / 1820px */
+        ;
+
+          .font-h7 {
+            position: relative;
+            display: inline-block;
+            line-height: 38px;
+            margin-bottom: 220px;
+
+            &::after {
+              content: '';
+              position: absolute;
+              width: 45px;
+              height: 3px;
+              right: -55px;
+              bottom: 12px;
+              background-color: $bg-ffffff;
+            }
+          }
+
+          .title {
+            position: relative;
+            font-weight: 700;
+            font-size: 120px;
+            line-height: 108px;
+            letter-spacing: -0.5px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            z-index: 1;
+          }
+
+          .font-body-h {
+            font-weight: normal;
+            line-height: 32px;
+          }
+        }
+
+        .img {
+          position: absolute;
+          opacity: 1 !important;
+          z-index: 3;
+
+          &.img-1 {
+            right: 13.8461% /* 252px / 1820px */
+          ;
+            top: 300px;
+          }
+
+          &.img-2 {
+            right: 17.5824% /* 320px / 1820px */
+          ;
+            top: 500px;
+          }
+
+          &.img-3 {
+            right: 16.3736% /* 298px / 1820px */
+          ;
+            top: 800px;
+          }
+        }
+      }
+    }
+
+    .section-management-philosophy {
+      overflow: hidden;
+      padding-top: 100px;
+      width: 100%;
+      height: 980px;
+      background-image: url(../img/macrogen/img-management-philosophy.png);
+      background-size: 960px 799px;
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      padding-left: 1087px;
+      margin-top: 180px;
+
+      .info {
+        .font-h7 {
+          line-height: 38px;
+          margin-bottom: 120px;
+          white-space: nowrap;
+        }
+
+        .font-h4 {
+          line-height: 60px;
+          margin-bottom: 60px;
+          white-space: nowrap;
+        }
+
+        .font-body {
+          font-weight: normal;
+          color: $gray-454545;
+          white-space: nowrap;
+        }
+      }
+    }
+
+    .section-core-values {
+      padding-top: 180px;
+
+      .font-h7 {
+        line-height: 38px;
+        margin-bottom: 120px;
+      }
+
+      .values {
+
+        &::after {
+          content: '';
+          display: block;
+          clear: both;
+        }
+
+        .item {
+          float: left;
+          width: 360px;
+          margin-right: 82px;
+
+          &:nth-child(2) {
+            margin-top: -50px;
+          }
+
+          &:last-child {
+            margin-right: 0;
+            margin-top: -100px;
+          }
+
+          .img {
+            width: 360px;
+            height: 360px;
+            margin-bottom: 30px;
+
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          .font-h5 {
+            margin-bottom: 15px;
+            line-height: 52px;
+          }
+
+          .font-body {
+            font-weight: normal;
+            color: $gray-454545;
+          }
+        }
+      }
+    }
+
+    .parallax-DNA {
+      position: absolute;
+      @include background-img($width: 732px, $height: 777px, $category: 'macrogen', $img: 'img-vision-DNA.png');
+      top: 1300px;
+      left: -120px;
+      z-index: 2;
+
+      &.DNA-2 {
+        background-image: url(../img/macrogen/img-vision-DNA-2.png);
+        left: auto;
+        right: 0;
+        top: 1000px;
+      }
+
+      &.DNA-3 {
+        background-image: url(../img/macrogen/img-vision-DNA-3.png);
+        z-index: -1;
+        top: 1700px;
+      }
+    }
+
+    @media (max-width: 1440px) {
+      .parallax-DNA {
+        display: none;
+      }
+    }
+  }
+
+  &.macrogen-contact-us {
+    .inner {
+      width: $min-width;
+      margin: 0 auto;
+    }
+
+    /* 아이콘 */
+    .ic-mail {
+      display: inline-block;
+      @include background-img($width: 16px, $height: 16px, $category: 'macrogen', $img: 'ic-mail.svg');
+      margin-right: 10px;
+      transform: translateY(3px);
+    }
+
+    .ic-fax {
+      display: inline-block;
+      @include background-img($width: 16px, $height: 16px, $category: 'macrogen', $img: 'ic-fax.svg');
+      margin-right: 10px;
+      transform: translateY(4px);
+    }
+
+    .ic-call {
+      display: inline-block;
+      @include background-img($width: 16px, $height: 16px, $category: 'macrogen', $img: 'ic-call.svg');
+      margin-right: 10px;
+      transform: translateY(3px);
+    }
+
+    .font-h3 {
+      margin-bottom: 120px;
+      line-height: 81px;
+    }
+
+    .font-h5 {
+      margin-bottom: 60px;
+    }
+
+    .map-wrap {
+      .info {
+        margin-bottom: 80px;
+
+        &::after {
+          content: '';
+          display: block;
+          clear: both;
+        }
+
+        .item {
+          position: relative;
+          width: 50%;
+          float: left;
+
+          &:last-child {
+            padding-left: 126px;
+
+            &::after {
+              content: none;
+            }
+          }
+
+          &::after {
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 100px;
+            right: 0;
+            top: 0;
+            background: $line-e9e9e9;
+          }
+
+          .tit {
+            float: left;
+            display: inline-block;
+            width: 174px;
+            vertical-align: middle;
+            font-weight: 700;
+            font-size: 26px;
+            line-height: 38px;
+            letter-spacing: -0.75px;
+            margin-right: 40px;
+          }
+
+          .desc {
+            float: left;
+            width: calc(100% - 174px - 40px);
+
+            li {
+              margin-bottom: 10px;
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+
+              a {
+                display: inline-block;
+                vertical-align: middle;
+                line-height: 32px;
+                font-weight: 500;
+                font-size: 18px;
+                color: $gray-454545;
+              }
+
+              span {
+                display: inline-block;
+                vertical-align: middle;
+                line-height: 32px;
+                font-size: 18px;
+                font-weight: 700;
+                color: $gray-454545;
+                margin-right: 4px;
+              }
+            }
+          }
+        }
+      }
+
+      .map-info {
+        border-bottom: 1px solid $line-e9e9e9;
+        margin-bottom: 120px;
+
+        .inner {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .address-wrap {
+          padding: 52px 0;
+
+          .pin {
+            display: inline-block;
+            vertical-align: middle;
+            @include background-img($width: 16px, $height: 16px, $category: 'macrogen', $img: 'ic-pin.svg');
+            margin-right: 6px;
+            transform: translateY(-1px);
+          }
+
+          .tit {
+            display: inline-block;
+            vertical-align: middle;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 32px;
+            letter-spacing: -0.75px;
+            margin-right: 20px;
+          }
+
+          .address {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 18px;
+            line-height: 32px;
+            letter-spacing: -0.75px;
+            color: $gray-454545;
+          }
+        }
+
+        .pin-btn-wrap {
+          .google-pin {
+            display: inline-block;
+            vertical-align: middle;
+            @include background-img($width: 12px, $height: 17px, $category: 'macrogen', $img: 'ic-pin-google.svg');
+            margin-right: 8px;
+          }
+
+          span {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 16px;
+            line-height: 23px;
+            letter-spacing: -0.75px;
+            color: $gray-000000;
+            padding-top: 2px;
+          }
+        }
+      }
+    }
+
+    .category {
+      border-top: 1px solid $line-e9e9e9;
+      margin-bottom: 100px;
+
+      .item {
+        position: relative;
+        float: left;
+        width: 622px;
+        padding: 50px;
+        border-bottom: 1px solid $line-e9e9e9;
+        border-left: 1px solid $line-e9e9e9;
+        overflow: hidden;
+
+        &:nth-child(2n) {
+          border-right: 1px solid $line-e9e9e9;
+        }
+
+        &.item-lg {
+          height: 318px;
+        }
+
+        &.item-md {
+          height: 200px;
+        }
+
+
+        &:first-child {
+          border-left: 1px solid $line-e9e9e9;
+        }
+
+        .title {
+          float: left;
+          position: absolute;
+          left: 50px;
+          top: 50px;
+          font-weight: 700;
+          font-size: 22px;
+          line-height: 32px;
+          letter-spacing: -0.75px;
+        }
+
+        .desc {
+          float: left;
+          padding-left: 248px;
+
+          .name {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 23px;
+            letter-spacing: -0.75px;
+            color: $gray-000000;
+            margin-bottom: 20px;
+
+            &:nth-child(3) {
+              margin-top: 40px;
+            }
+          }
+
+          li {
+            margin-bottom: 2px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            span {
+              display: inline-block;
+              vertical-align: middle;
+              font-weight: 700;
+              font-size: 16px;
+              line-height: 30px;
+              color: $gray-454545;
+              margin-right: 4px;
+            }
+
+            a {
+              font-size: 16px;
+              line-height: 30px;
+              color: $gray-454545;
+              display: inline-block;
+              vertical-align: middle;
+            }
+          }
+        }
+      }
+    }
+
+    .btn-wrap {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  &.macrogen-esg {
+    .inner {
+      width: $min-width;
+      margin: 0 auto;
+    }
+
+    .section-phrase {
+      padding-top: 150px;
+      padding-bottom: 120px;
+
+      .font-h3 {
+        line-height: 81px;
+      }
+    }
+
+    .section-banner {
+      padding: 0 50px;
+
+      .banner {
+        @include background-img($width: 1920px, $height: 820px, $category: 'macrogen', $img: 'bg-esg-thumb-1.png');
+        width: auto;
+        padding-top: 150px;
+
+        .font-h6 {
+          display: inline-block;
+          position: relative;
+          line-height: 39px;
+          color: $gray-ffffff;
+          margin-bottom: 80px;
+
+          &::after {
+            content: '';
+            position: absolute;
+            right: -58px;
+            bottom: 12px;
+            width: 50px;
+            height: 3px;
+            background-color: $gray-ffffff;
+          }
+        }
+
+        .font-h4 {
+          color: $gray-ffffff;
+          line-height: 63px;
+        }
+
+        &.banner-1 {
+          margin-bottom: 50px;
+        }
+
+        &.banner-2 {
+          background-image: url(../img/macrogen/bg-esg-thumb-2.png);
+        }
+      }
+    }
+
+    .section-management-goals {
+      padding-top: 150px;
+
+      .font-h6 {
+        display: inline-block;
+        position: relative;
+        line-height: 46px;
+        margin-bottom: 150px;
+
+        &::after {
+          content: '';
+          position: absolute;
+          right: -58px;
+          bottom: 12px;
+          width: 50px;
+          height: 3px;
+          background-color: $gray-000000;
+        }
+      }
+
+      .list-goals {
+        overflow: hidden;
+
+        .goal {
+          width: 100%;
+          margin-bottom: 150px;
+          height: 600px;
+
+          &:first-child {
+            background-image: url(../img/macrogen/bg-esg-thumb-sm-1.png);
+            background-size: 940px 640px;
+            background-position: 965px 0;
+            background-repeat: no-repeat;
+            padding-left: 338px;
+          }
+
+          &:nth-child(2) {
+            background-image: url(../img/macrogen/bg-esg-thumb-sm-2.png);
+            background-size: 940px 640px;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            padding-left: 1107px;
+          }
+
+          &:nth-child(3) {
+            background-image: url(../img/macrogen/bg-esg-thumb-sm-3.png);
+            background-size: 940px 640px;
+            background-position: 965px 0;
+            background-repeat: no-repeat;
+            padding-left: 338px;
+          }
+
+          &:nth-child(4) {
+            background-image: url(../img/macrogen/bg-esg-thumb-sm-4.png);
+            background-size: 940px 640px;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            padding-left: 1107px;
+          }
+
+          .box {
+            display: inline-block;
+          }
+
+          &:nth-child(2n) {
+            text-align: left;
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          &::after {
+            content: '';
+            display: block;
+            clear: both;
+          }
+
+          .item {
+            float: left;
+
+            &:first-child {
+              &.text {
+                margin-right: 40px;
+              }
+            }
+
+            &:nth-child(2) {
+              &.text {
+                margin-left: 147px;
+              }
+            }
+
+            &.text {
+              width: 495px;
+              padding-top: 100px;
+              text-align: left;
+
+              .font-h7 {
+                line-height: 38px;
+                color: $point-primary;
+                margin-bottom: 60px;
+              }
+
+              .font-h3 {
+                line-height: 81px;
+                margin-bottom: 40px;
+              }
+
+              .font-body-h {
+                ul {
+                  li {
+                    position: relative;
+                    font-size: 16px;
+                    font-weight: normal;
+                    padding-left: 30px;
+                    line-height: 40px;
+                    color: $gray-454545;
+                    white-space: nowrap;
+
+                    &::before {
+                      content: '';
+                      position: absolute;
+                      width: 15px;
+                      height: 1px;
+                      background-color: $gray-454545;
+                      top: 18px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+
+            &.bg {
+              width: 940px;
+              height: 600px;
+
+              img {
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .modal-dialog {
+    .modal-content {
+      .modal-body {
+        .list-of-winners {
+          > .title {
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 52px;
+            letter-spacing: -1px;
+            color: $gray-000000;
+            margin-bottom: 60px;
+          }
+
+          ul {
+            li {
+              float: left;
+              width: 220px;
+              padding: 0 20px;
+              margin-bottom: 58px;
+
+              &:nth-child(5),
+              &:nth-child(6),
+              &:nth-child(7),
+              &:nth-child(8) {
+                margin-bottom: 0;
+              }
+
+              .img {
+                width: 180px;
+                height: 180px;
+                margin-bottom: 20px;
+                border-radius: 50%;
+                overflow: hidden;
+
+                img {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+
+              .name {
+                font-weight: 700;
+                font-size: 22px;
+                line-height: 32px;
+                text-align: center;
+                letter-spacing: -0.75px;
+                margin-bottom: 2px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                color: $gray-000000;
+
+                > a {
+                  color: $gray-000000;
+                }
+              }
+
+              .desc {
+                font-size: 18px;
+                line-height: 26px;
+                text-align: center;
+                letter-spacing: -0.75px;
+                color: $gray-666666;
+              }
+            }
+          }
+        }
+
+        .list-of-winners-detail {
+          .list-header {
+            padding: 50px 0 62px;
+            overflow: hidden;
+            border-bottom: 1px solid $line-e9e9e9;
+            margin-bottom: 60px;
+
+            .img {
+              float: left;
+              width: 220px;
+              height: 272px;
+              margin-right: 50px;
+
+              img {
+                width: 100%;
+              }
+            }
+
+            .info {
+              float: left;
+              width: calc(100% - 220px - 50px);
+
+              .sub {
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 26px;
+                letter-spacing: -0.75px;
+                color: $point-primary;
+                margin-bottom: 20px;
+              }
+
+              .name {
+                font-weight: 700;
+                font-size: 44px;
+                line-height: 64px;
+                letter-spacing: -2px;
+                color: $gray-000000;
+                margin-bottom: 4px;
+
+                a {
+                  color: $gray-000000;
+                }
+              }
+
+              .job {
+                position: relative;
+                font-size: 16px;
+                line-height: 23px;
+                letter-spacing: -0.75px;
+                color: $gray-707070;
+                padding-bottom: 25px;
+                margin-bottom: 25px;
+
+                &::after {
+                  content: '';
+                  position: absolute;
+                  bottom: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 1px;
+                  border-bottom: 1px dashed $line-909090;
+                }
+              }
+
+              .career {
+                .tit {
+                  font-size: 16px;
+                  line-height: 24px;
+                  letter-spacing: -0.75px;
+                  margin-bottom: 10px;
+                }
+
+                ul {
+                  li {
+                    position: relative;
+                    font-size: 16px;
+                    line-height: 30px;
+                    letter-spacing: -0.75px;
+                    color: $gray-454545;
+                    padding-left: 15px;
+                    margin-bottom: 2px;
+                    @include ellipsis($line: 2);
+
+                    &:last-child {
+                      margin-bottom: 0;
+                    }
+
+                    &::before {
+                      content: '';
+                      position: absolute;
+                      left: 0;
+                      top: 11px;
+                      width: 5px;
+                      height: 5px;
+                      border-radius: 50%;
+                      background-color: $gray-454545;
+                      vertical-align: middle;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .list-body {
+            .title {
+              font-weight: 700;
+              font-size: 18px;
+              line-height: 26px;
+              letter-spacing: -0.75px;
+              margin-bottom: 30px;
+            }
+
+            .desc {
+              font-size: 16px;
+              line-height: 30px;
+              letter-spacing: -0.75px;
+              color: $gray-454545;
+              margin-bottom: 30px;
+
+              &:last-of-type {
+                margin-bottom: 0;
+              }
+
+            }
+          }
+        }
+      }
+
+      .modal-footer {
+        display: block;
+        padding: 24px 60px 25px;
+
+        .board {
+          margin: 0;
+
+          .navigation {
+            .content {
+              .item {
+                padding: 0;
+
+                &::before {
+                  width: 12px;
+                  height: 25px;
+                  background-size: 12px 25px;
+                  background-repeat: no-repeat;
+                }
+
+                &.prev {
+                  padding-left: 36px;
+
+                  .title {
+                    text-align: left;
+                  }
+                }
+
+                &.next {
+                  padding-right: 36px;
+
+                  .title {
+                    text-align: right;
+                  }
+                }
+              }
+
+              .title {
+                display: block;
+                width: 354px;
+                font-size: 16px;
+                line-height: 25px;
+                letter-spacing: -0.75px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes subAnimation {
+  from {
+    opacity: 0;
+    background-size: 1920px * 2 980px * 2;
+  }
+
+  to {
+    opacity: 1;
+    background-size: 1920px 980px;
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  /* 공통 */
+  .slide-tab-wrap .swiper-container .swiper-slide {
+    width: auto;
+  }
+  .btn.btn-text {
+    text-align: left;
+  }
+  .btn.btn-circle {
+    min-width: auto;
+  }
+
+  /* macrogen */
+  .macrogen.macrogen-authorization .section .title-sm > div {
+    transform: translateY(-2px);
+  }
+
+  .macrogen.macrogen-vision .parallax-DNA.DNA-3 {
+    bottom: 0;
+    top: auto;
+  }
+}
+
+//@media (max-width: 1600px) {
+//  .macrogen.macrogen-esg .section-management-goals .list-goals .goal {
+//    height: 600px * 0.8;
+//  }
+//  .macrogen.macrogen-esg .section-management-goals .list-goals .goal .item.text {
+//    transform: scale(0.8);
+//    padding-top: 60px;
+//  }
+//  .macrogen.macrogen-esg .section-management-goals .list-goals .goal .item:nth-child(2).text {
+//    margin-left: 107px;
+//  }
+//  .macrogen.macrogen-esg .section-management-goals .list-goals .goal .item.bg {
+//    width: 940px * 0.8;
+//    height: 600px * 0.8;
+//  }
+//}
