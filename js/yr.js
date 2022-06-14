@@ -1,14 +1,20 @@
 $(function(){
+
 });
 
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////                                                         **공통**                                                                   ///////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 var commonEvent = {
     init:function(){
        this.headerEvent();
        this.menu();
        this.goTopEvent();
        this.bgAni();
-    },
-
+       this.tabFunction();
+    }, 
+    
     headerEvent:function(){
         // 번역페이지 버튼 온/오프
         $(document).on('click', '.lang_choice li', function(){
@@ -24,6 +30,18 @@ var commonEvent = {
                 $(this).parent().toggleClass('on');
             });
         }    
+    },
+
+    tabFunction: function(){
+        var Tabs = $('.tabs li');
+        Tabs.on("click", function() {
+            $(this).addClass('on');
+            $(this).siblings().removeClass('on');
+            
+            var Tabs_cont = Tabs.index(this)+1;
+            $('.tab_contents').removeClass('on');
+            $('.tab_content0' + Tabs_cont).addClass('on');
+        });
     },
 
     goTopEvent:function() {
@@ -64,18 +82,30 @@ var commonEvent = {
         $(document).ready(function() {
             setTimeout(function() {
                 $('.sub_visual').addClass('ani');
-            }, 200)
+            }, 100)
         })
 
     },
 }
 
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////                                                         **메인**                                                                   ///////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 var mainEvent = {
     init:function(){
+       this.headerEvent();
        this.mainVisual();
        this.mainS1();
        this.s2Tab();
        this.floating();
+    },
+    headerEvent:function(){
+        // 번역페이지 버튼 온/오프
+        $(document).on('click', '.lang_choice li', function(){
+            $('.lang_choice li').removeClass('on');
+            $(this).addClass('on');  
+        });
     },
 
     mainVisual: function(){
@@ -99,9 +129,7 @@ var mainEvent = {
     },
 
     mainS1: function(){
-        var Tabs = $('.cont_main .section1 .s1_tab li');
-
-        $(".swiper-container").each(function(index,){
+        $(".cont_main .swiper-container").each(function(index,){
             var s1Swiper = new Swiper('.cont_main .section1 .tab_swiper0' + index, {
                 observer: true,
                 observeParents: true,
@@ -140,14 +168,14 @@ var mainEvent = {
                 }, 
             });
     
-            
+            var Tabs = $('.cont_main .section1 .s1_tab li');
             Tabs.on("click", function() {
                 $(this).addClass('on');
                 $(this).siblings().removeClass('on');
                 var Tabs_cont = Tabs.index(this)+1;
     
-                $('.cont_main .section1 .tab_contents').hide().removeClass('on');
-                $('.cont_main .section1 .tab_content0' + Tabs_cont).addClass('on').fadeIn();
+                $('.cont_main .section1 .tab_contents').removeClass('on');
+                $('.cont_main .section1 .tab_content0' + Tabs_cont).addClass('on');
                 
                 setTimeout(function(){
                     s1Swiper.slideTo(0);
@@ -194,11 +222,14 @@ var mainEvent = {
 
 };
 
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////                                                         회사소개                                                                   ///////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 var companyEvent={
     init:function(){
         this.featuresSlide();
-        this.featuresTab();
-        this.locationTab();
+        this.history();
     },
 
     /* 토페스 특장점 */
@@ -230,43 +261,108 @@ var companyEvent={
         });
     },
 
-    featuresTab: function(){
-        var Tabs = $('.features_contents .section2 .s2_tab li');
-        Tabs.on("click", function() {
-            $(this).addClass('on');
-            $(this).siblings().removeClass('on');
-            
-            var Tabs_cont = Tabs.index(this)+1;
-            $('.features_contents .section2 .tab_contents').removeClass('on');
-            $('.features_contents .section2 .tab_content0' + Tabs_cont).addClass('on');
+    history: function() {
+
+        $('._swiperTab .swiper-slide').on('click', function(){
+            $(this).addClass('active').siblings().removeClass('active');
         });
+
+        $('#tab a').on('click', function (event) {
+            event.preventDefault()
+            $(this).tab('show')
+        })
+        
+        // 연혁 인터랙션
+        $(document).ready(function () {
+            var section = $('._historySection');
+            var sectionLength = section.length;
+        
+            section.find('.desc-info').each(function (idx) {
+                var sectionHeight = section.eq(idx).find('.desc-info').height();
+                section.eq(idx).find('.year-info').css('height', sectionHeight + 'px')
+            })
+        
+            $(window).on('resize scroll', function (){
+                var currentPosition = $(window).scrollTop();
+        
+                for (var i = 0; i < sectionLength; i++) {
+                    setHistoryScroll(section.eq(i));
+                }
+        
+                if($(window).scrollTop() == $(document).height() - $(window).height()) {
+                    $('.hs_section .year-info').find('li').removeClass('active')
+                    $('.hs_section:last-child .year-info').find('li:last-child').addClass('active')
+                }
+                else {
+                    $('.hs_section:last-child .year-info').find('li:last-child').removeClass('active')
+                }
+            })
+        
+            function setHistoryScroll($information) {
+                var gap = 50;/*50*/
+                var gapYear = 69;
+                var currentPosition = $(window).scrollTop() + 50; /*+95 X*/
+                var sectionOffset = $information.find('.desc-info ul').eq(0).offset().top;
+                var scrollStart = currentPosition - sectionOffset + 100;
+                var size = $information.find('.year-info li').length;
+        
+                $information.find('.year-info li').each(function (index) {
+                    if (currentPosition < $information.find('.desc-info ul').eq(0).offset().top - gap) {
+                        //섹션 이전 화면에서는 absolute상태
+                        $information.find('.year-info').css({'top' : 'auto'}, {'position' : 'absolute'});
+                    } else {
+                        //섹션 안으로 들어오면 fixed 상태
+                        if (size !== index + 1) {
+                            if (currentPosition > $information.find('.desc-info ul').eq(index).offset().top - gap && currentPosition < $information.find('.desc-info ul').eq(index + 1).offset().top - gap) {
+                                $information.find('.year-info').css({'top': scrollStart + gap - (gapYear * index)}, {'position': 'fixed'});
+                                $information.find('.year-info li').eq(index).addClass('active').siblings().removeClass('active');
+                            }
+                        } else {
+                            if (currentPosition > $information.find('.desc-info ul').eq(index).offset().top) {
+                                $information.find('.year-info').css({'top': scrollStart + gap - (gapYear * index)}, {'position': 'fixed'});
+                                $information.find('.year-info li').eq(index).addClass('active').siblings().removeClass('active');
+                            }
+                        }
+                    }
+                })
+            }
+        })
     },
 
-    /* 오시는 길 */
-    locationTab: function(){
-        var Tabs = $('.cont_company .location_contents .location_tab li');
-        Tabs.on("click", function() {
-            $(this).addClass('on');
-            $(this).siblings().removeClass('on');
-            
-            var Tabs_cont = Tabs.index(this)+1;
-            $('.cont_company .location_contents .tab_contents').removeClass('on');
-            $('.cont_company .location_contents .tab_content0' + Tabs_cont).addClass('on');
-        });
+};
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////                                                         고객지원                                                                   ///////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+var supportEvent = {
+    init:function(){
+        this.faqToggle();
+        this.iptEvent();
+    },
+    faqToggle: function(){
+        $(".que").click(function() {
+            $(this).next(".ans").stop().slideToggle(300);
+            $(this).toggleClass('on').siblings().removeClass('on');
+            $(this).next(".ans").siblings(".ans").slideUp(300);
+         });
     },
 
-    /* About Us - 연혁 */
-    historyTab: function(){
-        var Tabs = $('.cont_company .about_contents .section2 .au1_tab li');
-        Tabs.on("click", function() {
-            $(this).addClass('on');
-            $(this).siblings().removeClass('on');
-            
-            var Tabs_cont = Tabs.index(this)+1;
-            $('.cont_company .about_contents .tab_contents').removeClass('on');
-            $('.cont_company .about_contents .tab_content0' + Tabs_cont).addClass('on');
+    iptEvent:function(){
+        //selectbox
+        var selectType = $(".select_row>select");
+        selectType.addClass("selectBox");
+        selectChange(selectType);
+        function selectChange(type) {
+            type.change(function () {
+                var select_name = $(this).children("option:selected").text();
+                $(this).siblings("label").text(select_name);
+            });
+        };
+        $('.estimate_contents .select_row').click(function(){
+            $(this).toggleClass('on');
         });
-    },
 
+    },
 };
 

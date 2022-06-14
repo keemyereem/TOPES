@@ -21,6 +21,15 @@ var commonEvent = {
             $('.lang_choice li').removeClass('on');
             $(this).addClass('on');  
         });
+
+        $(window).on('scroll',function(){
+            const st = $(window).scrollTop();
+
+            if (st>=100){
+                $('.header').addClass('fixed'); 
+                
+            }
+        });
     },
 
     menu: function(){
@@ -105,6 +114,15 @@ var mainEvent = {
         $(document).on('click', '.lang_choice li', function(){
             $('.lang_choice li').removeClass('on');
             $(this).addClass('on');  
+        });
+
+        $(window).on('scroll',function(){
+            const st = $(window).scrollTop();
+
+            if (st>=100){
+                $('.header').addClass('fixed'); 
+                
+            }e
         });
     },
 
@@ -229,9 +247,7 @@ var mainEvent = {
 var companyEvent={
     init:function(){
         this.featuresSlide();
-        this.featuresTab();
-        this.locationTab();
-        this.historyTab();
+        this.history();
     },
 
     /* 토페스 특장점 */
@@ -263,6 +279,74 @@ var companyEvent={
         });
     },
 
+    history: function() {
+
+        $('._swiperTab .swiper-slide').on('click', function(){
+            $(this).addClass('active').siblings().removeClass('active');
+        });
+
+        $('#tab a').on('click', function (event) {
+            event.preventDefault()
+            $(this).tab('show')
+        })
+        
+        // 연혁 인터랙션
+        $(document).ready(function () {
+            var section = $('._historySection');
+            var sectionLength = section.length;
+        
+            section.find('.desc-info').each(function (idx) {
+                var sectionHeight = section.eq(idx).find('.desc-info').height();
+                section.eq(idx).find('.year-info').css('height', sectionHeight + 'px')
+            })
+        
+            $(window).on('resize scroll', function (){
+                var currentPosition = $(window).scrollTop();
+        
+                for (var i = 0; i < sectionLength; i++) {
+                    setHistoryScroll(section.eq(i));
+                }
+        
+                if($(window).scrollTop() == $(document).height() - $(window).height()) {
+                    $('.hs_section .year-info').find('li').removeClass('active')
+                    $('.hs_section:last-child .year-info').find('li:last-child').addClass('active')
+                }
+                else {
+                    $('.hs_section:last-child .year-info').find('li:last-child').removeClass('active')
+                }
+            })
+        
+            function setHistoryScroll($information) {
+                var gap = 0;/*50*/
+                var gapYear = 69;
+                var currentPosition = $(window).scrollTop() + 180; /*+95 X*/
+                var sectionOffset = $information.find('.desc-info ul').eq(0).offset().top;
+                var scrollStart = currentPosition - sectionOffset + 100;
+                var size = $information.find('.year-info li').length;
+        
+                $information.find('.year-info li').each(function (index) {
+                    if (currentPosition < $information.find('.desc-info ul').eq(0).offset().top - gap) {
+                        //섹션 이전 화면에서는 absolute상태
+                        $information.find('.year-info').css({'top' : 'auto', 'position' : 'absolute'});
+                    } else {
+                        //섹션 안으로 들어오면 fixed 상태
+                        if (size !== index + 1) {
+                            if (currentPosition > $information.find('.desc-info ul').eq(index).offset().top - gap && currentPosition < $information.find('.desc-info ul').eq(index + 1).offset().top - gap) {
+                                $information.find('.year-info').css({'top': scrollStart + gap - (gapYear * index)}, {'position': 'fixed'});
+                                $information.find('.year-info li').eq(index).addClass('active').siblings().removeClass('active');
+                            }
+                        } else {
+                            if (currentPosition > $information.find('.desc-info ul').eq(index).offset().top) {
+                                $information.find('.year-info').css({'top': scrollStart + gap - (gapYear * index)}, {'position': 'fixed'});
+                                $information.find('.year-info li').eq(index).addClass('active').siblings().removeClass('active');
+                            }
+                        }
+                    }
+                })
+            }
+        })
+    },
+
 };
 
 
@@ -272,6 +356,7 @@ var companyEvent={
 var supportEvent = {
     init:function(){
         this.faqToggle();
+        this.iptEvent();
     },
     faqToggle: function(){
         $(".que").click(function() {
@@ -279,6 +364,23 @@ var supportEvent = {
             $(this).toggleClass('on').siblings().removeClass('on');
             $(this).next(".ans").siblings(".ans").slideUp(300);
          });
+    },
+
+    iptEvent:function(){
+        //selectbox
+        var selectType = $(".select_row>select");
+        selectType.addClass("selectBox");
+        selectChange(selectType);
+        function selectChange(type) {
+            type.change(function () {
+                var select_name = $(this).children("option:selected").text();
+                $(this).siblings("label").text(select_name);
+            });
+        };
+        $('.estimate_contents .select_row').click(function(){
+            $(this).toggleClass('on');
+        });
+
     },
 };
 
