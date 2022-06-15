@@ -1,5 +1,5 @@
 $(function(){
-
+    
 });
 
 
@@ -27,7 +27,8 @@ var commonEvent = {
 
             if (st>=100){
                 $('.header').addClass('fixed'); 
-                
+            }else{
+                $('.header').removeClass('fixed');
             }
         });
     },
@@ -121,8 +122,9 @@ var mainEvent = {
 
             if (st>=100){
                 $('.header').addClass('fixed'); 
-                
-            }e
+            }else{
+                $('.header').removeClass('fixed'); 
+            }
         });
     },
 
@@ -132,6 +134,8 @@ var mainEvent = {
             observeParents: true,
             slidesPerView : 1,
             speed: 500,
+            loop: true,
+            loopedSlides: 4,
             autoplay: {
                 delay: 5000,
                 disableOnInteraction: false, 
@@ -281,38 +285,43 @@ var companyEvent={
 
     history: function() {
 
-        $('._swiperTab .swiper-slide').on('click', function(){
-            $(this).addClass('active').siblings().removeClass('active');
-        });
-
-        $('#tab a').on('click', function (event) {
-            event.preventDefault()
-            $(this).tab('show')
-        })
+        // 연혁 탭버튼 누르면 슬라이드 이동 스크립트 -> html 소스 하단에 위치
+        // function fnMove(seq){
+        //     var id = $('#'+ seq);
+        //     var offset = id.offset();
+        //     $('html, body').animate({scrollTop : offset.top - 169}, 400);
+        // }
         
         // 연혁 인터랙션
         $(document).ready(function () {
             var section = $('._historySection');
             var sectionLength = section.length;
-        
+            
+            // 연도와 내용 높이값 맞추기
             section.find('.desc-info').each(function (idx) {
                 var sectionHeight = section.eq(idx).find('.desc-info').height();
-                section.eq(idx).find('.year-info').css('height', sectionHeight + 'px')
+                section.eq(idx).find('.year-info').css('height', sectionHeight / 10 + 'rem')
             })
-        
+
             $(window).on('resize scroll', function (){
                 var currentPosition = $(window).scrollTop();
-        
+                
                 for (var i = 0; i < sectionLength; i++) {
-                    setHistoryScroll(section.eq(i));
+                     setHistoryScroll(section.eq(i));
                 }
         
                 if($(window).scrollTop() == $(document).height() - $(window).height()) {
-                    $('.hs_section .year-info').find('li').removeClass('active')
-                    $('.hs_section:last-child .year-info').find('li:last-child').addClass('active')
+                    $('.tab_contents .year-info').find('li').removeClass('active')
+                    $('.tab_contents .year-info').find('li:last-child').addClass('active')
                 }
                 else {
-                    $('.hs_section:last-child .year-info').find('li:last-child').removeClass('active')
+                    $('.tab_contents:last-child .year-info').find('li:last-child').removeClass('active')
+
+                    $('.tabs li').on("click", function() {
+                        var Tabs_cont = $('.tabs li').index(this)+1;
+                        $('.tab_contents .year-info').find('li').removeClass('active')
+                        $('.tab_content0' + Tabs_cont).find('li:first-child').addClass('active');
+                    });
                 }
             })
         
@@ -323,11 +332,12 @@ var companyEvent={
                 var sectionOffset = $information.find('.desc-info ul').eq(0).offset().top;
                 var scrollStart = currentPosition - sectionOffset + 100;
                 var size = $information.find('.year-info li').length;
-        
+                
                 $information.find('.year-info li').each(function (index) {
                     if (currentPosition < $information.find('.desc-info ul').eq(0).offset().top - gap) {
                         //섹션 이전 화면에서는 absolute상태
                         $information.find('.year-info').css({'top' : 'auto', 'position' : 'absolute'});
+                        
                     } else {
                         //섹션 안으로 들어오면 fixed 상태
                         if (size !== index + 1) {

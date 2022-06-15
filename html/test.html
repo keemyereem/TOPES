@@ -12,29 +12,40 @@
     </script><![endif]-->
 
     <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta http-equiv="Cache-Control" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Page-Enter" content="revealtrans(duration=1,transition=12)">
     <meta http-equiv="Page-Exit" content="revealtrans(duration=1,transition=12)">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="author" content="TOPES">
+    <meta name="robots" content="index, follow">
+    <meta name="title" content="TOPES">
+    <meta name="description" content="“The guardian of happiness” 인류의 행복을 지키는 파수꾼 TOPES">
+    <meta name="keywords" content="교통단속시스템 , 교통정보시스템 , 방범시스템 , CCTV 시스템">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="TOPES" />
+    <meta property="og:description" content="“The guardian of happiness” 인류의 행복을 지키는 파수꾼 TOPES" />
+    <meta property="og:site_name" content="TOPES">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="TOPES" />
+    <meta name="twitter:description" content="“The guardian of happiness” 인류의 행복을 지키는 파수꾼 TOPES" />
+
     <title>Topes</title>
     <link rel="icon" href="images/favicon.png" sizes="32x32">
+    <link rel="canonical" href="http://dev.topes.4-m.co.kr/" />
+
     <link type="text/css" href="css/jquery.swiper.min.css" rel="stylesheet">
     <link type="text/css" href="css/font.css" rel="stylesheet">
     <link type="text/css" href="css/common.css" rel="stylesheet">
     <link type="text/css" href="css/sub.css" rel="stylesheet">
     <link type="text/css" href="css/media.css" rel="stylesheet">
-
-    <!-- ///////////////////////////////////////////////////
-    ///////////   * 연혁 SCSS파일 불러오기 *   /////////////
-    /////////////////////////////////////////////////////-->
-    <link type="text/css" rel="stylesheet" href="css/macrogen_component_pc.css"/>
     
-    <script type="text/javascript" src="js/lib/jquery-1.12.4.min.js"></script>
-    <script type="text/javascript" src="js/lib/jquery.swiper.min.js"></script>
-    <script type="text/javascript" src="js/yr.js"></script>
+    <script src="js/lib/jquery-1.12.4.min.js"></script>
+    <script src="js/lib/jquery.swiper.min.js"></script>
+    <script src="js/yr.js"></script>
 
     <script>
         $(document).ready( function() {
@@ -42,7 +53,7 @@
             $(".header").load("include/header.html");
             $(".sitemap").load("include/sitemap.html");
             $(".footer").load("include/footer.html");
-
+            
             commonEvent.init();
             companyEvent.init();
         });
@@ -156,20 +167,34 @@
                                 <div class="title">
                                     <h3>연혁</h3>
                                 </div>
+
+                                <!-- //////////////////// indicatos for test -->
+                                <style>
+                                    .dd { position:fixed; right: 25%; width: 250px; height:40px; color: #000; text-align: right; font-size: 14px; line-height: 30px; padding-right: 20px; background: rgba(255, 255, 255, .8); }
+                                    .bb { width: 100%; height: 2px; position: absolute;  font-size: 18px; text-align: right; }
+                                </style>
+                                <div class="dd indicactor" style=" border:2px solid red; top: 25%; ">$(window).scrollTop() : <b></b></div>
+                                <div class="dd indicactor2" style="border:2px solid blue; top: 30%;">$(document).height() : <b></b></div>
+                                <div class="dd indicactor3" style="border:2px solid green; top: 35%;">$(window).height() : <b></b></div>
+                                <div class="dd indicactor4" style="border:2px solid yellow; top: 40%;">sectionOffset : <b></b></div>
+                                <div class="dd indicactor5" style="border:2px solid rgb(255, 0, 208); top: 45%;">scrollStart : <b></b></div>
+                                <p class="bb line" style="background: red;">currentPosition + 180 = <b></b></p>
+                                <p class="bb line2" style="background: blue;">.desc-info ul.offset().top() = <b></b></p>
+                                <p class="bb line3" style="background: rgb(214, 77, 245);">top = <b></b></p>
+                                <!-- indicatos for test //////////////////// -->
+                                
                                     <!-- 연도별 연혁보기 탭 -->
-                                    <div class="slide-tab-wrap">
-                                        <div class="swiper-container tab-slide-box _swiperTab">
-                                            <div class="swiper-wrapper _swiperTab">
-                                                <div class="swiper-slide active"><a href="javascript:;" onclick="fnMove('group-1')">현재~2000</a></div>
-                                                <div class="swiper-slide"><a href="javascript:;" onclick="fnMove('group-2')">1999~1990</a></div>
-                                                <div class="swiper-slide"><a href="javascript:;" onclick="fnMove('group-3')">1989~1984</a></div>
-                                            </div>
-                                        </div>
+                                    <div class="tab-wrap">
+                                        <ul class="_swiperTab tabs">
+                                            <li class="on"><a href="javascript:;" >현재~2000</a></li><!-- onclick="fnMove('group-1')" -->
+                                            <li class=""><a href="javascript:;">1999~1990</a></li>
+                                            <li class=""><a href="javascript:;">1989~1984</a></li>
+                                        </ul>
                                     </div>
                     
                                     <div class="section-wrap">
 <!--/////////////////////////////////// 2000 ~ 현재 -->
-                                        <div class="hs_section _historySection"><!-- id="group-1" 있던 자리 -->
+                                        <div class="_historySection tab_contents tab_content01 on" id="group-1">
                 
                                             <div class="inner">
                                                 <div class="history-list">
@@ -198,24 +223,9 @@
                                                             <li class=""><span>2002</span></li>
                                                             <li class=""><span>2001</span></li>
                                                             <li class=""><span>2000</span></li>
-
-                                                            <li class=""><span>1999</span></li>
-                                                            <li class=""><span>1998</span></li>
-                                                            <li class=""><span>1997</span></li>
-                                                            <li class=""><span>1996</span></li>
-                                                            <li class=""><span>1995</span></li>
-                                                            <li class=""><span>1994</span></li>
-                                                            <li class=""><span>1993</span></li>
-                                                            <li class=""><span>1992</span></li>
-                                                            <li class=""><span>1991</span></li>
-                                                            <li class=""><span>1990</span></li>
-
-                                                            <li class=""><span>1988</span></li>
-                                                            <li class=""><span>1986</span></li>
-                                                            <li class=""><span>1984</span></li>
                                                         </ul>
                                                     </div>
-                                                    <div class="desc-info" id="group-1">
+                                                    <div class="desc-info">
                                                         <ul data-year="2022">
                                                             <li>
                                                                 <span class="num">03</span>
@@ -541,20 +551,20 @@
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                <!-- </div>
+                                                </div>
                                                 
                                             </div>
-                                        </div> -->
+                                        </div>
 <!------------------------------------- 2000 ~ 현재 -->
                                     
 <!--/////////////////////////////////// 1990 ~ 1999 -->
-                                        <!-- <div class="hs_section _historySection" id="group-2">
+                                        <div class="_historySection tab_contents tab_content02" id="group-2">
                 
                                             <div class="inner">
                                                 <div class="history-list">
                                                     <div class="year-info">
                                                         <ul>
-                                                            <li class=""><span>1999</span></li>
+                                                            <li class="active"><span>1999</span></li>
                                                             <li class=""><span>1998</span></li>
                                                             <li class=""><span>1997</span></li>
                                                             <li class=""><span>1996</span></li>
@@ -565,9 +575,9 @@
                                                             <li class=""><span>1991</span></li>
                                                             <li class=""><span>1990</span></li>
                                                         </ul>
-                                                    </div> -->
+                                                    </div>
 
-                                                    <div class="desc-info" id="group-2">
+                                                    <div class="desc-info">
                                                         <ul data-year="1999">
                                                             <li>
                                                                 <span class="num">11</span>
@@ -697,23 +707,23 @@
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                <!-- </div>
+                                                </div>
                                             </div>
-                                        </div> -->
+                                        </div>
 <!------------------------------------- 1990 ~ 1999 -->
                                     
 <!--/////////////////////////////////// 1984 ~ 1989 -->
-                                        <!-- <div class="hs_section _historySection" id="group-3">
+                                        <div class="_historySection tab_contents tab_content03" id="group-3">
                                             <div class="inner">
                                                 <div class="history-list">
                                                     <div class="year-info">
                                                         <ul>
-                                                            <li class=""><span>1988</span></li>
+                                                            <li class="active"><span>1988</span></li>
                                                             <li class=""><span>1986</span></li>
                                                             <li class=""><span>1984</span></li>
                                                         </ul>
-                                                    </div> -->
-                                                    <div class="desc-info" id="group-3">
+                                                    </div>
+                                                    <div class="desc-info">
                                                         <ul data-year="1988">
                                                             <li>
                                                                 <span class="num">11</span>
@@ -763,11 +773,7 @@
                             </section>
 
                             <script>
-                                function fnMove(seq){
-                                    var id = $('#'+ seq);
-                                    var offset = id.offset();
-                                    $('html, body').animate({scrollTop : offset.top - 169}, 400);
-                                }
+                                
                             </script>
 
                         </div>
