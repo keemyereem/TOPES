@@ -330,7 +330,7 @@ var companyEvent={
                 var gapYear = 69;
                 var currentPosition = $(window).scrollTop() + 180; /*+95 X*/
                 var sectionOffset = $information.find('.desc-info ul').eq(0).offset().top;
-                var scrollStart = currentPosition - sectionOffset + 60;
+                // var scrollStart = currentPosition - sectionOffset + 60;
                 var size = $information.find('.year-info li').length;
                 
                 $information.find('.year-info li').each(function (index) {

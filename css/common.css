@@ -26,7 +26,7 @@ label {vertical-align:middle; cursor:pointer;}
 address, i, em {display:inline; font-style:normal; zoom:1;}
 table {width:100%; border-collapse:collapse; table-layout:fixed;}
 img, select, input, button {vertical-align:top;}
-img {perspective:1; -ms-perspective:1; -o-perspective:1; -webkit-perspective:1; -moz-perspective:1;}
+img {perspective:none; -ms-perspective:none; -o-perspective:none; -webkit-perspective:none; -moz-perspective:none;}
 br {font-family:dotum !important;}
 br.br_t, br.br_m {display: none;}
 
@@ -41,7 +41,7 @@ br.br_t, br.br_m {display: none;}
 .inner {margin: 0 auto;}
 .acc_blind{position: absolute; width: 1px; height: 1px; clip: rect(0 0 0 0); overflow: hidden;}
 .br_t,.br_m{display: none;}
-
+.indent { display: none; }
 /*popup*/
 
 
@@ -192,7 +192,7 @@ br.br_t, br.br_m {display: none;}
 */
 
 /* sitemap */
-.sitemap { width:100%; height: 100vh; position: fixed; z-index: 1001; left:-150%; transition:.8s left .2s; transition-timing-function: cubic-bezier(0, 0, 0. .2, 1); }
+.sitemap { width:100%; height: 100vh; position: fixed; z-index: 1001; left:-150%; transition:.8s left .2s; /* transition-timing-function: cubic-bezier(0, 0, 0. .2, 1); */ }
 .sitemap.on, .sitemap_bg.on { left:0; transition-delay: 0s; }
 .sitemap_bg { display: none; width:100%; height: 100vh; position: fixed; z-index: 1000; top: 0; left:-100%; background: rgba(0, 0, 0, 0.5); transition:left .5s; transition-timing-function: cubic-bezier(0, 0.5, 0.8, 1); }
 .sitemap .sitemap_wrap { width:100%; height: 100%; position: relative; background: #fff; z-index: 1;}

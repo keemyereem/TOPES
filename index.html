@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
     <head>
         <meta http-equiv="content-Type" content="text/html; charset=utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <title>토페스</title>
         <link rel="icon" href="admin/images/favicon.jpg" sizes="32x32">
-        <style type="text/css">
+        <style>
             body, td, th, div, span, p, a {font-size:12px; margin: 0; padding: 0; font-family: "Malgun Gothic", "맑은 고딕", "돋움", "dotum";}
             body, div, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p, form, fieldset, input, table, tr, th, td, a, span, em, button, textarea, header, footer, nav, section, aside.all_menu, article {margin: 0; padding: 0; box-sizing: border-box;}
             body {padding-bottom:20px;}
@@ -25,10 +25,12 @@
             .content table.mt15 {margin-top:15px;}
             .content th {background:#e3e3e3;}
             .content th, .content td {border:1px solid #ddd; border-spacing:0; padding:5px; text-align:center;}
+
+            .th_width100 { width:100px; }
             table tbody:nth-child(2n-1) tr {background: rgb(243, 243, 243);}
 
         </style>
-        <script type="text/javascript" src="js/lib/jquery-1.12.4.min.js"></script>
+        <script src="js/lib/jquery-1.12.4.min.js"></script>
         <script>
             $(document).ready(function () {
                 $("#tab_list").find("ul").find("li").find("a").on("click", function () {
@@ -66,8 +68,8 @@
                         <th>5depth</th>
                         <th>비고</th>
                         <th>화면 ID</th>
-                        <th width="100">PC</th>
-                        <th width="100">Mobile</th>
+                        <th class="th_width100">PC</th>
+                        <th class="th_width100">Mobile</th>
                     </tr>
                 </thead>
                 <tbody>
