@@ -299,17 +299,15 @@
 .cont_company .about_contents .section2 .section-wrap .tab_contents .history-list .year-info li:last-child{margin-bottom:0}
 .cont_company .about_contents .section2 .section-wrap .tab_contents .history-list .year-info li span{position:relative;display:block;font-family: 'play';font-weight:400;font-size:30px;line-height:39px;letter-spacing:.5px;color:#f1f1f1}
 .cont_company .about_contents .section2 .section-wrap .tab_contents .history-list .year-info li span::before{content:'';position:absolute;width:10px;height:10px;background-color:#888;left:-60px;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);border-radius:50%}
-/* .cont_company .about_contents .section2 .section-wrap .tab_contents .history-list .year-info li span::after{content:'';position:absolute;width:2px;height:50px;background-image:url("../img/macrogen/bg-history-line.svg");background-size:cover;left:-97px;bottom:-49px} */
 .cont_company .about_contents .section2 .section-wrap .tab_contents .history-list .year-info li.active span{font-family: 'play';font-size:40px;font-weight: 400;line-height:1;color:#000;letter-spacing: -1px;}
 .cont_company .about_contents .section2 .section-wrap .tab_contents .history-list .year-info li.active span::before{content:'';position:absolute;left:-70px;background-color:transparent;width:30px;height:30px;background: radial-gradient(#e0006d, #e0006d 5px, #fce5f0 6px, #fce5f0 15px); }
 .cont_company .about_contents .section2 .section-wrap .tab_contents .history-list .year-info li.active span::after{bottom:-41px}
-/* .cont_company .about_contents .section2 .section-wrap .tab_contents .history-list .year-info li:first-child::before{content:'';position:absolute;width:2px;height:50px;background-image:url("../img/macrogen/bg-history-line.svg");background-size:cover;left:10px;top:-41px} */
 .cont_company .about_contents .section2 .section-wrap .tab_contents .history-list .year-info li:first-child::after{content:'';position:absolute;width:10px;height:10px;background-color:#888;border-radius:50%;left:9px;top:-54px}
 .cont_company .about_contents .section2 .section-wrap .tab_contents .history-list .year-info li:last-child span::after{content:none}
 .cont_company .about_contents .section2 .section-wrap .tab_contents .history-list .desc-info{padding-left:296px;}
 .cont_company .about_contents .section2 .section-wrap .tab_contents .history-list .desc-info ul{margin-bottom:60px;}
 .cont_company .about_contents .section2 .section-wrap .tab_contents .history-list .desc-info ul:last-child{margin-bottom:0}
-.cont_company .about_contents .section2 .section-wrap .tab_contents .history-list .desc-info ul li{/* margin-bottom:22px; */overflow:hidden; line-height: 2.125;}
+.cont_company .about_contents .section2 .section-wrap .tab_contents .history-list .desc-info ul li{ overflow:hidden; line-height: 2.125;}
 .cont_company .about_contents .section2 .section-wrap .tab_contents .history-list .desc-info ul li:last-child{margin-bottom:0}
 .cont_company .about_contents .section2 .section-wrap .tab_contents .history-list .desc-info ul li .num{float:left;display:inline-block;width:60px;font-family: 'play';font-weight:400;font-size:16px;letter-spacing: -.4px;/* line-height:23px; */color:#000}
 .cont_company .about_contents .section2 .section-wrap .tab_contents .history-list .desc-info ul li .desc{float:left;display:inline-block;width:calc(100% - 60px);font-size:16px;/* line-height:23px; */letter-spacing:-0.4px;color:#555}
@@ -425,5 +423,5 @@
 .cont_company .location_contents .tab_contents .locate > ul:nth-child(3) ul li {display: block; font-size: 1.4rem; line-height: 1.86; letter-spacing: -.08rem; padding-bottom:2rem; }
 .cont_company .location_contents .tab_contents .locate > ul:nth-child(3) ul li:last-child {padding-bottom: 0;}
 .cont_company .location_contents .tab_contents .locate > ul:nth-child(3) ul li .sub_tit {display: inline-block; width: auto; line-height: 4.2rem;}
-.cont_company .location_contents .tab_contents .locate > img { margin-top: 3.5rem; }
+.cont_company .location_contents .tab_contents .locate > img { margin-top: 3.5rem; width: 100%; }
 .cont_company .location_contents .tab_content03 .locate > ul li ul li {font-size: 1.6rem; font-weight: 300; color: #222;}

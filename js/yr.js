@@ -305,7 +305,15 @@ var companyEvent={
                 var currentPosition = $(window).scrollTop();
                 
                 ///////////////////////////////////////////////////////////////////////////////////// indicators for test
-                var currentPosition_fix = $(window).scrollTop() + 180;
+                var gap = 0;/*50*/
+                var gapYear = 69;
+                var currentPosition = $(window).scrollTop()+80; /*+95 X*/
+                var sectionOffset = section.find('.desc-info ul').eq(0).offset().top;
+                var scrollStart = currentPosition - sectionOffset + 100;
+                var size = section.find('.year-info li').length;
+
+
+                var currentPosition_fix = $(window).scrollTop() + 80;
                 var dc_h = $(document).height();
                 var win_h = $(window).height();
                 var sectionOffset = section.eq(0).find('.desc-info ul').eq(0).offset().top;
@@ -316,7 +324,8 @@ var companyEvent={
                 $('.indicactor5 b').text(currentPosition - sectionOffset);
                 $('.line').css({'top': currentPosition_fix}); $('.line b').text(currentPosition_fix);
                 $('.line2').css({'top': sectionOffset}); $('.line2 b').text(sectionOffset);
-                $('.line3').css({'top': scrollStart + gap - (gapYear * index)}); $('.line2 b').text(sectionOffset);
+                
+
                 ///////////////////////////////////////////////////////////////////////////////////// indicators for test
                 
                 for (var i = 0; i < sectionLength; i++) {
@@ -341,12 +350,14 @@ var companyEvent={
             function setHistoryScroll($information) {
                 var gap = 0;/*50*/
                 var gapYear = 69;
-                var currentPosition = $(window).scrollTop(); /*+95 X*/
+                var currentPosition = $(window).scrollTop()+80; /*+95 X*/
                 var sectionOffset = $information.find('.desc-info ul').eq(0).offset().top;
                 var scrollStart = currentPosition - sectionOffset + 100;
                 var size = $information.find('.year-info li').length;
         
                 $information.find('.year-info li').each(function (index) {
+                    $('.line3').css({'top': scrollStart + gap - (gapYear * index)}); $('.line3 b').text( scrollStart + gap - (gapYear * index));
+
                     if (currentPosition < $information.find('.desc-info ul').eq(0).offset().top - gap) {
                         //섹션 이전 화면에서는 absolute상태
                         $information.find('.year-info').css({'top' : 'auto', 'position' : 'absolute'});

@@ -200,7 +200,7 @@ var mainEvent = {
                 $('.cont_main .section1 .tab_content0' + Tabs_cont).addClass('on');
                 
                 setTimeout(function(){
-                    s1Swiper.slideTo(0);
+                    s1Swiper.slideTo(0, 0);
                 },500);
                 
             });
@@ -303,9 +303,9 @@ var companyEvent={
                 section.eq(idx).find('.year-info').css('height', sectionHeight / 10 + 'rem')
             })
 
-            $(window).on('resize scroll', function (){
+            $(window).on('scroll resize', function (){
                 var currentPosition = $(window).scrollTop();
-                
+
                 for (var i = 0; i < sectionLength; i++) {
                      setHistoryScroll(section.eq(i));
                 }
@@ -326,28 +326,32 @@ var companyEvent={
             })
         
             function setHistoryScroll($information) {
-                var gap = 0;/*50*/
+                var gap = 20;/*50*/
                 var gapYear = 69;
                 var currentPosition = $(window).scrollTop() + 180; /*+95 X*/
                 var sectionOffset = $information.find('.desc-info ul').eq(0).offset().top;
-                var scrollStart = currentPosition - sectionOffset + 100;
+                var scrollStart = currentPosition - sectionOffset + 60;
                 var size = $information.find('.year-info li').length;
                 
                 $information.find('.year-info li').each(function (index) {
                     if (currentPosition < $information.find('.desc-info ul').eq(0).offset().top - gap) {
                         //섹션 이전 화면에서는 absolute상태
-                        $information.find('.year-info').css({'top' : 'auto', 'position' : 'absolute'});
+                        $information.find('.year-info').css({'top' : 'auto', 'position' : 'absolute', 'margin-top': '0'});
+                        $information.find('.year-info ul').css({'margin-top': '0'});
                         
                     } else {
                         //섹션 안으로 들어오면 fixed 상태
                         if (size !== index + 1) {
                             if (currentPosition > $information.find('.desc-info ul').eq(index).offset().top - gap && currentPosition < $information.find('.desc-info ul').eq(index + 1).offset().top - gap) {
-                                $information.find('.year-info').css({'top': scrollStart + gap - (gapYear * index)}, {'position': 'fixed'});
+                                $information.find('.year-info').css({'top': '0', 'position': 'fixed', 'margin-top': '180px'});
+                                $information.find('.year-info ul').css({'margin-top': '-' + (gapYear * index) + 'px'});
                                 $information.find('.year-info li').eq(index).addClass('active').siblings().removeClass('active');
                             }
                         } else {
                             if (currentPosition > $information.find('.desc-info ul').eq(index).offset().top) {
-                                $information.find('.year-info').css({'top': scrollStart + gap - (gapYear * index)}, {'position': 'fixed'});
+                                // $information.find('.year-info').css({'top': scrollStart + gap - (gapYear * index)}, {'position': 'fixed'});
+                                $information.find('.year-info').css({'top': '0', 'position': 'fixed', 'margin-top': '180px'});
+                                $information.find('.year-info ul').css({'margin-top': '-' + (gapYear * index) + 'px'});
                                 $information.find('.year-info li').eq(index).addClass('active').siblings().removeClass('active');
                             }
                         }
