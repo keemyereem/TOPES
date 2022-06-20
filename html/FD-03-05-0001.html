@@ -55,7 +55,7 @@
             $(".footer").load("include/footer.html");
 
             commonEvent.init();
-            supportEvent.init();
+
         });
     </script>
 </head>
@@ -73,9 +73,9 @@
         <div class="sitemap"></div>
         <!-- //sitemap -->
         <div class="container">
-            <div class="sub_visual cs_visual">
+            <div class="sub_visual stmp_visual">
                 <div class="sub_visual_nav">
-                    <h2><span>Customer support</span>고객지원</h2>
+                    <h2><span class="dep5">Smart Traffic Management Platform</span>스마트 교통관리 플랫폼</h2>
 
                     <div class="sub_visual_nav_prev">
                         <a href="javascript:;" title="이전메뉴로 이동">
@@ -93,75 +93,59 @@
 
                 <div class="sub_visual_menu">
                     <ul>
-                        <li class=""><a href="html/FD-04-01-0001.html" title="페이지 이동">공지사항</a></li>
-                        <!-- <li class="mobile"><a href="html/FD-04-01-0001.html" title="페이지 이동">공지사항</a></li> -->
-
-                        <li class="on"><a href="javascript:;" title="페이지 이동">자주하는 질문(FAQ)</a></li>
-                        <li class="mobile"><a href="html/FD-04-02-0001.html" title="페이지 이동">자주하는 질문(FAQ)</a></li>
-                        
-                        <li class=""><a href="html/FD-04-03-0001.html" title="페이지 이동">견적문의</a></li>
-                        <!-- <li class="mobile"><a href="html/FD-04-03-0001.html" title="페이지 이동">견적문의</a></li> -->
+                        <li class=""><a href="html/FD-03-01-0001.html" title="페이지 이동">개요</a></li>
+                        <li class=""><a href="html/FD-03-02-0001.html" title="페이지 이동">스마트 교차로 솔루션</a></li>
+                        <li class=""><a href="html/FD-03-03-0001.html" title="페이지 이동">스마트 횡단보도</a></li>
+                        <li class=""><a href="html/FD-03-04-0001.html" title="페이지 이동">돌발상황 감지 솔루션</a></li>
+                        <li class="on"><a href="html/FD-03-05-0001.html" title="페이지 이동">스마트 감응 솔루션</a></li>
+                        <li class="mobile"><a href="html/FD-03-05-0001.html" title="페이지 이동">스마트 감응 솔루션</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="contents cont_cs">
+            <div class="contents cont_stmp">
                 <div class="contents_inner">
-                    <div class="sub_contents faq_contents">
+                    <div class="sub_contents crossroad_contents">
                         <div class="inner">
                             <div class="title">
-                                <h3>자주하는 질문(FAQ)</h3>
-                                <!-- 
-                                <p>
-                                    대한민국 특허 27개 보유<br>
-                                    지속적인 연구 개발로 지능형 교통 시스템 관련 대한민국 특허 27개를 보유하였습니다.
-                                </p>
-                                -->
+                                <h3>스마트 감응 솔루션</h3>
+                                <p>신호교차로에서 교통량 정보를 기반으로 <b>좌회전 신호 최적화 구현 서비스</b>를 제공합니다.</p>
                             </div>
-                            <div class="faq" data-aos="fade-up" data-aos-offset="400">
-                            <!-- Q1 -->
-                                <div class="que"><p>시스템별 문의 담당부서, 연락처(영업, 사업)를 알고싶어요.</p></div>
-                                <div class="ans"><p>
-                                    스마트 단속관리 : ITS 사업팀 031-594-2524<br>
-
-                                    지능형 교통관리 : ICT 영업팀 031-593-0294<br>
-
-                                    산업용 시스템 : ICT 사업팀 031-593-0294<br>
-
-                                    스마트 교통관리 플래폼 : 신사업개발 031-591-8325
-                                </p></div>
-                            <!-- Q2 -->
-                                <div class="que"><p>스마트장비 영상속도, 레이더 속도 측정 차이가 어떻게 되나요?</p></div>
-                                <div class="ans"><p>
-                                    - 레이더속도 : 레이더검지기를 통해, 약100m에서 통행하는 차량이 검지가되게 셋팅을 하고,<br>
-
-                                    단속하고 싶은 지점(카메라부터 정지선 거리 ex.33m)을 검지 하여 그 부분 속도를 단속을 합니다
-                                    <br>
-                                     
-                                    
-                                     - 영상속도 : 짧은 시간에 영상을 2번 촬영을 하고, <br>
-                                    
-                                    첫번째 두번째 영상에서 번호판이 움직인 시간 거리를 속도로 산출을 합니다
-    
-                                </p></div>
-                            <!-- Q3 -->
-                                <div class="que"><p>눈, 비 내릴 때 레이더장비가 단속에는 지장이 없나요?</p></div>
-                                <div class="ans"><p>
-                                    단속하는데 환경적인 요소 지장이 하나도 없는거는 아니지만, 
-
-                                    위반데이터를 검지하고 산출하는데 문제는 없다고 이야기를 합니다.<br>
-
-                                    다만 눈이 많이 내리면 차량 번호판이 눈에 덮혀 가려진경우, 번호판을 읽을 수 없어 단속데이터를 생성하지 않습니다
-
-                                </p></div>
-                            <!-- Q4 -->
-                                <div class="que"><p>조달우수제품 사양이 궁금합니다.</p></div>
-                                <div class="ans"><p>
-                                    각 사양에 대한 정보는 브로슈어 참고해 주시기 바랍니다.<br>
-
-                                    첨부 : <a href="download/Good_procurement_catalog.pptx" download="조달우수 카다로그">조달우수 카다로그</a><br>
-
-                                </p></div>
-                            </div>
+                            <section class="section1">
+                                <div class="sec_tit">시스템 특징</div>
+                                <div class="sec_cont">
+                                    <div class="img">
+                                        <img src="images/stmp/stmp05_img01.png" alt="스마트 감응 솔루션 시스템 특징">
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="section2">
+                                <div class="sec_tit">시스템 구성도</div>
+                                <div class="sec_cont">
+                                    <div class="left">
+                                        <img src="images/stmp/stmp05_img02.png" alt="스마트 감응 솔루션 시스템 구성도">
+                                    </div>
+                                    <div class="right">
+                                        <ul>
+                                            <li>
+                                                <div class="img"><img src="images/stmp/stmp05_compose01.png" alt="좌회전 차량 감지(주간) 이미지"></div>
+                                                <div class="desc">좌회전 차량 감지(주간)</div>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <div class="img"><img src="images/stmp/stmp05_compose02.png" alt="좌회전 차량 감지(야간) 이미지"></div>
+                                                <div class="desc">좌회전 차량 감지(야간)</div>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <div class="img"><img src="images/stmp/stmp05_compose03.png" alt="대기열 이미지"></div>
+                                                <div class="desc">대기열</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </section>
                         </div>
                     </div>
                 </div>
