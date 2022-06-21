@@ -24,7 +24,8 @@
     .header .gnb {flex-shrink: 0; flex-basis: 83rem;}
     .header .gnb_menu .top_sitemap {flex-shrink: 0;}
     .header .gnb_menu .top_sitemap {flex-shrink: 0;}
-    .container .sub_visual .sub_visual_nav {min-width: 140rem;}
+    .container .sub_visual .sub_visual_nav {width: 140rem; left: 0; transform: translateX(0);}
+    
 
     .cont_stmp .crossroad_contents .section1 .txt {width: 62rem; flex-shrink: 0;}
 
