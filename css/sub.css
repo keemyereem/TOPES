@@ -104,9 +104,11 @@
 .cont_main .section2 .section_inner .tab_content01 > ul li:nth-child(1) {background-image: url(../images/main/s2_features_img01.png); background-repeat: no-repeat; background-position: 50% 50%; background-size: cover;}
 .cont_main .section2 .section_inner .tab_content01 > ul li:nth-child(2) {background-image: url(../images/main/s2_features_img02.png); background-repeat: no-repeat; background-position: 50% 50%; background-size: cover; margin-top: -5rem;}
 .cont_main .section2 .section_inner .tab_content01 > ul li:nth-child(3) {background-image: url(../images/main/s2_features_img03.png); background-repeat: no-repeat; background-position: 50% 50%; background-size: cover;}
+.cont_main .section2 .section_inner .tab_content01 > ul li:nth-child(4) {background-image: url(../images/main/s2_features_img01.png); background-repeat: no-repeat; background-position: 50% 50%; background-size: cover; margin-top: -5rem;}
 .cont_main .section2 .section_inner .tab_content01 > ul li:nth-child(1) .icon {width: 5.7rem; height: 5.6rem; background: url(../images/main/s2_features_icon01.png) no-repeat 50% 50%; background-size: contain;}
 .cont_main .section2 .section_inner .tab_content01 > ul li:nth-child(2) .icon {width: 5.7rem; height: 5.8rem; background: url(../images/main/s2_features_icon02.png) no-repeat 50% 50%; background-size: contain;}
 .cont_main .section2 .section_inner .tab_content01 > ul li:nth-child(3) .icon {width: 6.3rem; height: 5.8rem; background: url(../images/main/s2_features_icon03.png) no-repeat 50% 50%; background-size: contain;}
+.cont_main .section2 .section_inner .tab_content01 > ul li:nth-child(4) .icon {width: 6.3rem; height: 5.8rem; background: url(../images/main/s2_features_icon01.png) no-repeat 50% 50%; background-size: contain;}
 .cont_main .section2 .section_inner .tab_content01 > ul li > .name {font-size: 2.8rem; color: #fff; font-weight: 400; letter-spacing: -.07rem; line-height: 1.35; margin-top: 5.4rem;}
 .cont_main .section2 .section_inner .tab_content01 > ul li > p {font-size: 1.6rem; color: #fff; opacity: .7; letter-spacing: -.04rem; line-height: 1.625; margin-top: 2rem; display: none;}
 .cont_main .section2 .section_inner .tab_content01 > ul li > a {display: inline-block; margin-top: 8rem; font-size: 1.6rem; color: #fff; letter-spacing: -.08rem; line-height: normal; display: none;}
@@ -247,13 +249,15 @@
 .cont_stmp .title h3 {color: #18c6cd;}
 .cont_stmp .sec_tit {font-size: 3rem; font-weight: 400; letter-spacing: -.012rem; margin-bottom: 6rem;}
 .cont_stmp .sec_tit:before {content:''; display: block; width: 8rem; height: 0.4rem; background: #18c6cd; margin-bottom: 1.7rem;}
-.cont_stmp section .sec_cont {display: flex;align-items: flex-end;}
+.cont_stmp .section1 .sec_cont {display: flex;align-items: flex-end;}
 .cont_stmp .section1 {padding-top: 6rem;}
-.cont_stmp .section1 .img {max-width: 78rem; position: relative;}
-.cont_stmp .section1 .img > img { width: 100%; object-fit: contain;}
+.cont_stmp .section1 .img {/* max-width: 78rem; */ position: relative;}
+.cont_stmp .section1 .txt {}
+/* .cont_stmp .section1 .img > img { width: 100%; object-fit: contain;} */
 .cont_stmp .section2 {padding-top: 12rem;}
+.cont_stmp .section2 .sec_cont {display: flex;align-items: flex-end; justify-content: space-between;}
 .cont_stmp .section2 .left {max-width: auto;}
-.cont_stmp .section2 .right {background: #f5f5f5; margin-left: 4rem;}
+.cont_stmp .section2 .right {background: #f5f5f5; /* margin-left: 4rem; */}
 .cont_stmp .section2 .right ul {display: flex;}
 .cont_stmp .section2 .right ul li .desc {font-size: 1.6rem; font-weight: 300; color: #222; letter-spacing: -.04rem; text-align: center; line-height: 5.8rem;}
 
@@ -263,7 +267,7 @@
 .cont_stmp .crossroad_contents .section1 .img div:nth-of-type(3) {bottom:6.8%; right: 23%;}
 .cont_stmp .crossroad_contents .section1 .img div > span {display: table-cell; font-size: 1.6rem; color: #555; text-align: center; line-height: 1.25; letter-spacing: -.04rem; padding: 1.8rem 3.3rem;}
 .cont_stmp .crossroad_contents .section1 .img div > span > b {font-weight: 400; color: #18c6cd;}
-.cont_stmp .crossroad_contents .section1 .txt {font-size: 1.6rem; color: #555; letter-spacing: -.04rem; line-height: 1.875; position: relative; /* max-width: 66rem; */ width: 66rem;/*  height: 44.2rem; */}
+.cont_stmp .crossroad_contents .section1 .txt {font-size: 1.6rem; color: #555; letter-spacing: -.04rem; line-height: 1.875; position: relative; width: 66rem; padding-left: 3rem;}
 .cont_stmp .crossroad_contents .section1 .txt ul {position: absolute;left: 3rem; bottom: 0;}
 .cont_stmp .crossroad_contents .section1 .txt li {display: flex;}
 .cont_stmp .crossroad_contents .section1 .txt li > span {display: inline-block; flex-shrink: 0; width: 0.8rem; height: 0.8rem; border: 2px solid #a6a6a6; border-radius: 50%; box-sizing: border-box; margin-top: 1.2rem; margin-right: 1.2rem;}

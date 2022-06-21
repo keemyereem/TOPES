@@ -17,9 +17,18 @@
     .cont_main .section3 .s3_awards {justify-content: left; padding: 3rem 2rem;}
 
     /* 스마트 교통관리 플랫폼 - 스마트 교차로 솔루션 */
-    .cont_stmp .crossroad_contents .section1 .img div > span {font-size: 1.1vw; padding: 1.2vw 2vw;}
+    /* .cont_stmp .crossroad_contents .section1 .img div > span {font-size: 1.1vw; padding: 1.2vw 2vw;} */
 }
+@media screen and (max-width:1400px) {
+    .wrap {overflow-x: auto;}
+    .header .gnb {flex-shrink: 0; flex-basis: 83rem;}
+    .header .gnb_menu .top_sitemap {flex-shrink: 0;}
+    .header .gnb_menu .top_sitemap {flex-shrink: 0;}
+    .container .sub_visual .sub_visual_nav {min-width: 140rem;}
 
+    .cont_stmp .crossroad_contents .section1 .txt {width: 62rem; flex-shrink: 0;}
+
+}
 /* -------------------- 모바일 -------------------- */
 @media screen and (max-width:767px) {
     /* 공통부분 */
