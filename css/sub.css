@@ -165,6 +165,14 @@
 .container .sub_visual:after { content: ''; width: 100%; height: 100%; position:absolute; background-size: cover; transform: scale(1.5); }
 .container .sub_visual.ani:after {background-size: cover; transition: 2s; animation: subvisual_ani 1s alternate; transform: scale(1); } 
 
+.container .sub_visual.its_visual .sub_visual_nav h2 span.dep1 { color: #ffa200; }
+.container .sub_visual.its_visual .sub_visual_nav h2 span.dep2 { color: #ffffff; }
+.container .sub_visual.its_visual .sub_visual_nav h2 span.dep3 { color: #ffffff; }
+.container .sub_visual.its_visual .sub_visual_nav h2 span.dep4 { color: #ffffff; }
+.container .sub_visual.its_visual .sub_visual_nav h2 span.dep5 { color: #ffffff; }
+.container .sub_visual.its_visual .sub_visual_nav h2 span.dep6 { color: #ffffff; }
+.container .sub_visual.its_visual .sub_visual_nav h2 span.dep7 { color: #ffffff; }
+
 .container .sub_visual.stmp_visual .sub_visual_nav h2 span.dep1 {color: #18c6cd;}
 .container .sub_visual.stmp_visual .sub_visual_nav h2 span.dep2 {color: #18c6cd;}
 .container .sub_visual.stmp_visual .sub_visual_nav h2 span.dep3 {color: orange;}
@@ -180,12 +188,15 @@
     }
 }
 
-
+/* 지능형 교통관리 - 교통안전복합솔루션 */
+.cont_its .contents_inner { max-width: 100%; }
+.cont_its .contents_inner .tscs_contents .inner { max-width:100%; }
 .cont_its .tscs_contents .title h3 { color: #ff8500; }
-.cont_its .tscs_contents .imagepro { width:100%; height:8rem; background:#f0f0f0; padding:0 4rem; display: flex; align-items: center; margin: 4rem 0 12rem; }
+.cont_its .tscs_contents .imagepro { max-width:144rem; height:8rem; background:#f0f0f0; padding:0 4rem; display: flex; align-items: center; margin: 4rem auto 12rem; }
 .cont_its .tscs_contents .imagepro p { font-family: 'play'; font-size: 3.2rem; font-weight: 400; color: #888888; padding-left: 1rem; }
 .cont_its .tscs_contents .sec_tit {font-size: 3rem; font-weight: 400; letter-spacing: -.012rem; margin-bottom: 6rem;}
 .cont_its .tscs_contents .sec_tit:before {content:''; display: block; width: 8rem; height: 0.4rem; background: #ff8500; margin-bottom: 1.7rem;}
+.cont_its .tscs_contents section { max-width:144rem; margin: auto; }
 .cont_its .tscs_contents .section1 .sec_cont ul { display: flex; padding-bottom: 12rem; }
 .cont_its .tscs_contents .section1 .sec_cont ul li { width: calc(100% / 3); display:flex; }
 .cont_its .tscs_contents .section1 .sec_cont ul li img { height: fit-content; }
@@ -194,9 +205,23 @@
 .cont_its .tscs_contents .section1 .sec_cont ul li dl dd:first-of-type { margin-top:2rem; }
 .cont_its .tscs_contents .section1 .sec_cont ul li dl dd { font-size: 1.6rem; font-weight: 150; line-height: 1.9; color:#555555; position: relative; padding-left: 2rem; }
 .cont_its .tscs_contents .section1 .sec_cont ul li dl dd:before { content: ''; display: inline-block; width: .4rem; height: .4rem; border: .2rem solid #555555; border-radius: 100%; position: absolute; left:0; top:1.2rem; }
-
-.cont_its .tscs_contents .section2 .sec_cont { background: linear-gradient(138deg, #fff9ee 50%, #ffe9c5 0%); width: 100%; }
-
+.cont_its .tscs_contents .section2 { max-width:100% }
+.cont_its .tscs_contents .section2 .sec_tit { max-width:144rem; margin:auto; padding-bottom: 6rem; }
+.cont_its .tscs_contents .section2 .sec_cont { background: linear-gradient(138deg, #fff9ee, #ffe9c5); width: 100%; padding: 9.2rem 0 10.2rem; margin-bottom: 12rem; }
+.cont_its .tscs_contents .section2 .sec_cont .wrap { max-width: 144rem; margin: auto; }
+.cont_its .tscs_contents .section2 .sec_cont .wrap h3 { margin: auto; font-size: 2.4rem; font-weight: 400; text-align: center; width: 23rem; height: 6rem; line-height: 6rem; background:#ff8500; border-radius: 3rem; color: #fff; }
+.cont_its .tscs_contents .section2 .sec_cont .wrap > ul { display: flex; align-items: flex-end; padding-top: 6.4rem; justify-content: center; }
+.cont_its .tscs_contents .section2 .sec_cont .wrap > ul > div { margin-bottom: 8.5rem; padding: 0 2rem; }
+.cont_its .tscs_contents .section2 .sec_cont .wrap > ul > div:nth-of-type(2) { margin-bottom: 11.4rem; }
+.cont_its .tscs_contents .section2 .sec_cont .wrap > ul > li > p { font-size: 1.8rem; font-weight: 400; color: #ff8500; text-align: center; padding-bottom: 2.6rem; }
+.cont_its .tscs_contents .section2 .sec_cont .wrap > ul > li .depth_box { display: flex; flex-direction: column; justify-content: center; background: #fff; width: 23rem; height: 58.5rem; border-radius: 1rem; border: .1rem solid #ffa200; box-shadow: .4rem .3rem 2.4rem 0 rgba(85, 85, 85, 0.16); }
+.cont_its .tscs_contents .section2 .sec_cont .wrap > ul > li .depth_box li { text-align: center; }
+.cont_its .tscs_contents .section2 .sec_cont .wrap > ul > li .depth_box li:not(:last-child) { padding-bottom: 4rem; }
+.cont_its .tscs_contents .section2 .sec_cont .wrap > ul > li .depth_box li p { font-size: 1.6rem; color: #888888; padding-top: 1.8rem; }
+.cont_its .tscs_contents .section2 .sec_cont .wrap > ul > li:nth-of-type(1) { margin-right: 4.7rem; }
+.cont_its .tscs_contents .section2 .sec_cont .wrap > ul > li:nth-of-type(3) .depth_box { width: 25rem; }
+.cont_its .tscs_contents .section2 .sec_cont .wrap > ul > li:nth-of-type(3) .depth_box li:not(:last-child) { padding-bottom: 2.7rem; }
+.cont_its .tscs_contents .section2 .sec_cont .wrap > ul > li:nth-of-type(4) .depth_box li:not(:last-child) { padding-bottom: 9rem; }
 .cont_its .tscs_contents .section3 .top ul {display: flex; justify-content: space-around;}
 .cont_its .tscs_contents .section3 .top ul li {text-align: center;}
 .cont_its .tscs_contents .section3 .top ul li .icon {width: 13.2rem; height: 13.2rem;background-size: contain;}
@@ -210,28 +235,40 @@
 .cont_its .tscs_contents .section3 .top ul li:nth-child(8) .icon {background: url(../images/its/its01_install_icon08.png) no-repeat 50% 50%;}
 .cont_its .tscs_contents .section3 .top ul li .num {font-size: 1.8rem; font-weight: 400; font-family: 'play'; color: #ff8500; letter-spacing: -.045rem; margin: 2rem 0 1rem;}
 .cont_its .tscs_contents .section3 .top ul li .tit {font-size: 1.6rem; color: #555;}
-.cont_its .tscs_contents .section3 .bot {width: 100%; height: 71.7rem; background: url(../images/its/its01_install_bg.png) no-repeat 100% 100%; background-size: contain; border: 1px solid #d6d6d6; margin-top: 7.5rem;}
-.cont_its .tscs_contents .section3 .bot ul {display: flex;}
-.cont_its .tscs_contents .section3 .bot span {font-size: 1.6rem; font-weight: 150; color: #555;}
+.cont_its .tscs_contents .section3 .bot {width: 100%; height: 71.7rem; background: url(../images/its/its01_install_bg.png) no-repeat 100% 100%; background-size: contain; border: 1px solid #d6d6d6; margin-top: 7.5rem; padding-top: 5.7rem;}
+.cont_its .tscs_contents .section3 .bot ul {display: flex; margin-left: 5.8rem;}
+.cont_its .tscs_contents .section3 .bot ul li {border-radius: 1rem; overflow: hidden; box-shadow: 4px 3px 24px 0px rgba(0, 0, 0, 0.16); margin-right: 3.4rem;}
+.cont_its .tscs_contents .section3 .bot ul li:last-child {margin-right: 0;}
+.cont_its .tscs_contents .section3 .bot span {display: inline-block; font-size: 1.6rem; font-weight: 150; color: #555; margin: 2rem 0 4.5rem 5.8rem;}
 .cont_its .tscs_contents .section3 .bot span > b {font-weight: 400; color: #ff8500;}
 
+
 /* 스마트 교통관리 플랫폼 - 스마트 교차로 솔루션 */
-.cont_stmp .crossroad_contents .title h3 {color: #18c6cd;}
-.cont_stmp .crossroad_contents .sec_tit {font-size: 3rem; font-weight: 400; letter-spacing: -.012rem; margin-bottom: 6rem;}
-.cont_stmp .crossroad_contents .sec_tit:before {content:''; display: block; width: 8rem; height: 0.4rem; background: #18c6cd; margin-bottom: 1.7rem;}
-.cont_stmp .crossroad_contents section .sec_cont {display: flex;align-items: flex-end;}
-.cont_stmp .crossroad_contents .section1 {padding-top: 6rem;}
-.cont_stmp .crossroad_contents .section1 .img {max-width: 78rem; position: relative;}
-.cont_stmp .crossroad_contents .section1 .img > img { width: 100%; object-fit: contain;}
+.cont_stmp .title h3 {color: #18c6cd;}
+.cont_stmp .sec_tit {font-size: 3rem; font-weight: 400; letter-spacing: -.012rem; margin-bottom: 6rem;}
+.cont_stmp .sec_tit:before {content:''; display: block; width: 8rem; height: 0.4rem; background: #18c6cd; margin-bottom: 1.7rem;}
+.cont_stmp section .sec_cont {display: flex;align-items: flex-end;}
+.cont_stmp .section1 {padding-top: 6rem;}
+.cont_stmp .section1 .img {max-width: 78rem; position: relative;}
+.cont_stmp .section1 .img > img { width: 100%; object-fit: contain;}
+.cont_stmp .section2 {padding-top: 12rem;}
+.cont_stmp .section2 .left {max-width: auto;}
+.cont_stmp .section2 .right {background: #f5f5f5; margin-left: 4rem;}
+.cont_stmp .section2 .right ul {display: flex;}
+.cont_stmp .section2 .right ul li .desc {font-size: 1.6rem; font-weight: 300; color: #222; letter-spacing: -.04rem; text-align: center; line-height: 5.8rem;}
+
+.cont_stmp .crossroad_contents .section1 .img div {position: absolute; display: table; background: rgba(255, 255, 255,.8); box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.2); border-radius: 3.8rem;}
+.cont_stmp .crossroad_contents .section1 .img div:nth-of-type(1) {top: 43%; left: 2.3%;}
+.cont_stmp .crossroad_contents .section1 .img div:nth-of-type(2) {top: 44.45%; right: 2.3%;}
+.cont_stmp .crossroad_contents .section1 .img div:nth-of-type(3) {bottom:6.8%; right: 23%;}
+.cont_stmp .crossroad_contents .section1 .img div > span {display: table-cell; font-size: 1.6rem; color: #555; text-align: center; line-height: 1.25; letter-spacing: -.04rem; padding: 1.8rem 3.3rem;}
+.cont_stmp .crossroad_contents .section1 .img div > span > b {font-weight: 400; color: #18c6cd;}
 .cont_stmp .crossroad_contents .section1 .txt {font-size: 1.6rem; color: #555; letter-spacing: -.04rem; line-height: 1.875; position: relative; /* max-width: 66rem; */ width: 66rem;/*  height: 44.2rem; */}
 .cont_stmp .crossroad_contents .section1 .txt ul {position: absolute;left: 3rem; bottom: 0;}
 .cont_stmp .crossroad_contents .section1 .txt li {display: flex;}
-.cont_stmp .crossroad_contents .section1 .txt li > span {display: inline-block; width: 0.8rem; height: 0.8rem; border: 2px solid #a6a6a6; border-radius: 50%; box-sizing: border-box; margin-top: 1.2rem; margin-right: 1.2rem;}
+.cont_stmp .crossroad_contents .section1 .txt li > span {display: inline-block; flex-shrink: 0; width: 0.8rem; height: 0.8rem; border: 2px solid #a6a6a6; border-radius: 50%; box-sizing: border-box; margin-top: 1.2rem; margin-right: 1.2rem;}
 
-.cont_stmp .crossroad_contents .section2 {padding-top: 12rem;}
-.cont_stmp .crossroad_contents .section2 .right {background: #f5f5f5; margin-left: 4rem;}
-.cont_stmp .crossroad_contents .section2 .right ul {display: flex;}
-.cont_stmp .crossroad_contents .section2 .right ul li .desc {font-size: 1.6rem; font-weight: 300; color: #222; letter-spacing: -.04rem; text-align: center; line-height: 5.8rem;}
+
 
 /* 고객지원 - 공지사항 */
 .cont_cs .announce_contents .title h3 { color:#050f5e; }
