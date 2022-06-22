@@ -24,9 +24,9 @@
     /* .cont_stmp .crossroad_contents .section1 .img div > span {font-size: 1.1vw; padding: 1.2vw 2vw;} */
 }
 @media screen and (max-width:1400px) {
-    body {overflow-x: auto;}
-    .wrap {width: 140rem;}
-
+    /* body {overflow-x: auto;}
+    .wrap {width: 140rem;} */
+    html{overflow-x: scroll; width: 140rem;}
     .header {width: 140rem; overflow-x: auto;}
     .header .gnb {flex-shrink: 0; flex-basis: 83rem;}
     .header .gnb_menu {flex-shrink: 0;}
