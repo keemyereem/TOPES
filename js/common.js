@@ -1,5 +1,5 @@
 $(function(){
-    
+
 });
 
 
@@ -14,7 +14,7 @@ var commonEvent = {
        this.bgAni();
        this.tabFunction();
     }, 
-    
+
     headerEvent:function(){
         // 번역페이지 버튼 온/오프
         $(document).on('click', '.lang_choice li', function(){
@@ -24,13 +24,19 @@ var commonEvent = {
 
         $(window).on('scroll',function(){
             const st = $(window).scrollTop();
-
             if (st>=100){
                 $('.header').addClass('fixed'); 
             }else{
                 $('.header').removeClass('fixed');
-            }
+            };
+            
         });
+
+        $('.header').scroll(function(){
+            $('.wrap').width($('.header').width() + $('.header').scrollLeft());
+        });
+
+
     },
 
     menu: function(){

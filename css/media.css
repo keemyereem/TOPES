@@ -1,3 +1,7 @@
+
+/* --------------------- TOPES Released 0000.00.00 --------------------- */
+/* --------------------- Published by 4m Creative --------------------- */
+
 @media screen and (max-width:1780px) {
     .header .header_wrap {display: flex; align-items: center; justify-content: space-between;}
     .header h1 {padding-top: 0;}
@@ -20,12 +24,19 @@
     /* .cont_stmp .crossroad_contents .section1 .img div > span {font-size: 1.1vw; padding: 1.2vw 2vw;} */
 }
 @media screen and (max-width:1400px) {
-    .wrap {overflow-x: auto;}
+    body {overflow-x: auto;}
+    .wrap {width: 140rem;}
+
+    .header {width: 140rem; overflow-x: auto;}
     .header .gnb {flex-shrink: 0; flex-basis: 83rem;}
-    .header .gnb_menu .top_sitemap {flex-shrink: 0;}
-    .header .gnb_menu .top_sitemap {flex-shrink: 0;}
+    .header .gnb_menu {flex-shrink: 0;}
+    .header .top_sitemap {flex-shrink: 0;}
+    /* .container {width: 140rem;} */
     .container .sub_visual .sub_visual_nav {width: 140rem; left: 0; transform: translateX(0);}
-    
+
+    /* 메인 */
+    .tab_contents .right > img {width: initial;}
+ 
 
     .cont_stmp .crossroad_contents .section1 .txt {width: 62rem; flex-shrink: 0;}
 
@@ -63,6 +74,7 @@
     .input_search a img:last-child { display: block; width: 1.6rem; object-fit: contain; margin:-.3rem 1.5rem 0; }
 
     /* container*/
+    .container {width: 100%;}
     .container .sub_visual { height: 32.5rem; display: block; overflow: unset; }
     .container .sub_visual:after { display:none; }
     .container .sub_visual .sub_visual_nav h2 { font-size: 3rem; }
@@ -161,6 +173,7 @@
     .cont_main .section1 .section_inner .tab_contents .txt_box .tag {font-size: 1.4rem; margin-top: 3.5rem;}
     .cont_main .section1 .section_inner .tab_contents .txt_box .tit {font-size: 2.5rem; margin: 1rem 0;} 
     .cont_main .section1 .section_inner .tab_contents .txt_box > p {font-size: 1.4rem; font-weight: 150;}
+    .cont_main .section1 .section_inner .tab_contents .right > img {width: 100%;}
 
     .cont_main .section2 {background: rgba(5, 15, 94, .06); padding: 0 2rem 3rem;}
     .cont_main .section2 .section_inner {margin: 0 auto;}
@@ -174,10 +187,12 @@
     .cont_main .section2 .section_inner .tab_content01 > ul li:nth-child(1) {background-image: url(../images/main/s2_features_img01_m.png);}
     .cont_main .section2 .section_inner .tab_content01 > ul li:nth-child(2) {background-image: url(../images/main/s2_features_img02_m.png); margin-top: 0;margin-left: 2.5rem;}
     .cont_main .section2 .section_inner .tab_content01 > ul li:nth-child(3) {background-image: url(../images/main/s2_features_img03_m.png);}
+    .cont_main .section2 .section_inner .tab_content01 > ul li:nth-child(4) {background-image: url(../images/main/s2_features_img01_m.png); margin-top: 0;margin-left: 2.5rem;}
     .cont_main .section2 .section_inner .tab_content01 > ul li .icon {margin-left: 5rem;}
     .cont_main .section2 .section_inner .tab_content01 > ul li:nth-child(1) .icon {width: 3.85rem; height: 3.8rem; background: url(../images/main/s2_features_icon01.png) no-repeat 50% 50%; background-size: contain;}
     .cont_main .section2 .section_inner .tab_content01 > ul li:nth-child(2) .icon {width: 3.85rem; height: 3.9rem; background: url(../images/main/s2_features_icon02.png) no-repeat 50% 50%; background-size: contain;}
     .cont_main .section2 .section_inner .tab_content01 > ul li:nth-child(3) .icon {width: 4.25rem; height: 3.9rem; background: url(../images/main/s2_features_icon03.png) no-repeat 50% 50%; background-size: contain;}
+    .cont_main .section2 .section_inner .tab_content01 > ul li:nth-child(4) .icon {width: 3.85rem; height: 3.8rem; background: url(../images/main/s2_features_icon01.png) no-repeat 50% 50%; background-size: contain;}
     .cont_main .section2 .section_inner .tab_content01 > ul li > .name {font-size: 1.7rem; margin-top: 0;margin-left: 2.5rem;}
     .cont_main .section2 .section_inner .tab_content01 > ul li > p {font-size: 1.6rem;letter-spacing: -.04rem; line-height: 1.625; margin-top: 2rem; display: none;}
     .cont_main .section2 .section_inner .tab_content01 > ul li > a {margin-top: 8rem; font-size: 1.6rem; color: #fff; letter-spacing: -.08rem; line-height: normal; display: none;}
