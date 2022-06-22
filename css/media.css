@@ -26,18 +26,17 @@
 @media screen and (max-width:1400px) {
     /* body {overflow-x: auto;}
     .wrap {width: 140rem;} */
-    html{overflow-x: scroll; width: 140rem;}
-    .header {width: 140rem; overflow-x: auto;}
+    html{overflow-x: auto; width: 140rem;}
+    .header {width: 140rem;}
     .header .gnb {flex-shrink: 0; flex-basis: 83rem;}
     .header .gnb_menu {flex-shrink: 0;}
     .header .top_sitemap {flex-shrink: 0;}
-    /* .container {width: 140rem;} */
     .container .sub_visual .sub_visual_nav {width: 140rem; left: 0; transform: translateX(0);}
 
     /* 메인 */
     .tab_contents .right > img {width: initial;}
  
-
+    .cont_stmp .overview_contents .section2 .sec_cont .wrap {width: 140rem;}
     .cont_stmp .crossroad_contents .section1 .txt {width: 62rem; flex-shrink: 0;}
 
 }
@@ -46,9 +45,10 @@
     /* 공통부분 */
     br.br_pc, br.br_t {display: none;}
     br.br_m {display: block;}
+    html{overflow-x: auto; width: 100%;}
 
     /* header */
-    .header {height: 5.5rem; ;line-height: 5.5rem;}
+    .header {height: 5.5rem; ;line-height: 5.5rem; width: 100%;}
     .header .header_wrap {width: calc(100% - 4rem); display: block;}
     .header h1 {padding-top: 1.8rem;}
     .header h1 .logo {background: url(../images/common/header_logo_m.png) 0 0 no-repeat;width: 8rem;height: 1.9rem;background-size: contain;}

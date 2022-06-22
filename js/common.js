@@ -29,12 +29,11 @@ var commonEvent = {
             }else{
                 $('.header').removeClass('fixed');
             };
-            
         });
 
-        $('.header').scroll(function(){
-            $('.wrap').width($('.header').width() + $('.header').scrollLeft());
-        });
+        $(window).scroll(function(){
+            $(".header").css("left",0-$(this).scrollLeft());
+        })
 
 
     },
@@ -132,6 +131,10 @@ var mainEvent = {
                 $('.header').removeClass('fixed'); 
             }
         });
+
+        $(window).scroll(function(){
+            $(".header").css("left",0-$(this).scrollLeft());
+        })
     },
 
     mainVisual: function(){
