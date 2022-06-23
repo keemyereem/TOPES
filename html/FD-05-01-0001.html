@@ -28,17 +28,19 @@
 
     <title>Topes</title>
     <link rel="icon" href="images/favicon.png" sizes="32x32">
-    <link rel="canonical" href="http://dev.topes.4-m.co.kr/" />
+    <link rel="canonical" href="http://dev.topes.4-m.co.kr/" />  
 
     <link type="text/css" href="css/jquery.swiper.min.css" rel="stylesheet">
     <link type="text/css" href="css/font.css" rel="stylesheet">
     <link type="text/css" href="css/common.css" rel="stylesheet">
     <link type="text/css" href="css/sub.css" rel="stylesheet">
     <link type="text/css" href="css/media.css" rel="stylesheet">
-    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <script src="js/lib/jquery-1.12.4.min.js"></script>
     <script src="js/lib/jquery.swiper.min.js"></script>
     <script src="js/common.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
         $(document).ready( function() {
@@ -103,15 +105,15 @@
                         <div class="inner">
 
                             <section class="section1">
-                                <div class="title">
+                                <div class="title" data-aos="fade-up">
                                     <h3>About Us</h3>
                                 </div>
-                                <p class="sub_tit">
+                                <p class="sub_tit" data-aos="fade-up">
                                     토페스는 40년 가까운 시간 동안 안전하고 올바른 교통 문화 선도를 향한 열정으로 <b>끊임없는 연구개발과 지속적인 성장</b>을 하고 있습니다.<br>
                                     TOPES의 이름처럼 업계 최초, 최고의 솔루션으로 다양한 사람들의 고민을 해결하여 대한민국 최고를 넘어 해외시장에서도 다양한 고객의 고민을 해결하고 만족시키겠습니다.                                                             
                                 </p>
                                 
-                                <div class="sec1_box">
+                                <div class="sec1_box" data-aos="fade-up">
                                     <div class="part1">
                                         <img src="images/company/about_sec01_logo.png" alt="box1_logo">
                                         <p>인류의 행복을 지키는 파수꾼</p>
@@ -154,12 +156,12 @@
                             </section>         
 
                             <section class="section2">
-                                <div class="title">
+                                <div class="title" data-aos="fade-up">
                                     <h3 class="upper_line">연혁</h3>
                                 </div>
                                 <!-- 연도별 연혁보기 탭 -->
                                 <div class="tab-wrap">
-                                    <ul class="_swiperTab tabs">
+                                    <ul class="_swiperTab tabs" data-aos="fade-up">
                                         <li class="on"><a href="javascript:;" >현재~2000</a></li><!-- onclick="fnMove('group-1')" -->
                                         <li class=""><a href="javascript:;">1999~1990</a></li>
                                         <li class=""><a href="javascript:;">1989~1984</a></li>
@@ -200,7 +202,7 @@
                                                     </ul>
                                                 </div>
                                                 <div class="desc-info">
-                                                    <ul data-year="2022">
+                                                    <ul data-year="2022" class="active">
                                                         <li>
                                                             <span class="num">03</span>
                                                             <span class="desc">납세자의 날 표창(인사 제2022-152호)</span>
@@ -746,7 +748,7 @@
                                         </div>
                                     </div>
 <!--/////////////////////////////////// 1984 ~ 1989 -->
-
+                                    <!-- <img src="images/company/features_img02.png" alt=""> -->
                                 </div>
                             </section>
 

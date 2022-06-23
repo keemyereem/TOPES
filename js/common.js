@@ -1,5 +1,10 @@
 $(function(){
-
+    AOS.init({
+		once : true,
+		throttleDelay : 99,
+		duration: 1000,
+        anchorPlacement: 'center-bottom'
+	});
 });
 
 
@@ -29,12 +34,9 @@ var commonEvent = {
             }else{
                 $('.header').removeClass('fixed');
             };
-        });
 
-        $(window).scroll(function(){
             $(".header").css("left",0-$(this).scrollLeft());
-        })
-
+        });
 
     },
 
@@ -130,11 +132,10 @@ var mainEvent = {
             }else{
                 $('.header').removeClass('fixed'); 
             }
+
+            $(".header").css("left",0-$(this).scrollLeft());
         });
 
-        $(window).scroll(function(){
-            $(".header").css("left",0-$(this).scrollLeft());
-        })
     },
 
     mainVisual: function(){
@@ -189,7 +190,7 @@ var mainEvent = {
                                '<span class="' + totalClass + '"></span>';
                     }
                 },
-                watchOverflow: true, 
+                watchOverflow: false, 
     
                 breakpoints: {
                     768: {
@@ -271,6 +272,7 @@ var companyEvent={
             slidesPerView : 5,
             speed: 500,
             spaceBetween: 30,
+            
 
             navigation: {
                 nextEl: '.patent_swiper .arrow.swiper-button-next',
@@ -289,7 +291,19 @@ var companyEvent={
                 },
 
             }, 
+
+            on: {
+                slideChangeTransitionStart: function() {
+                    var wrap_width = $('.swiper-pagination_wrap').width();
+                    if(this.activeIndex % 5 == 0) {
+                        $('.patent_swiper .swiper-pagination').css('left', '-' + (wrap_width) + 'px')
+                    }
+                    
+                }
+            }
         });
+
+        
     },
 
     history: function() {
@@ -320,16 +334,20 @@ var companyEvent={
                 }
         
                 if($(window).scrollTop() == $(document).height() - $(window).height()) {
-                    $('.tab_contents .year-info').find('li').removeClass('active')
-                    $('.tab_contents .year-info').find('li:last-child').addClass('active')
+                    $('.tab_contents .year-info').find('li').removeClass('active');
+                    $('.tab_contents .year-info').find('li:last-child').addClass('active');
+                    $('.tab_contents .desc-info').find('ul').removeClass('active');
+                    $('.tab_contents .desc-info').find('ul:last-child').addClass('active');
                 }
                 else {
                     $('.tab_contents:last-child .year-info').find('li:last-child').removeClass('active')
 
                     $('.tabs li').on("click", function() {
                         var Tabs_cont = $('.tabs li').index(this)+1;
-                        $('.tab_contents .year-info').find('li').removeClass('active')
+                        $('.tab_contents .year-info').find('li').removeClass('active');
+                        $('.tab_contents .desc-info').find('ul').removeClass('active');
                         $('.tab_content0' + Tabs_cont).find('li:first-child').addClass('active');
+                        $('.tab_content0' + Tabs_cont).find('ul:first-child').addClass('active');
                     });
                 }
             })
@@ -348,6 +366,24 @@ var companyEvent={
                         $information.find('.year-info').css({'top' : 'auto', 'position' : 'absolute', 'margin-top': '0'});
                         $information.find('.year-info ul').css({'margin-top': '0'});
                         
+                        if($(window).width()<=1400 && $(window).width()>767){
+                            $(window).scroll(function(){
+                                $(".year-info").css("left",0-$(this).scrollLeft());
+                            });
+                            
+                        }else{
+                            $(window).scroll(function(){
+                                $(".year-info").css("left","initial");
+                            });
+                        };
+
+                        if($(window).width() > 1920){
+                            $('.desc-info').css('padding-bottom','300px');
+                        }else{
+                            $('.desc-info').css('padding-bottom','0');
+                        }
+                        
+                        
                     } else {
                         //섹션 안으로 들어오면 fixed 상태
                         if (size !== index + 1) {
@@ -355,6 +391,7 @@ var companyEvent={
                                 $information.find('.year-info').css({'top': '0', 'position': 'fixed', 'margin-top': '180px'});
                                 $information.find('.year-info ul').css({'margin-top': '-' + (gapYear * index) + 'px'});
                                 $information.find('.year-info li').eq(index).addClass('active').siblings().removeClass('active');
+                                $information.find('.desc-info ul').eq(index).addClass('active').siblings().removeClass('active');
                             }
                         } else {
                             if (currentPosition > $information.find('.desc-info ul').eq(index).offset().top) {

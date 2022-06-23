@@ -35,10 +35,13 @@
     <link type="text/css" href="css/common.css" rel="stylesheet">
     <link type="text/css" href="css/sub.css" rel="stylesheet">
     <link type="text/css" href="css/media.css" rel="stylesheet">
+    <link type="text/css" href="css/aos.css" rel="stylesheet">
 
     <script src="js/lib/jquery-1.12.4.min.js"></script>
     <script src="js/lib/jquery.swiper.min.js"></script>
+    <script src="js/lib/aos.js"></script>
     <script src="js/common.js"></script>
+    
 
     <script>
         $(document).ready( function() {
@@ -49,6 +52,7 @@
 
             // commonEvent.init();
             mainEvent.init();
+
         });
     </script>
 </head>
@@ -135,7 +139,7 @@
                     </div>
                 </div>
                 <!-- solution -->
-                <section class="section1">
+                <section class="section1" data-aos="fade-up">
                     <div class="section_inner">
                         <h2 class="title">SOLUTION</h2>
                         <p class="sub_tit">
@@ -148,11 +152,10 @@
                             <li><a href="javascript:;" title="산업용 시스템">산업용 시스템</a></li>
                             <li><a href="javascript:;" title="스마트 교통관리 플랫폼">스마트 교통관리 플랫폼</a></li>
                         </ul>
-                        <div class="tabcon_wrap">
+                        <div class="tabcon_wrap" data-aos="fade-up">
                             <div class="tab_contents tab_content01 on">
                                 <div class="left">
                                     <div class="txt_box">
-                                        <div class="tag">Smart Traffic Enforcement</div>
                                         <h3 class="tit">스마트 단속관리</h3>
                                         <p>
                                             점점 가속화되고 있는 정보화 사회에 알맞은 신속, 안전,<br class="br_pc">
@@ -176,6 +179,12 @@
                                             </div>
                                             <div class="swiper-slide">
                                                 <img src="images/main/sol01_img02.png" alt="스마트 단속관리 슬라이드 이미지">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="images/main/sol01_img03.png" alt="스마트 단속관리 슬라이드 이미지">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="images/main/sol01_img04.png" alt="스마트 단속관리 슬라이드 이미지">
                                             </div>
                                         </div>
                                     </div>
@@ -207,22 +216,28 @@
                                         </div>
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
-                                                <img src="images/main/sol01_img01.png" alt="지능형 교통관리 슬라이드 이미지">
+                                                <img src="images/main/sol02_img01.png" alt="지능형 교통관리 슬라이드 이미지">
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="images/main/sol01_img02.png" alt="지능형 교통관리 슬라이드 이미지">
+                                                <img src="images/main/sol02_img02.png" alt="지능형 교통관리 슬라이드 이미지">
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="images/main/sol01_img01.png" alt="지능형 교통관리 슬라이드 이미지">
+                                                <img src="images/main/sol02_img03.png" alt="지능형 교통관리 슬라이드 이미지">
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="images/main/sol01_img02.png" alt="지능형 교통관리 슬라이드 이미지">
+                                                <img src="images/main/sol02_img04.png" alt="지능형 교통관리 슬라이드 이미지">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="images/main/sol02_img05.png" alt="지능형 교통관리 슬라이드 이미지">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="images/main/sol02_img06.png" alt="지능형 교통관리 슬라이드 이미지">
                                             </div>
                                         </div> 
                                     </div>
                                 </div>
                                 <div class="right">
-                                    <img src="images/main/sol01_big.png" alt="지능형 교통관리 이미지">
+                                    <img src="images/main/sol02_big.png" alt="지능형 교통관리 이미지">
                                 </div>
                             </div>
                             <div class="tab_contents tab_content03">
@@ -231,9 +246,9 @@
                                         <div class="tag"></div>
                                         <h3 class="tit">산업용 시스템</h3>
                                         <p>
-                                            제철소의 생산라인,  중공업의 물류 감시용 카메라 등<br class="br_pc">
-                                            산업현장의 생산라인 자동화는 물론 산업안전에도<br class="br_pc">
-                                            크게 기여하고 있습니다.                                                                    
+                                            제철소의 생산라인,  중공업의 물류 감시용 카메라 등 <br class="br_pc">
+                                            산업현장의 생산라인 자동화는<br class="br_pc">
+                                            물론 산업안전에도 크게 기여하고 있습니다.                                                                  
                                         </p>
                                     </div>
                                     <div class="swiper-container tab_swiper tab_swiper03">
@@ -248,22 +263,16 @@
                                         </div>
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
-                                                <img src="images/main/sol01_img01.png" alt="산업용 시스템 슬라이드 이미지">
+                                                <img src="images/main/sol03_img01.png" alt="산업용 시스템 슬라이드 이미지">
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="images/main/sol01_img02.png" alt="산업용 시스템 슬라이드 이미지">
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="images/main/sol01_img01.png" alt="산업용 시스템 슬라이드 이미지">
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="images/main/sol01_img02.png" alt="산업용 시스템 슬라이드 이미지">
+                                                <img src="images/main/sol03_img02.png" alt="산업용 시스템 슬라이드 이미지">
                                             </div>
                                         </div> 
                                     </div>
                                 </div>
                                 <div class="right">
-                                    <img src="images/main/sol01_big.png" alt="산업용 시스템 이미지">
+                                    <img src="images/main/sol03_big.png" alt="산업용 시스템 이미지">
                                 </div>
                             </div>
                             <div class="tab_contents tab_content04">
@@ -273,9 +282,8 @@
                                         <h3 class="tit">스마트 교통관리 플랫폼</h3>
                                         <p>
                                             교차로, 횡단보도, 돌발상황 감지 및 감응 시스템 등<br class="br_pc">
-                                            도로 위의 다양한 이벤트를 감지 및 대응 할 수 있는<br class="br_pc">
-                                            개별 모듈과 각 모듈을 통합한 토페스의 플랫폼은<br class="br_pc">
-                                            교통관리 자동화의 첫 시작입니다.                                                
+                                            도로 위의 다양한 이벤트를 감지 및 대응 할 수 있는 개별 모듈과 <br class="br_pc">
+                                            모듈을 통합한 토페스의 플랫폼은 교통관리 자동화의 첫 시작입니다.                                            
                                         </p>
                                     </div>
                                     <div class="swiper-container tab_swiper tab_swiper04">
@@ -290,22 +298,22 @@
                                         </div>
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
-                                                <img src="images/main/sol01_img01.png" alt="스마트 교통관리 플랫폼 슬라이드 이미지">
+                                                <img src="images/main/sol04_img01.png" alt="스마트 교통관리 플랫폼 슬라이드 이미지">
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="images/main/sol01_img02.png" alt="스마트 교통관리 플랫폼 슬라이드 이미지">
+                                                <img src="images/main/sol04_img02.png" alt="스마트 교통관리 플랫폼 슬라이드 이미지">
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="images/main/sol01_img01.png" alt="스마트 교통관리 플랫폼 슬라이드 이미지">
+                                                <img src="images/main/sol04_img03.png" alt="스마트 교통관리 플랫폼 슬라이드 이미지">
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="images/main/sol01_img02.png" alt="스마트 교통관리 플랫폼 슬라이드 이미지">
+                                                <img src="images/main/sol04_img04.png" alt="스마트 교통관리 플랫폼 슬라이드 이미지">
                                             </div>
                                         </div> 
                                     </div>
                                 </div>
                                 <div class="right">
-                                    <img src="images/main/sol01_big.png" alt="스마트 교통관리 플랫폼 이미지">
+                                    <img src="images/main/sol04_big.png" alt="스마트 교통관리 플랫폼 이미지">
                                 </div>
                             </div>
                         </div>
@@ -313,7 +321,7 @@
                 </section>
 
                 <!-- 특장점 / 바로가기 -->
-                <section class="section2">
+                <section class="section2" data-aos="fade-up">
                     <div class="section_inner">
                         <ul class="s2_tab">
                             <li class="on"><a href="javascript:;" title="Features">Features</a></li>
@@ -326,7 +334,7 @@
                                 글로벌 경쟁력 키움으로써<br class="br_m"> 토페스를 백년기업으로 도약합니다.                                
                             </p>
                             <ul>
-                                <li>
+                                <li data-aos="fade-up">
                                     <div class="hover"></div>
                                     <div class="icon"></div>
                                     <div class="name">우수한 기술력</div>
@@ -337,7 +345,7 @@
                                     </p>
                                     <a href="javascript:;" title="자세히보기">자세히보기 <span></span></a>
                                 </li>
-                                <li>
+                                <li data-aos="fade-up" data-aos-delay ="200">
                                     <div class="hover"></div>
                                     <div class="icon"></div>
                                     <div class="name">
@@ -351,7 +359,7 @@
                                     </p>
                                     <a href="javascript:;" title="자세히보기">자세히보기 <span></span></a>
                                 </li>
-                                <li>
+                                <li data-aos="fade-up" data-aos-delay ="400">
                                     <div class="hover"></div>
                                     <div class="icon"></div>
                                     <div class="name">
@@ -364,7 +372,7 @@
                                     </p>
                                     <a href="javascript:;" title="자세히보기">자세히보기 <span></span></a>
                                 </li>
-                                <li>
+                                <li data-aos="fade-up" data-aos-delay ="600">
                                     <div class="hover"></div>
                                     <div class="icon"></div>
                                     <div class="name">우수조달상품</div>
@@ -375,7 +383,7 @@
                                        
                                     </p>
                                     <a href="javascript:;" title="자세히보기">자세히보기 <span></span></a>
-                                </li>
+                                </li data-aos="fade-up">
                             </ul>
                         </div>
 
@@ -436,43 +444,45 @@
                 <!-- 문의 -->
                 <section class="section3">
                     <div class="s3_top">
-                        <div class="tag">CONTACT</div>
-                        <h2 class="title">
+                        <div class="tag" data-aos="fade-up">CONTACT</div>
+                        <h2 class="title" data-aos="fade-up">
                             교통과 관련된 <b>다양한 솔루션</b>,<br>
                             <b>토페스</b>와 <b>상담</b>하세요
                         </h2>
 <!--                         <p class="sub_tit">
                             원하는 상담 내용과 간단한 정보를 남겨주시면 토페스의 전문 상담사가 도와드리겠습니다.
                         </p> -->
-                        <a href="javascript:;" title="contact us">CONTACT US</a>
+                        <a href="javascript:;" title="contact us" data-aos="fade-in">CONTACT US</a>
                     </div>
-                    <div class="s3_awards">
-                        <div>
-                            <div class="logo"><img src="images/main/footer_awards01.png" alt="산업통상자원부 로고"></div>
-                            <div class="txt">
-                                <div>대한민국 산업대상</div>
-                                <div>기술혁신 부문 대상</div>
+                    <div class="s3_awards_wrap">
+                        <div class="s3_awards">
+                            <div>
+                                <div class="logo"><img src="images/main/footer_awards01.png" alt="행정안전부 로고"></div>
+                                <div class="txt">
+                                    <div>동탑산업훈장</div>
+                                    <div>산업발전</div>
+                                </div>
                             </div>
-                        </div>
-                        <div>
-                            <div class="logo"><img src="images/main/footer_awards02.png" alt="조달청 로고"></div>
-                            <div class="txt">
-                                <div>해외조달시장 진출</div>
-                                <div>유망기업 (G-PASS 기업) 지정</div>
+                            <div>
+                                <div class="logo"><img src="images/main/footer_awards02.png" alt="산업통상자원부 로고"></div>
+                                <div class="txt">
+                                    <div>장관 표창</div>
+                                    <div>기업 경영</div>
+                                </div>
                             </div>
-                        </div>
-                        <div>
-                            <div class="logo"><img src="images/main/footer_awards02.png" alt="조달청 로고"></div>
-                            <div class="txt">
-                                <div>해외조달시장 진출</div>
-                                <div>기업-PQ기업(제2014-003호) 지정</div>
+                            <div>
+                                <div class="logo"><img src="images/main/footer_awards02.png" alt="행정안전부 로고"></div>
+                                <div class="txt">
+                                    <div>대통령 표창</div>
+                                    <div>중소기업 육성</div>
+                                </div>
                             </div>
-                        </div>
-                        <div>
-                            <div class="logo"><img src="images/main/footer_awards04.png" alt="베스트브랜드 로고"></div>
-                            <div class="txt">
-                                <div>베스트브랜드 & 패키지디자인어워드</div>
-                                <div>상품디자인 부문 대상</div>
+                            <div>
+                                <div class="logo"><img src="images/main/footer_awards04.png" alt="교육부 로고"></div>
+                                <div class="txt">
+                                    <div>장관표창</div>
+                                    <div>고졸취업 활성화</div>
+                                </div>
                             </div>
                         </div>
                     </div>
