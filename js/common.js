@@ -1,9 +1,12 @@
 $(function(){
     AOS.init({
+        // 핸들링 참고: https://github.com/michalsnik/aos
 		once : true,
 		throttleDelay : 99,
 		duration: 1000,
-        anchorPlacement: 'center-bottom'
+        anchorPlacement: 'center-bottom',
+        startEvent: "load",
+
 	});
 });
 
@@ -270,6 +273,7 @@ var companyEvent={
             observer: true,
             observeParents: true,
             slidesPerView : 5,
+            slidesPerGroup : 5,
             speed: 500,
             spaceBetween: 30,
             
@@ -291,19 +295,7 @@ var companyEvent={
                 },
 
             }, 
-
-            on: {
-                slideChangeTransitionStart: function() {
-                    var wrap_width = $('.swiper-pagination_wrap').width();
-                    if(this.activeIndex % 5 == 0) {
-                        $('.patent_swiper .swiper-pagination').css('left', '-' + (wrap_width) + 'px')
-                    }
-                    
-                }
-            }
         });
-
-        
     },
 
     history: function() {
