@@ -4,7 +4,7 @@ $(function(){
 		once : true,
 		throttleDelay : 99,
 		duration: 1000,
-        anchorPlacement: 'center-bottom',
+        anchorPlacement: 'center-top',
         startEvent: "load",
 
 	});
