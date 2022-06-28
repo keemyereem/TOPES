@@ -94,7 +94,7 @@
                         
                         <li class=""><a href="html/FD-02-03-0001.html" title="페이지 이동">노후 경유차량 단속 시스템</a></li>
                         
-                        <li class="on"><a href="html/FD-02-04-0001.html" title="페이지 이동">도로노면상태 관리 시스템</a></li>
+                        <li class="on"><a href="javascript:;" title="페이지 이동">도로노면상태 관리 시스템</a></li>
                         <li class="mobile"><a href="html/FD-02-04-0001.html" title="페이지 이동">도로노면상태 관리 시스템</a></li>
 
                         <li class=""><a href="html/FD-02-05-0001.html" title="페이지 이동">차량세부제원 추출 시스템</a></li>
@@ -113,12 +113,12 @@
                                     본 시스템은 기상 변화로 인한 도로상의 노면 결빙 및 도로노면 솟음(Blow Up) 가능성으로 <b>사전에 예측하여 교통사고 및 사망사고를 예방</b>하기 위한 시스템입니다.
                                 </p>
                             </div>
-                            <section class="section1">
-                                <div class="sec_tit" data-aos="fade-up">
+                            <section class="section1" data-aos="fade-up">
+                                <div class="sec_tit">
                                     <h3>주요 특징</h3>
                                 </div>
                                 <div class="sec_cont">
-                                    <ul data-aos="fade-up">
+                                    <ul>
                                         <li>
                                             <ul>
                                                 <li><img src="images/its/its04_icon01.png" alt="도로노면상태 관리 시스템 주요특징 아이콘"></li>
@@ -126,7 +126,8 @@
                                                 <li><img src="images/its/its04_icon03.png" alt="도로노면상태 관리 시스템 주요특징 아이콘"></li>
                                             </ul>
                                             <p>
-
+                                                기상정보 수집 <br>
+                                                노면온도 수집
                                             </p>
                                         </li>
                                         <li>
@@ -136,7 +137,8 @@
                                                 <li><img src="images/its/its04_icon06.png" alt="도로노면상태 관리 시스템 주요특징 아이콘"></li>
                                             </ul>
                                             <p>
-                                                
+                                                노면결빙 가능성 예측<br>
+                                                도로노면 솟음(Blow-UP) 가능성 예측                                                
                                             </p>
                                         </li>
                                         <li>
@@ -148,7 +150,8 @@
                                                 <li><img src="images/its/its04_icon11.png" alt="도로노면상태 관리 시스템 주요특징 아이콘"></li>
                                             </ul>
                                             <p>
-                                                
+                                                모니터링 및 저장<br>
+                                                3단계 경고 알람                                                
                                             </p>
                                         </li>
                                         <li>
@@ -160,34 +163,145 @@
                                                 <li><img src="images/its/its04_icon16.png" alt="도로노면상태 관리 시스템 주요특징 아이콘"></li>
                                             </ul>
                                             <p>
-                                                
+                                                도로관리<br>
+                                                운행주의 안내                                                
                                             </p>
                                         </li>
                                     </ul>
-                                    <ul data-aos="fade-up">
-                                        <li>
-                                            <img src="images/its/its03_spec_img01.png" alt="its03_spec_img01">
-                                            <p>현장설치</p>
-                                        </li>
-                                        <li>
-                                            <img src="images/its/its03_spec_img02.png" alt="its03_spec_img02">
-                                            <p>통과차량검지</p>
-                                        </li>
-                                        <li>
-                                            <img src="images/its/its03_spec_img03.png" alt="its03_spec_img03">
-                                            <p>조회, 운영</p>
-                                        </li>
-                                    </ul>
                                 </div>
                             </section>
-                            <section class="section2">
-                                <div class="sec_tit" data-aos="fade-up">시스템 구성</div>
+
+                            <section class="section2" data-aos="fade-up">
+                                <div class="sec_tit">시스템 구성</div>
                                 <div class="sec_cont">
-                                    <div class="wrap" data-aos="fade-up">
-                                        <img src="images/its/its03_system_info01.png" alt="its03_system_info01">
+                                    <div>
+                                        <h4>도로 노면온도 데이터 수집</h4>
+                                        <ul>
+                                            <li>
+                                                <div class="img"><img src="images/its/its04_compose_img01.png" alt="열화상 카메라"></div>
+                                                <div class="txt">
+                                                    <h5>열화상 카메라</h5>
+                                                    <ol>
+                                                        <li><b>·측&nbsp;&nbsp;&nbsp;&nbsp;정&nbsp;&nbsp;&nbsp;&nbsp;범&nbsp;&nbsp;&nbsp;위</b><span>-20°C to + 120°C</span></li>
+                                                        <li><b>·관심영역설정</b><span>10개 개별 지점 온도 정보 제공</span></li>
+                                                        <li><b>·측&nbsp;정&nbsp;&nbsp;정&nbsp;확&nbsp;도 </b><span>±2 °C or ±2% (KOLAS 검교성 성적서 제출)</span></li>
+                                                    </ol>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="img"><img src="images/its/its04_compose_img02.png" alt="카메라 하우징"></div>
+                                                <div class="txt">
+                                                    <h5>카메라 하우징</h5>
+                                                    <ol>
+                                                        <li><b>·보&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;호&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;등&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;급</b><span>IP67</span></li>
+                                                        <li><b>·재&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;질</b><span>SUS 316L</span></li>
+                                                        <li><b>·진동 테스트 인증</b><span>IEC60945 인증 </span></li>
+                                                    </ol>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <span>※ 옵션 기상센터 :  강수량계, 풍향계, 풍속계, 시정계</span>
+                                    </div>
+                                    <div>
+                                        <h4>대기 온습도 데이터 수집</h4>
+                                        <ul>
+                                            <li>
+                                                <div class="img"><img src="images/its/its04_compose_img03.png" alt="온·습도계"></div>
+                                                <div class="txt">
+                                                    <h5>온·습도계</h5>
+                                                    <ol>
+                                                        <li><b>·온도 측정범위</b><span>-80 ~ 60 °C (오차 : ±0.3 °C)</span></li>
+                                                        <li><b>·습도 측정범위</b><span>0 ~ 100%RH (오차 : ±3%RH)</span></li>
+                                                    </ol>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="img"><img src="images/its/its04_compose_img04.png" alt="제어기"></div>
+                                                <div class="txt">
+                                                    <h5>제어기</h5>
+                                                    <ol>
+                                                        <li><b>·도로 노면 상태 분석 알고리즘 탑재</b></li>
+                                                        <li><b>·도로노면 솟음(Blow-UP) 및 노면 결빙 3단계 (관심, 주의, 경고) 제공</b></li>
+                                                        <li><b>·장치 설정, 모니터링, 로그저장</b></li>
+                                                        <li><b>·관심 영역 별 노면온도, 대기 온·습도 정보 제공</b></li>
+                                                    </ol>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <span></span>
                                     </div>
                                 </div>
                             </section>
+
+                            <section class="section3" data-aos="fade-up">
+                                <div class="sec_tit">시스템 구성도</div>
+                                <div class="sec_cont">
+                                    <img src="images/its/its04_info_img.png" alt="시스템 구성도">
+                                </div>
+                            </section>
+
+                            <section class="section4" data-aos="fade-up">
+                                <div class="sec_tit">시스템 기대효과</div>
+                                <div class="sec_cont">
+                                    <ol>
+                                        <li>
+                                            <div class="num">01</div>
+                                            <p>
+                                                도로노면 온도<br>
+                                                실시간 모니터링
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <div class="num">02</div>
+                                            <p>
+                                                도로노면 솟음(Blow-UP) 및<br>
+                                                결빙 예측정보 제공                                              
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <div class="num">03</div>
+                                            <p>
+                                                도로 주행 차량 안전 확보
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <div class="num">04</div>
+                                            <p>
+                                                도로결빙으로 인한<br>
+                                                대형차량추돌사고 방지
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <div class="num">05</div>
+                                            <p>
+                                                사전 사고예방으로 안전하고<br>
+                                                원활한 교통흐름 향상                                                
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <div class="num">06</div>
+                                            <p>
+                                                자동측정장치 활용을 통한<br>
+                                                효율적인 제설작업                                                
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <div class="num">07</div>
+                                            <p>
+                                                누적 데이터 도로안전관련<br>
+                                                빅데이터 활용                                                
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <div class="num">08</div>
+                                            <p>
+                                                점검팀 업무효율 향상
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </section>
+
                         </div>
                     </div>
                 </div>

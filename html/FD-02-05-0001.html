@@ -49,10 +49,6 @@
             $(".sitemap").load("include/sitemap.html");
             $(".footer").load("include/footer.html");
 
-            $(".tab_content01").load("include/FD-01-01-0001_tab01.html");
-            $(".tab_content02").load("include/FD-01-01-0001_tab02.html");
-            $(".tab_content03").load("include/FD-01-01-0001_tab03.html");
-
             commonEvent.init();
 
         });
@@ -72,9 +68,9 @@
         <div class="sitemap"></div>
         <!-- //sitemap -->
         <div class="container">
-            <div class="sub_visual ste_visual">
+            <div class="sub_visual its_visual">
                 <div class="sub_visual_nav">
-                    <h2><span>Smart Traffic Enforcement</span>스마트 단속관리</h2>
+                    <h2><span>Intelligent Transport System</span>지능형 교통관리</h2>
 
                     <div class="sub_visual_nav_prev">
                         <a href="javascript:;" title="이전메뉴로 이동">
@@ -92,60 +88,64 @@
 
                 <div class="sub_visual_menu">
                     <ul>
-                        <li class="on"><a href="javascript:;" title="페이지 이동">속도/신호위반/구간 단속 시스템</a></li>
-                        <li class="mobile"><a href="html/FD-01-01-0001.html" title="페이지 이동">속도/신호위반/구간 단속 시스템</a></li>
+                        <li class=""><a href="html/FD-02-01-0001.html" title="페이지 이동">교통안전 복합 시스템</a></li>
 
-                        <li class=""><a href="html/FD-01-02-0001.html" title="페이지 이동">이륜차/헬멧 단속 시스템</a></li>
+                        <li class=""><a href="html/FD-02-02-0001.html" title="페이지 이동">교통정보 수집 시스템</a></li>
 
-                        <li class=""><a href="html/FD-01-03-0001.html" title="페이지 이동">꼬리물기 단속 시스템</a></li>
+                        <li class=""><a href="html/FD-02-03-0001.html" title="페이지 이동">노후 경유차량 단속 시스템</a></li>
 
-                        <li class=""><a href="html/FD-01-04-0001.html" title="페이지 이동">불법 주정차 단속 시스템</a></li>
+                        <li class=""><a href="html/FD-02-04-0001.html" title="페이지 이동">도로노면상태 관리 시스템</a></li>
+
+                        <li class="on"><a href="javascript:;" title="페이지 이동">차량세부제원 추출 시스템</a></li>
+                        <li class="mobile"><a href="html/FD-02-05-0001.html" title="페이지 이동">차량세부제원 추출 시스템</a></li>
+
+                        <li class=""><a href="html/FD-02-06-0001.html" title="페이지 이동">차축조작 과적차량<br class="br_pc">단속 시스템</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="contents cont_ste">
+            <div class="contents cont_its">
                 <div class="contents_inner">
-                    <div class="sub_contents srs_contents">
-                        <!-- <div class="inner"> -->
+                    <div class="sub_contents vdse_contents">
+                        <div class="inner">
                             <div class="title" data-aos="fade-up">
-                                <h3>속도/신호위반/구간 단속 시스템</h3>
+                                <h3>차량세부제원추출 시스템</h3>
+                                <p>
+                                    본 시스템은 기존 AVC(Automatic Vehicle Classification) 장비의 단점을 극복하고, 도로 교통량 통계 콘텐츠의 고도화를 달성할 수 있는 <br>
+                                    새로운 형태의 AVC 장비를 개발하여 비매설식의 간편한 시공과 편리한 재설치 및 유지 보수를 제공합니다. <br>
+                                    AI 인식 기술을 기반으로 세부적인 차량 모델을 구분하여, 12종 차종을 분류하며, 1종 세부 구분(택시/경차/그 외), 전기차 분류 등 <b>지능형 차량 분류 정보를 제공하는 시스템</b>입니다.                                    
+                                </p>
                             </div>
-                            
                             <section class="section1">
-                                <div class="txt">
-                                    <img src="images/ste/topcam_2016.png" alt="TOPCAM 2016 로고">
-                                    <p>
-                                        토페스의 우수한 기술력이 집약된 단속 제어기로 <br class="br_pc">
-                                        속도위반/신호위반 및 구간교통 단속에 적용되는 시스템입니다.
-                                    </p>
+                                <div class="sec_tit" data-aos="fade-up"><h3>주요 특징</h3></div>
+                                <div class="sec_cont">
+                                    <div class="wrap">
+                                        <p>통과 차량 정보 수집(차종, 제조사, 색상)</p>
+                                        <img src="images/its/its05_spec_info01.png" alt="its05_spec_info01">
+                                    </div>
+                                    <ul class="txt" data-aos="fade-up">
+                                        <li>차축이 조작된 차량에 대해서도 정확한 차종 정보 추출 가능</li>
+                                        <li>각 차종별, 차선별 통행량 정보 제공</li>
+                                        <li>CNN 기반의 딥러닝 모델링 기술</li>
+                                        <li>비매설 영상식 장비로 시공 및 재설치, 유지보수의 편의성 향상</li>
+                                        <li>통과 차량의 증거이미지 확보</li>
+                                    </ul>
                                 </div>
-                                <!-- 영상 -->
-                                <div class="video"></div>
+
+                                
                             </section>
-                            
-                            <div class="tab_wrap">
-                                <ul class="tabs srs_tab">
-                                    <li class=""><a href="javascript:;" title="속도위반 교통단속 시스템">속도위반 교통단속 시스템 </a></li>
-                                    <li class=""><a href="javascript:;" title="신호위반 교통단속 시스템">신호위반 교통단속 시스템</a></li>
-                                    <li class="on"><a href="javascript:;" title="구간 교통단속 시스템">구간 교통단속 시스템</a></li>
-                                </ul>
-                                <div class="tab_cont_wrap">
-                                    <div class="tab_contents tab_content01">
-                                        <!-- 속도위반 교통단속 시스템 -->
+                            <section class="section2">
+                                <div class="sec_tit" data-aos="fade-up">시스템 구성도</div>
+                                <div class="sec_cont">
+                                    <div class="wrap" data-aos="fade-up">
+                                        <img src="images/its/its05_spec_info02.png" alt="its05_spec_info02">
                                     </div>
-
-                                    <div class="tab_contents tab_content02">
-                                        <!-- 신호위반 교통단속 시스템 -->
-                                    </div>
-                                    
-                                    <div class="tab_contents tab_content03 on">
-                                        <!-- 구간 교통단속 시스템 -->
+                                    <div class="wrap" data-aos="fade-up">
+                                        <h3>구조물</h3>
+                                        <img src="images/its/its05_spec_info03.png" alt="its05_spec_info03">
                                     </div>
                                 </div>
-                            </div>
-                            
-
-                        <!-- </div> -->
+                            </section>
+                        </div>
                     </div>
                 </div>
             </div>

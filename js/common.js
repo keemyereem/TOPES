@@ -4,7 +4,7 @@ $(function(){
 		once : true,
 		throttleDelay : 99,
 		duration: 1000,
-        anchorPlacement: 'center-top',
+        anchorPlacement: 'center-bobttom',
         startEvent: "load",
 
 	});
@@ -41,6 +41,13 @@ var commonEvent = {
             $(".header").css("left",0-$(this).scrollLeft());
         });
 
+        $(document).on('click', '.top_sitemap', function() {
+            $(this).toggleClass('on .col_b')
+            $('.header').toggleClass('site');
+            $('.sitemap').toggleClass('on'); 
+
+        })
+        
     },
 
     menu: function(){
@@ -61,6 +68,11 @@ var commonEvent = {
             var Tabs_cont = Tabs.index(this)+1;
             $('.tab_contents').removeClass('on');
             $('.tab_content0' + Tabs_cont).addClass('on');
+            
+            // 속도/ 신호위반/ 구간 단속 시스템 => 탭버튼 클릭 시, aos 초기화
+            if ($('.tab_content0' + Tabs_cont).find('div, ul').hasClass('aos-init')) {
+                AOS.refresh();
+            }
         });
     },
 
@@ -138,6 +150,14 @@ var mainEvent = {
 
             $(".header").css("left",0-$(this).scrollLeft());
         });
+
+        $(document).on('click', '.top_sitemap', function() {
+            $(this).toggleClass('on .col_b')
+            $('.header').toggleClass('site');
+            $('.sitemap').toggleClass('on'); 
+
+        })
+
 
     },
 

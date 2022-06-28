@@ -46,7 +46,7 @@
         $(document).ready( function() {
             //html용 include
             $(".header").load("include/header.html");
-            $(".sitemap").load("include/sitemap.html");
+            //$(".sitemap").load("include/sitemap.html");
             $(".footer").load("include/footer.html");
 
             commonEvent.init();
@@ -65,7 +65,7 @@
         <!-- sitemap -->
         <div class="dim"></div>
         <div class="sitemap_bg"></div>
-        <div class="sitemap"></div>
+        <!-- <div class="sitemap"></div> -->
         <!-- //sitemap -->
         <div class="container">
             <div class="sub_visual its_visual">
@@ -92,26 +92,26 @@
 
                         <li class=""><a href="html/FD-02-02-0001.html" title="페이지 이동">교통정보 수집 시스템</a></li>
                         
-                        <li class="on"><a href="javascript:;" title="페이지 이동">노후 경유차량 단속 시스템</a></li>
-                        <li class="mobile"><a href="html/FD-02-03-0001.html" title="페이지 이동">노후 경유차량 단속 시스템</a></li>
+                        <li class=""><a href="html/FD-02-03-0001.html" title="페이지 이동">노후 경유차량 단속 시스템</a></li>
 
                         <li class=""><a href="html/FD-02-04-0001.html" title="페이지 이동">도로노면상태 관리 시스템</a></li>
 
                         <li class=""><a href="html/FD-02-05-0001.html" title="페이지 이동">차량세부제원 추출 시스템</a></li>
 
-                        <li class=""><a href="html/FD-02-06-0001.html" title="페이지 이동">차축조작 과적차량<br class="br_pc">단속 시스템</a></li>
+                        <li class="on"><a href="javascript:;" title="페이지 이동">차축조작 과적차량<br class="br_pc">단속 시스템</a></li>
+                        <li class="mobile"><a href="html/FD-02-06-0001.html" title="페이지 이동">차축조작 과적차량 단속 시스템</a></li>
                     </ul>
                 </div>
             </div>
             <div class="contents cont_its">
                 <div class="contents_inner">
-                    <div class="sub_contents odvcs_contents">
+                    <div class="sub_contents amovcs_contents">
                         <div class="inner">
                             <div class="title" data-aos="fade-up">
-                                <h3>노후 경유차량 단속 시스템</h3>
+                                <h3>차축 조작 과적차량 단속 시스템</h3>
                                 <p>
-                                    본 시스템은 기존 검지센서(Loop, Laser, Radar)와 카메라를 이용하여 차량을 검지하는 장비로써 <br>
-                                    <b>통과하는 차량의 정보(차량번호, 차량이미지 등)를 검지하여 센터로 전송</b>하는 시스템입니다. 
+                                    이 시스템은 요금소에서 과적 여부 단속시 가변축을 단 차량은 차축을 내릴 경우 무게가 분산돼 과적 단속을 피할 수 있는데 이런 점을 보완하기 위해 <br>
+                                    차축조작 DB검지 시스템의 전면 및 측면 영상인식 기술을 활용하여 차축조작 자동 추출 및 분류하고 <b>과적차량을 판정하는 시스템</b>입니다.
                                 </p>
                             </div>
                             <section class="section1">
@@ -120,35 +120,62 @@
                                 </div>
                                 <div class="sec_cont">
                                     <ul data-aos="fade-up">
-                                        <li><span>· 검지 방법</span>영상, LOOP, 레이저, 레이다 복합</li>
-                                        <li><span>· 정보 제공</span>차량번호, 운전자, 적재영상, 동영상</li>
-                                        <li><span>· 제어기</span>4차로 입력</li>
-                                        <li><span>· 조명</span>IR Light Panel(LED)</li>
-                                        <li><span>· 인식률</span>90%이상</li>
-                                        <li><span>· 측정 속도</span>10km/h ~ 250km/h</li>
-                                    </ul>
-                                    <ul data-aos="fade-up">
-                                        <li>
-                                            <img src="images/its/its03_spec_img01.png" alt="its03_spec_img01">
-                                            <p>현장설치</p>
-                                        </li>
-                                        <li>
-                                            <img src="images/its/its03_spec_img02.png" alt="its03_spec_img02">
-                                            <p>통과차량검지</p>
-                                        </li>
-                                        <li>
-                                            <img src="images/its/its03_spec_img03.png" alt="its03_spec_img03">
-                                            <p>조회, 운영</p>
-                                        </li>
+                                        <li>· 차축조작하여 과적 차량 단속</li>
+                                        <li>· 차량 옆면 영상 인식</li>
+                                        <li>· 인식률 90% 이상</li>
                                     </ul>
                                 </div>
                             </section>
+
                             <section class="section2">
-                                <div class="sec_tit" data-aos="fade-up">시스템 구성</div>
+                                <div class="sec_tit" data-aos="fade-up"><h3>시스템 구성</h3></div>
                                 <div class="sec_cont">
+                                    <img src="images/its/its06_system_info01.png" alt="its06_system_info01">
+                                </div>
+                            </section>
+
+                            <section class="section3">
+                                <div class="sec_tit" data-aos="fade-up">시스템 구성도</div>
+                                <div class="sec_cont">
+                                    <h3>AI 기반 차축 조작 과적 차량 검지 기술</h3>
                                     <div class="wrap" data-aos="fade-up">
-                                        <img src="images/its/its03_system_info01.png" alt="its03_system_info01">
+                                        <h4><span>01</span>차축 조작 정보 검지 장비</h4>
+                                        <img src="images/its/its06_system_info02.png" alt="its06_system_info02">
                                     </div>
+                                    <div class="wrap" data-aos="fade-up">
+                                        <h4><span>02</span>차축 조작 정보 검지 장비</h4>
+                                        <div>
+                                            <ul>
+                                                <li>
+                                                    <span>과적 검문소 계중 정보 Vs. AI차축 정보 검지기 검지 축수</span><br>
+                                                    IF (검문소 총중량/주행 중 차축수 > 10톤)
+                                                    <p>차축 조작 과적 판정</p>
+                                                </li>
+
+                                                <li>과적 검문소 계중 정보 연계</li>
+
+                                                <li>
+                                                    <img src="images/its/its06_system_img01.png" alt="its06_system_img01">
+                                                    <p>
+                                                        <span>과적 검문소</span><br>
+                                                        저속축중계 총중, 축중, 번호판
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="section4">
+                                <div class="sec_tit" data-aos="fade-up"><h3>시스템 기대효과</h3></div>
+                                <div class="sec_cont">
+                                    <ul class="txt aos-init aos-animate" data-aos="fade-up">
+                                        <li>도로 교통 환경에 영향을 주지 않는 차축 조작 판별</li>
+                                        <li>저조도 카메라와 열화상 카메라의 차량 영상으로부터 차축 영역을 정밀하게 추출하는 AI알고리즘을 통해 <br>
+                                            검출 차량이 이전 과적검문소를 통과한 정보와 비교하여 불법 차축 조작 여부 판단
+                                        </li>
+                                    </ul>
                                 </div>
                             </section>
                         </div>
