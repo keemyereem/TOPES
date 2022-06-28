@@ -46,8 +46,15 @@ var commonEvent = {
             $('.header').toggleClass('site');
             $('.sitemap').toggleClass('on'); 
 
-        })
-        
+    
+            // $('.sitemap_wrap').toggleClass('on');
+        });
+        // $('.sitemap .sitemap_wrap li').hover(confirm('dd'));
+        // if($('.sitemap').hasClass('on'){
+
+        // }else{
+
+        // }
     },
 
     menu: function(){
