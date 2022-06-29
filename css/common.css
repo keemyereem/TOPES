@@ -138,9 +138,10 @@ br.br_t, br.br_m {display: none;}
 .header .lang_select .lang_choice li.on a {opacity: 1;}
 .header.fixed .lang_select .lang_choice li a, .header.site .lang_select .lang_choice li a, .header.main_fixed .lang_select .lang_choice li a {color: #222; opacity: .3;}
 .header.fixed .lang_select .lang_choice li.on a, .header.site .lang_select .lang_choice li.on a, .header.main_fixed .lang_select .lang_choice li.on a {color: #e0006d; opacity: 1;}
-.header .top_sitemap {display: inline-block;vertical-align: middle;margin-left: 5rem;}
+.header .top_sitemap {display: inline-block;vertical-align: middle;margin-left: 5rem; cursor: pointer; }
 .header .top_sitemap > div{font-family: 'play'; font-size: 16px; font-weight: 400; color: #fff; display: inline-block; transform: translateY(0); transition: 0.5s transform; }
-.header.fixed .top_sitemap > div, .header.site .top_sitemap > div {color: #050f5e;}
+.header.fixed .top_sitemap > div, 
+.header.site .top_sitemap > div {color: #050f5e; }
 .header .top_sitemap button{vertical-align: middle; height: 2rem; display: inline-flex; flex-direction: column; justify-content: space-between; position: relative;}
 .header .top_sitemap button span{width: 3rem; height: .2rem; margin-bottom: .7rem; position: relative; overflow: hidden; margin-left: 1rem; }
 .header .top_sitemap button span:nth-child(2) { width: 2.2rem;margin-left: 1.8rem; }
@@ -150,8 +151,7 @@ br.br_t, br.br_m {display: none;}
 .header .top_sitemap button span::before , .header .top_sitemap button span::after{ transition-duration: 0.25s; transition-property: transform; }
 .header.fixed .top_sitemap button span::before, .header.fixed .top_sitemap button span::after,
 .header.site .top_sitemap button span::before, .header.site .top_sitemap button span::after,
-.header.main_fixed .top_sitemap button span::before, .header.main_fixed .top_sitemap button span::after,
-.header .top_sitemap.on.col_b button span:before, .header .top_sitemap.on.col_b button span:after { background-color: #050f5e; transition:all ease .3s; }
+.header.main_fixed .top_sitemap button span::before, .header.main_fixed .top_sitemap button span::after { background-color: #050f5e; transition:all ease .3s; }
 .header .top_sitemap button span::before{content: ''; width: 100%; height: 100%; background-color: #fff; display: block; transform: translateX(0);}
 .header .top_sitemap button span::after{content: ''; width: 100%; height: 100%; background-color: #fff; position: absolute; left: 0; top: 0; transform: translateX(100%);}
 .header.fixed .top_sitemap button span::before {background-color: #050f5e;}
@@ -194,13 +194,14 @@ br.br_t, br.br_m {display: none;}
 */
 
 /* sitemap */
-.sitemap { width:100%; height: 100vh; position: fixed; top: -100vh; z-index: 1001; left: 0; transition:.2s left .2s; background: #fff;}
+.sitemap { width:100%; height: 100vh; position: fixed; top: -100vh; z-index: 1001; left: 0; transition:.4s top .2s; background: #fff;}
 .sitemap.on, .sitemap_bg.on { top: 0; transition-delay: 0s; }
 .sitemap .sitemap_wrap {width: 100%; height: 100%; margin: auto; padding-top: 18rem; position: relative; background: #fff; z-index: 1;}
 .sitemap .sitemap_wrap li, .sitemap .sitemap_wrap li h2 {display: block; width: auto;}
 .sitemap .sitemap_wrap li h2 {width: 50%; padding-left: 17vw;}
-.sitemap.on .sitemap_wrap li h2 > a {color: pink; opacity: 1;}
-.sitemap .sitemap_wrap li h2 > a {display: block; font-size: 3rem; font-weight: 400; color: #222; padding: 2rem 0 2rem 10rem; word-break: break-all;}
+.sitemap.on .sitemap_wrap li h2 > a {color: #222222;}
+.sitemap.on .sitemap_wrap li h2 > a.col_g {color: #222222; opacity: .3;}
+.sitemap .sitemap_wrap li h2 > a {display: block; font-size: 3rem; font-weight: 400; color: #222; padding: 2rem 0 2rem 10rem; word-break: break-word;}
 .sitemap .sitemap_wrap li h2 > a:before {content:''; display: none; width: 8rem; height: .4rem; margin-bottom: 1rem;}
 .sitemap .sitemap_wrap li:hover h2 > a:before , .sitemap .sitemap_wrap li.on h2 > a:before {display: block;} 
 .sitemap .sitemap_wrap li:nth-child(1) h2 > a:before {background: #febf00;}

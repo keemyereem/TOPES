@@ -45,16 +45,18 @@ var commonEvent = {
             $(this).toggleClass('on .col_b')
             $('.header').toggleClass('site');
             $('.sitemap').toggleClass('on'); 
-
-    
-            // $('.sitemap_wrap').toggleClass('on');
         });
-        // $('.sitemap .sitemap_wrap li').hover(confirm('dd'));
-        // if($('.sitemap').hasClass('on'){
 
-        // }else{
-
-        // }
+        $(document).on({
+            mouseenter: function () {
+                // let sitemapIdx = $(this).index();
+                $(this).siblings().find('h2 a').addClass('col_g');
+            },
+            mouseleave: function () {
+                $(this).siblings().find('h2 a').removeClass('col_g');
+            }
+        }, ".sitemap ul li"); 
+        
     },
 
     menu: function(){
@@ -125,6 +127,7 @@ var commonEvent = {
         })
 
     },
+
 }
 
 
@@ -139,6 +142,7 @@ var mainEvent = {
        this.s2Tab();
        this.floating();
     },
+
     headerEvent:function(){
         // 번역페이지 버튼 온/오프
         $(document).on('click', '.lang_choice li', function(){
@@ -155,16 +159,25 @@ var mainEvent = {
                 $('.header').removeClass('fixed'); 
             }
 
-            $(".header").css("left",0-$(this).scrollLeft());
+            $(".header, .sitemap").css("left",0-$(this).scrollLeft());
         });
 
         $(document).on('click', '.top_sitemap', function() {
-            $(this).toggleClass('on .col_b')
+            $(this).toggleClass('on')
             $('.header').toggleClass('site');
             $('.sitemap').toggleClass('on'); 
 
         })
-
+        
+        $(document).on({
+            mouseenter: function () {
+                // let sitemapIdx = $(this).index();
+                $(this).siblings().find('h2 a').addClass('col_g');
+            },
+            mouseleave: function () {
+                $(this).siblings().find('h2 a').removeClass('col_g');
+            }
+        }, ".sitemap ul li"); 
 
     },
 
@@ -281,7 +294,6 @@ var mainEvent = {
 
     },
 
-
 };
 
 
@@ -347,47 +359,72 @@ var companyEvent={
 
             $(window).on('scroll resize', function (){
                 var currentPosition = $(window).scrollTop();
+                var scrollEnd = $(document).height() - $(window).height();
 
                 for (var i = 0; i < sectionLength; i++) {
                      setHistoryScroll(section.eq(i));
                 }
-        
-                if($(window).scrollTop() == $(document).height() - $(window).height()) {
-                    $('.tab_contents .year-info').find('li').removeClass('active');
-                    $('.tab_contents .year-info').find('li:last-child').addClass('active');
-                    $('.tab_contents .desc-info').find('ul').removeClass('active');
-                    $('.tab_contents .desc-info').find('ul:last-child').addClass('active');
-                }
-                else {
-                    $('.tab_contents:last-child .year-info').find('li:last-child').removeClass('active')
 
-                    $('.tabs li').on("click", function() {
-                        var Tabs_cont = $('.tabs li').index(this)+1;
-                        $('.tab_contents .year-info').find('li').removeClass('active');
-                        $('.tab_contents .desc-info').find('ul').removeClass('active');
-                        $('.tab_content0' + Tabs_cont).find('li:first-child').addClass('active');
-                        $('.tab_content0' + Tabs_cont).find('ul:first-child').addClass('active');
-                    });
+                if ($('.tab_contents .year-info').find('li:last-child').hasClass('active')) {
+                    $('.tab_contents .desc-info').find('ul:last-child').addClass('active');
+                    $('.tab_contents .desc-info').find('ul:not(:last-child)').removeClass('active');
                 }
+
+                // 반응형 연혁 하단 여백 생성
+                if($(window).width() > 1920){
+                    $('.desc-info').css('padding-bottom','350px');
+                } else if ($(window).width() < 768 && $(window).height() > 670) {
+                    $('.desc-info').css('padding-bottom','50px');
+                } else {
+                    $('.desc-info').css('padding-bottom','0');
+                }
+
+                // if($(window).scrollTop() == scrollEnd) {
+                //     $('.tab_contents .year-info').find('li').removeClass('active');
+                //     $('.tab_contents .year-info').find('li:last-child').addClass('active');
+                //     $('.tab_contents .desc-info').find('ul').removeClass('active');
+                //     $('.tab_contents .desc-info').find('ul:last-child').addClass('active');
+                //     console.log(huddleLastcont)
+                // }
+                // else {
+                //     $('.tab_contents:last-child .year-info').find('li:last-child').removeClass('active')
+                //     $('.tabs li').on("click", function() {
+                //         var Tabs_cont = $('.tabs li').index(this)+1;
+                //         $('.tab_contents .year-info').find('li').removeClass('active');
+                //         $('.tab_contents .desc-info').find('ul').removeClass('active');
+                //         $('.tab_contents .desc-info').find('ul:last-child').removeClass('active');
+                //         $('.tab_content0' + Tabs_cont).find('li:first-child').addClass('active');
+                //         $('.tab_content0' + Tabs_cont).find('ul:first-child').addClass('active');
+                //     });
+                // }
             })
         
             function setHistoryScroll($information) {
-                var gap = 20;/*50*/
+                var gap = 20; 
                 var gapYear = 69;
-                var currentPosition = $(window).scrollTop() + 180; /*+95 X*/
+                var currentPosition = $(window).scrollTop() + 175; /*+95 X*/
                 var sectionOffset = $information.find('.desc-info ul').eq(0).offset().top;
                 // var scrollStart = currentPosition - sectionOffset + 60;
                 var size = $information.find('.year-info li').length;
-                
+                var getFixedMargin = 18;
+
                 $information.find('.year-info li').each(function (index) {
+                    // 반응형 변수값 교체
+                    if ($(window).width() < 768) {
+                        gapYear = 50;
+                        currentPosition = $(window).scrollTop() + 110;
+                        getFixedMargin = 12; 
+                    }
+                    
                     if (currentPosition < $information.find('.desc-info ul').eq(0).offset().top - gap) {
                         //섹션 이전 화면에서는 absolute상태
                         $information.find('.year-info').css({'top' : 'auto', 'position' : 'absolute', 'margin-top': '0'});
-                        $information.find('.year-info ul').css({'margin-top': '0'});
+                        $information.find('.year-info ul').css({'position': 'relative', 'margin-top': '0'});
+                            
                         
                         if($(window).width()<=1400 && $(window).width()>767){
                             $(window).scroll(function(){
-                                $(".year-info").css("left",0-$(this).scrollLeft());
+                                $(".year-info").css("left",0 - $(this).scrollLeft());
                             });
                             
                         }else{
@@ -395,32 +432,28 @@ var companyEvent={
                                 $(".year-info").css("left","initial");
                             });
                         };
-
-                        if($(window).width() > 1920){
-                            $('.desc-info').css('padding-bottom','300px');
-                        }else{
-                            $('.desc-info').css('padding-bottom','0');
-                        }
-                        
-                        
+                    
                     } else {
                         //섹션 안으로 들어오면 fixed 상태
                         if (size !== index + 1) {
                             if (currentPosition > $information.find('.desc-info ul').eq(index).offset().top - gap && currentPosition < $information.find('.desc-info ul').eq(index + 1).offset().top - gap) {
-                                $information.find('.year-info').css({'top': '0', 'position': 'fixed', 'margin-top': '180px'});
-                                $information.find('.year-info ul').css({'margin-top': '-' + (gapYear * index) + 'px'});
+                                $information.find('.year-info').css({'top': '0', 'position': 'fixed', 'margin-top': '' + getFixedMargin + 'rem'});
+                                $information.find('.year-info ul').css({'margin-top': '-' + (gapYear * index) + 'px', 'position': 'relative', 'bottom': 'unset'});
                                 $information.find('.year-info li').eq(index).addClass('active').siblings().removeClass('active');
                                 $information.find('.desc-info ul').eq(index).addClass('active').siblings().removeClass('active');
                             }
                         } else {
                             if (currentPosition > $information.find('.desc-info ul').eq(index).offset().top) {
                                 // $information.find('.year-info').css({'top': scrollStart + gap - (gapYear * index)}, {'position': 'fixed'});
-                                $information.find('.year-info').css({'top': '0', 'position': 'fixed', 'margin-top': '180px'});
+                                $information.find('.year-info').css({'top': '0', 'position': 'fixed', 'margin-top': '' + getFixedMargin + 'rem'});
                                 $information.find('.year-info ul').css({'margin-top': '-' + (gapYear * index) + 'px'});
                                 $information.find('.year-info li').eq(index).addClass('active').siblings().removeClass('active');
                             }
                         }
                     }
+
+                    
+                    
                 })
             }
         })
