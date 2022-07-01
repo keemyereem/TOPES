@@ -261,7 +261,7 @@ br.br_t, br.br_m {display: none;}
 .contents .contents_inner .title p { padding-top: 4rem; font-size: 1.8rem; font-weight: 200; line-height: 1.7; color: #555555; letter-spacing: -.025rem; }
 .contents .contents_inner .title p > b {font-weight: 400; color: #000;}
 .contents .contents_inner .inner .tb_view { font-size:1.6rem; }
-.contents .contents_inner .sec_cont .view { display: none; }
+/* .contents .contents_inner .sec_cont .view { display: none; } */
 .contents .paging {margin-top: 8rem;position: relative;text-align: center;}
 .contents .paging > a {display: inline-block;vertical-align: middle;}
 .contents .paging .front {width: 1.2rem;height: 1.2rem;background: url(../images/common/arrow_front.png) 0 0 no-repeat;background-size: 100% 100%;}

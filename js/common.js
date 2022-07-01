@@ -131,10 +131,16 @@ var commonEvent = {
     },
 
     fnImgPop: function() {
-        $(document).on('click', '.view', function() {
-            var getUrl = $(this).siblings('.img_m').attr('src');
+        $(document).on('click', '.view .img_m', function() {
+            var getUrl = $(this).attr('src');
             getUrl = getUrl.replace(".png","_view.png");
-            window.open(getUrl) 
+
+            var img = new Image();
+            img.src = getUrl;
+            
+            let winX = (screen.width - img.width) / 2;
+            let winY = (screen.height - img.height) / 2;
+            window.open(getUrl, top=' + winY + ', left=' + winX ');
         });
     },
 
