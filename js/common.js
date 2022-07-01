@@ -375,22 +375,25 @@ var companyEvent={
                      setHistoryScroll(section.eq(i));
                 }
 
+                // 반응형 연혁 하단 여백 생성
+                if($(window).width() > 1920){
+                    section.css('margin-bottom','350px');
+                } else if ($(window).width() < 768) {
+                    section.css('margin-bottom','200px');
+                } else {
+                    section.css('margin-bottom','0');
+                }
+
                 // 연혁 연도 마지막 active일 때, 내용 마지막 active 또는 스크롤 맨 끝 도달 시
-                if ($('.tab_contents.on .year-info').find('li:last-child').hasClass('active') || $(window).scrollTop() == scrollEnd) {
+                if ($('.tab_contents.on .year-info').find('li:last-child').hasClass('active') || $(window).scrollTop() >= scrollEnd) {
+                    console.log('dd');
                     $('.tab_contents.on .year-info').find('li:last-child').addClass('active');
                     $('.tab_contents.on .year-info').find('li:not(:last-child)').removeClass('active');
                     $('.tab_contents.on .desc-info').find('ul:last-child').addClass('active');
                     $('.tab_contents.on .desc-info').find('ul:not(:last-child)').removeClass('active');
                 }
 
-                // 반응형 연혁 하단 여백 생성
-                if($(window).width() > 1920){
-                    $('.desc-info').css('padding-bottom','350px');
-                } else if ($(window).width() < 768 && $(window).height() > 770) {
-                    $('.desc-info').css('padding-bottom','50px');
-                } else {
-                    $('.desc-info').css('padding-bottom','0');
-                }
+                
             })
         
             function setHistoryScroll($information) {

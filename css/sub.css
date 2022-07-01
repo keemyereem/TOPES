@@ -642,9 +642,9 @@
 .cont_stmp .solution_contents .section2 {padding-top: 12rem;}
 .cont_stmp .solution_contents .section2 .sec_cont {display: flex;align-items: flex-end; justify-content: space-between;}
 .cont_stmp .solution_contents .section2 .left {max-width: fit-content;}
-.cont_stmp .solution_contents .section2 .right {background: #f5f5f5; width: 79.8rem;}
+.cont_stmp .solution_contents .section2 .right {width: 79.8rem;}
 .cont_stmp .solution_contents .section2 .right ul {display: flex; /*  */flex-wrap: wrap; }
-.cont_stmp .solution_contents .section2 .right ul li .desc {font-size: 1.6rem; font-weight: 300; color: #222; letter-spacing: -.04rem; text-align: center; line-height: 5.8rem;}
+.cont_stmp .solution_contents .section2 .right ul li .desc {font-size: 1.6rem; font-weight: 300; color: #222; letter-spacing: -.04rem; text-align: center; line-height: 5.8rem; background: #f5f5f5;}
 /* .cont_stmp .crossroad_contents .section1 .img div {position: absolute; display: table; background: rgba(255, 255, 255,.8); box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.2); border-radius: 3.8rem;}
 .cont_stmp .crossroad_contents .section1 .img div:nth-of-type(1) {top: 43%; left: 2.3%;}
 .cont_stmp .crossroad_contents .section1 .img div:nth-of-type(2) {top: 44.45%; right: 2.3%;}
