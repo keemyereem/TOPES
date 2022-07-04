@@ -40,8 +40,7 @@ var commonEvent = {
                 $('.header').removeClass('fixed');
             };
 
-            $(".header").css("left",0-$(this).scrollLeft());
-            $(".sitemap").css("left",0-$(this).scrollLeft());
+            $(".header, .sitemap").css("left",0-$(this).scrollLeft());
         });
 
         $(document).on('click', '.top_sitemap', function() {
@@ -49,9 +48,9 @@ var commonEvent = {
             $('.header').toggleClass('site');
             $('.sitemap').toggleClass('on');
         });
-
-        // pc버전 마우스 오버시
+        
         if ($(window).width() > 768) {
+            // pc버전 마우스 오버시
             $(document).on({
                 mouseover: function () {
                     // let sitemapIdx = $(this).index();
@@ -62,6 +61,7 @@ var commonEvent = {
                 }
             }, ".sitemap ul li"); 
         } else {
+            // 모바일버전 터치시
             $(document).on('click', '.sitemap ul li h2', function() {
                 $(this).find('a').toggleClass('on');
                 $(this).siblings('.depth_box').toggleClass('on');
@@ -208,8 +208,8 @@ var mainEvent = {
 
         })
         
-        // pc버전 마우스 오버시
         if ($(window).width() > 768) {
+            // pc버전 마우스 오버시
             $(document).on({
                 mouseover: function () {
                     // let sitemapIdx = $(this).index();
@@ -220,6 +220,7 @@ var mainEvent = {
                 }
             }, ".sitemap ul li"); 
         } else {
+            // 모바일버전 터치시
             $(document).on('click', '.sitemap ul li h2', function() {
                 $(this).find('a').toggleClass('on');
                 $(this).siblings('.depth_box').toggleClass('on');

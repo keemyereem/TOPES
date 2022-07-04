@@ -92,11 +92,11 @@
     /* sitemap */
     .sitemap { background: #fff url(../images/common/sitemap_bg.png) no-repeat 50% calc(100% - 5rem); background-size: 26.5rem 8.95rem; width: 100%; }
     .sitemap .site_wrap_scroll { height: 100vh; overflow-y: auto; }
-    .sitemap .sitemap_wrap { width: 100%; min-height: 100%; height: auto;/*  overflow-y: auto; */ margin-left: 0; justify-content: initial; margin-top: 5.5rem; }
+    .sitemap .sitemap_wrap { width: 100%; min-height: 100%; height: auto; margin-left: 0; justify-content: initial; margin-top: 5.5rem; }
     .sitemap .sitemap_wrap li { width: 100%; }
     .sitemap .sitemap_wrap li h2 { width: 100%; }
     .sitemap .sitemap_wrap li:hover h2 > a, 
-    .sitemap .sitemap_wrap li h2 > a { width: 100%; font-size: 2.5rem; padding: 1.5rem 2rem; letter-spacing: -.125rem; word-break: break-word; }
+    .sitemap .sitemap_wrap li h2 > a { width: 100%; font-size: 2.5rem; padding: 1.5rem 2rem; letter-spacing: -.125rem; word-break: break-word; white-space: unset; }
     .sitemap .sitemap_wrap li h2 > a.on { font-size: 3.5rem; letter-spacing: -.175rem; } 
     .sitemap .sitemap_wrap li:hover h2 > a:before { display: none; }
     .sitemap .sitemap_wrap li h2 > a.on:before { display: block; }
