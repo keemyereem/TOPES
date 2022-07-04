@@ -41,23 +41,42 @@ var commonEvent = {
             };
 
             $(".header").css("left",0-$(this).scrollLeft());
+            $(".sitemap").css("left",0-$(this).scrollLeft());
         });
 
         $(document).on('click', '.top_sitemap', function() {
             $(this).toggleClass('on .col_b')
             $('.header').toggleClass('site');
-            $('.sitemap').toggleClass('on'); 
+            $('.sitemap').toggleClass('on');
         });
 
-        $(document).on({
-            mouseenter: function () {
-                // let sitemapIdx = $(this).index();
-                $(this).siblings().find('h2 a').addClass('col_g');
-            },
-            mouseleave: function () {
-                $(this).siblings().find('h2 a').removeClass('col_g');
-            }
-        }, ".sitemap ul li"); 
+        // pc버전 마우스 오버시
+        if ($(window).width() > 768) {
+            $(document).on({
+                mouseover: function () {
+                    // let sitemapIdx = $(this).index();
+                    $(this).siblings().find('h2 a').addClass('col_g');
+                },
+                mouseleave: function () {
+                    $(this).siblings().find('h2 a').removeClass('col_g');
+                }
+            }, ".sitemap ul li"); 
+        } else {
+            $(document).on('click', '.sitemap ul li h2', function() {
+                $(this).find('a').toggleClass('on');
+                $(this).siblings('.depth_box').toggleClass('on');
+                if ($(this).find('a').hasClass('on')) {
+
+                    $(this).parent().siblings().find('a').removeClass('on');
+                    $(this).parent().siblings().find('.depth_box').removeClass('on');
+                    $(this).parent().siblings().find('a').addClass('col_g');
+                    $(this).find('a').removeClass('col_g');
+                    
+                } else if (!$('.sitemap ul li h2 a').hasClass('on')) {
+                    $('.sitemap ul li h2 a').removeClass('col_g');
+                }
+            });
+        }
         
     },
 
@@ -183,17 +202,40 @@ var mainEvent = {
             $('.header').toggleClass('site');
             $('.sitemap').toggleClass('on'); 
 
+            if ($('.sitemap').hasClass('on') && $(window).width() < 769) {
+                
+            } 
+
         })
         
-        $(document).on({
-            mouseenter: function () {
-                // let sitemapIdx = $(this).index();
-                $(this).siblings().find('h2 a').addClass('col_g');
-            },
-            mouseleave: function () {
-                $(this).siblings().find('h2 a').removeClass('col_g');
-            }
-        }, ".sitemap ul li"); 
+        // pc버전 마우스 오버시
+        if ($(window).width() > 768) {
+            $(document).on({
+                mouseover: function () {
+                    // let sitemapIdx = $(this).index();
+                    $(this).siblings().find('h2 a').addClass('col_g');
+                },
+                mouseleave: function () {
+                    $(this).siblings().find('h2 a').removeClass('col_g');
+                }
+            }, ".sitemap ul li"); 
+        } else {
+            $(document).on('click', '.sitemap ul li h2', function() {
+                $(this).find('a').toggleClass('on');
+                $(this).siblings('.depth_box').toggleClass('on');
+                if ($(this).find('a').hasClass('on')) {
+
+                    $(this).parent().siblings().find('a').removeClass('on');
+                    $(this).parent().siblings().find('.depth_box').removeClass('on');
+                    $(this).parent().siblings().find('a').addClass('col_g');
+                    $(this).find('a').removeClass('col_g');
+
+                } else if (!$('.sitemap ul li h2 a').hasClass('on')) {
+                    $('.sitemap ul li h2 a').removeClass('col_g');
+                }
+            });
+        }
+        
 
     },
 
@@ -386,7 +428,6 @@ var companyEvent={
 
                 // 연혁 연도 마지막 active일 때, 내용 마지막 active 또는 스크롤 맨 끝 도달 시
                 if ($('.tab_contents.on .year-info').find('li:last-child').hasClass('active') || $(window).scrollTop() >= scrollEnd) {
-                    console.log('dd');
                     $('.tab_contents.on .year-info').find('li:last-child').addClass('active');
                     $('.tab_contents.on .year-info').find('li:not(:last-child)').removeClass('active');
                     $('.tab_contents.on .desc-info').find('ul:last-child').addClass('active');
