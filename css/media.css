@@ -1,9 +1,6 @@
 
 /* --------------------- TOPES Released 0000.00.00 --------------------- */
 /* --------------------- Published by 4m Creative --------------------- */
-@media screen and (max-width:1850px) {
-    /* .sitemap .sitemap_wrap li h2 {padding-left: 10vw;} */
-}
 
 @media screen and (max-width:1780px) {
     .header .header_wrap {display: flex; align-items: center; justify-content: space-between;}
@@ -17,13 +14,10 @@
 
 }
 
-@media screen and (max-width:1500px) {
-}
-
 @media screen and (max-width:1480px) {
     .header .gnb {margin: 0 3rem; width: calc(100% - 47rem);}
     .sitemap {background: #fff url(../images/common/sitemap_bg.png) no-repeat calc(100% - 2.6vw) calc(100% - 18.5rem);}
-    
+
 }
 
 @media screen and (max-width:1440px) {
@@ -33,6 +27,7 @@
     /* 스마트 교통관리 플랫폼 - 스마트 교차로 솔루션 */
     /* .cont_stmp .crossroad_contents .section1 .img div > span {font-size: 1.1vw; padding: 1.2vw 2vw;} */
 }
+
 @media screen and (max-width:1400px) {
     /* body {overflow-x: auto;}
     .wrap {width: 140rem;} */
@@ -259,7 +254,6 @@
     .cont_main .section2 .section_inner .tab_content02 > .map_wrap .map_txt .loc > span {font-size: 1.3rem;}
     .cont_main .section2 .section_inner .tab_content02 > .map_wrap .map_txt .loc > a {height: 4rem; margin-top: 2.5rem; font-size: 1.2rem; line-height: 4rem; letter-spacing: .21rem;}
     .cont_main .section2 .section_inner .tab_content02 > .map_wrap .map_txt .contact {padding: 2.5rem 3.5rem 3rem; height: 8.55rem; display: flex; justify-content: space-between;}
-    .cont_main .section2 .section_inner .tab_content02 > .map_wrap .map_txt .contact > div {}
     .cont_main .section2 .section_inner .tab_content02 > .map_wrap .map_txt .contact > div:first-of-type {margin-bottom: 0;}
     .cont_main .section2 .section_inner .tab_content02 > .map_wrap .map_txt .contact > div > span {display: block;}
     .cont_main .section2 .section_inner .tab_content02 > .map_wrap .map_txt .contact > div > span:first-of-type {font-size: 1.3rem; margin-right: 0;}
@@ -813,7 +807,6 @@
     .cont_cs .tb_view .view_nav dl dt { padding-right:3rem; }
     .cont_cs .tb_view .view_nav dl dt, dd { float:none; }
     .cont_cs .tb_view .view_nav dl dd { overflow: hidden; white-space: nowrap; display:block; text-overflow: ellipsis; }
-    .cont_cs .tb_view .view_nav dl dd a { } 
     .cont_cs .tb_view .btn_box .btn_line a {  margin: 6rem auto 0 auto; }
 
     /* 고객지원 - 자주하는 질문(FAQ) */
@@ -821,8 +814,6 @@
     .cont_cs .faq_contents .faq {margin: 6rem 0 0 0;}
     .cont_cs .faq_contents .faq > div > p:before {font-size: 1.9rem; line-height: normal; padding:0 1.5rem 0 0; }
     .cont_cs .faq_contents .faq .que {padding: 2.6rem 0;font-size: 1.6rem;letter-spacing: -.055rem;}
-    .cont_cs .faq_contents .faq .que > p {background: url(../images/recruit/faq_arrow.png) no-repeat calc(100% - 1rem) 50%;background-size: .95rem .5rem; padding:0 3rem 0 1rem; }
-    .cont_cs .faq_contents .faq .que.on > p {background: none; }
     .cont_cs .faq_contents .faq .ans {padding: 2.8rem 0;font-size: 1.5rem;line-height: 1.46;}
     .cont_cs .faq_contents .faq .ans > p { padding: 0 1rem; }
     .cont_cs .faq_contents .faq .ans > p:before { padding:0 1.5rem 0 0; }
@@ -848,7 +839,7 @@
     .cont_cs .estimate_contents .estimate_inquiry .section1 .left .bottom .tb_row:nth-of-type(n+3):nth-of-type(-n+4) {margin-bottom: 1.5rem;}
     .cont_cs .estimate_contents .estimate_inquiry .section1 .left .bottom .tit_cell {font-size: 1.2rem; }
     /* .cont_cs .estimate_contents .estimate_inquiry .section1 .right {margin-top: 1.5rem;} */
-    .cont_cs .estimate_contents .estimate_inquiry .section1 .right textarea {font-size: 1.2rem; padding: 1rem; min-height: 16.2;}
+    .cont_cs .estimate_contents .estimate_inquiry .section1 .right textarea {font-size: 1.2rem; padding: 1rem; min-height: 16.2rem;}
     .cont_cs .estimate_contents .estimate_inquiry .section2 .agree_info {height: 18rem; padding: 2.5rem; margin-bottom: 1rem;}
     .cont_cs .estimate_contents .estimate_inquiry .section2 .agree_info p {font-size: 1.2rem;}
     .cont_cs .checkbox_row input[type="checkbox"] + label {font-size: 1.3rem;}

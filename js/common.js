@@ -1,4 +1,5 @@
 $(function(){
+    
     AOS.init({
         // 핸들링 참고: https://github.com/michalsnik/aos
 		once : true,
@@ -311,9 +312,12 @@ var mainEvent = {
                 $('.cont_main .section1 .tab_contents').removeClass('on');
                 $('.cont_main .section1 .tab_content0' + Tabs_cont).addClass('on');
                 
-                setTimeout(function(){
-                    s1Swiper.slideTo(0, 0);
-                },500);
+                if ($('.cont_main .section1 .tab_swiper0' + index).length) {
+                    setTimeout(function() {
+                        s1Swiper.slideTo(0, 0);
+                    }, 500);
+                    
+                }
                 
             });
         });
@@ -558,6 +562,20 @@ var EnPage = {
     solutionTab: function(){
         // do something
         var headerHeight = $('.header').outerHeight();
+
+        // 요소 내용을 배열로 만드는 함수
+        function elemArr(arr) {
+            var arrObj = [];
+
+            for (var i = 0; i < arr.length; i++) {
+                arrObj.push(arr[i].className);
+            }
+            return arrObj;
+        }
+        
+        var idx = $(".container.en .sub_visual_menu li").toArray();
+        console.log(elemArr(idx));
+
         $('.container.en .sub_visual_menu .solBtn01').on('click', function(){
             $('.container.en .sub_visual_menu li').removeClass('on');
             $(this).addClass('on');

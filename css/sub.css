@@ -709,8 +709,6 @@
 .cont_cs  .faq_contents .faq .que > p:before {content:'Q';}
 .cont_cs  .faq_contents .faq .ans > p:before {content:'A';line-height: normal; padding-top: .5rem;}
 .cont_cs  .faq_contents .faq .que {cursor: pointer; position:relative; width: 100%;padding: 4.5rem 0;border-bottom: 1px solid #e8e8e8;font-size: 2.2rem;font-weight: 400;color: #222;line-height: normal;letter-spacing: -.055rem;}
-.cont_cs  .faq_contents .faq .que > p {background: url(../images/recruit/faq_arrow.png) no-repeat calc(100% - 6rem) 50%;}
-.cont_cs  .faq_contents .faq .que.on > p {background: url(../images/recruit/faq_arrow_on.png) no-repeat calc(100% - 6rem) 50%;}
 .cont_cs  .faq_contents .faq .que.on {background: #050f5e; border-bottom: 0;color: #fff;}
 .cont_cs  .faq_contents .faq .que.on > p:before {color: #fff;}
 .cont_cs  .faq_contents .faq .que:after { content: ''; background: url(../images/cs/faq_arrow_close.png) 50% 50% no-repeat; display: block; width:1.9rem; height:1rem; position: absolute; right: 8rem; top: 50%; transform: translateY(-50%); }

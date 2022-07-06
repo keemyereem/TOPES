@@ -40,10 +40,14 @@
 
 
 /* Common */
+
 .container.en .anchor { display: block; position: relative; top: -10rem; visibility: hidden; }
 .container.en .sub_visual_nav h2 { font-family: 'play'; font-weight: 400; }
 .container.en .sub_visual.sol_visual:after { background: url(../images/_en/sol_bg.png) no-repeat 50% 50%; background-size: cover; }
 .container.en .sub_visual.contactus_visual:after { background: url(../images/_en/contactus_bg.png) no-repeat 50% 50%; background-size: cover; }
+
+.header_en .header_wrap { width: calc(100% - 32rem); }
+.header_en .gnb { left: 0; width: 100% }
 .footer .footer_wrap .footer_info > div { line-height: 2.5; }
 
 
@@ -86,27 +90,23 @@
 .container.en .cont_sol .sol_contents #solution04 .top ul li:first-child { border-left: .1rem solid #eeeeee; }
 .container.en .cont_sol .sol_contents #solution04 .top ul li img { object-fit: none; position: absolute; left: 0; right: 0; top:0; bottom:0; margin: auto; transform: translateY(-2.5rem); }
 .container.en .cont_sol .sol_contents #solution04 .top ul li .tit {font-size: 1.6rem; font-weight: 300; color: #222222; padding-bottom: 3rem;}
-/* .container.en .cont_sol .sol_contents #solution04 .section2 .sec_tit { max-width:144rem; margin:auto; padding-bottom: 4.7rem; font-family: 'play'; font-weight: 400; font-size: 4rem;} */
+.container.en .cont_sol .sol_contents #solution04 .section2 { background: linear-gradient(138deg, #edfeff, #d0e9ea); text-align: center; padding: 9.6rem 0 7.6rem; }
 .container.en .cont_sol .sol_contents #solution04 .section3 .sec_cont { max-width: 144rem; margin: 12rem auto 0; }
 
 
 
 
 /* -------------------- Responsive -------------------- */
-@media screen and (max-width:1850px) {
-    
-}
-
 @media screen and (max-width:1780px) {
-
-}
-
-@media screen and (max-width:1500px) {
-
+    .header_en .header_wrap { justify-content: center; }
+    .header_en .gnb { margin: 0; width: 100%;}
+    .header_en .gnb>ul { justify-content: center; }
+    .header_en .gnb>ul>li { line-height: normal; height: 8rem; flex: initial;  }
+    .header .gnb>ul>li .gnb_tit { padding: 0 3.7rem; }
 }
 
 @media screen and (max-width:1480px) {
-    
+    .header_en .gnb { margin: 0; width: 100%; }
 }
 
 @media screen and (max-width:1440px) {
@@ -140,5 +140,33 @@
     .en.cont_main .section1 .section_inner .main_content ul:nth-child(even) li:not(.img) p a { margin: 3.6rem 0 0; }
     .en.cont_main .section1 .section_inner .main_content ul li:not(.img) p a:after { width: 1.5rem; height: 1.5rem; top: .4rem; margin-left: 1rem; background: url(../images/_en/main_readmore_arrow.png) 55% 50% no-repeat; background-size: auto; }
     .en.cont_main .section1 .section_inner .main_content ul li:not(.img) p a:hover:after { margin-left: 1.5rem; }
+
+    
+    /* Solution */
+    .sub_visual.sol_visual { background: url(../images/_en/sol_bg_m.png) no-repeat 50% 50%; background-size: cover; }
+    .container.en .cont_sol .contents_inner { padding: 0 2rem; }
+    .container.en .cont_sol .sol_contents .title { width: 100%; }
+    .container.en .cont_sol .sol_contents .inner:not(#solution01) { margin-top: 9rem; }
+    .container.en .cont_sol .sol_contents .title p { padding-top: 3rem; }
+    .container.en .cont_sol .sol_contents .sec_tit { font-size: 2rem; letter-spacing: 0; margin: 9rem 0 3rem; }
+    .container.en .cont_sol .sol_contents .sec_tit:before { height: 0.2rem; margin-bottom: 1rem; }
+    .container.en .cont_sol .sol_contents .sec_cont .img:after { margin: 3rem 0 2.4rem; }
+    .container.en .cont_sol .sol_contents .sec_cont .img > img { width: 100%; object-fit: contain; }
+    .container.en .cont_sol .sol_contents .sec_cont .txt { font-size: 1.3rem; line-height: 1.38; }
+
+    /* Solution - Smart Traffic Management Platform */
+    .container.en .cont_sol .sol_contents #solution04 .grey_detail { padding: 1.5rem 2rem; }
+    .container.en .cont_sol .sol_contents #solution04 .grey_detail p { font-size: 1.4rem; line-height: 1.57; padding-left: 1.5rem; }
+    .container.en .cont_sol .sol_contents #solution04 .grey_detail p:before { top: .7rem; }
+    .container.en .cont_sol .sol_contents #solution04 .top ul { justify-content: initial; flex-wrap: wrap; margin: 0 auto 9rem;}
+    .container.en .cont_sol .sol_contents #solution04 .top ul li { width: calc(100% / 4); height: 9.75rem; justify-content: flex-end; border-left: .1rem solid #eeeeee; margin-left: -1px; }
+    .container.en .cont_sol .sol_contents #solution04 .top ul li:nth-child(n+5):nth-child(-n+10) { margin-top: -1px; }
+    .container.en .cont_sol .sol_contents #solution04 .top ul li img { width: 4rem; object-fit: contain; transform: translateY(-1.1rem); }
+    .container.en .cont_sol .sol_contents #solution04 .top ul li:nth-child(6) img { width: 5rem; }
+    .container.en .cont_sol .sol_contents #solution04 .top ul li .tit {font-size: 1.3rem; padding-bottom: 1.6rem;}
+    .container.en .cont_sol .sol_contents #solution04 .section2 { padding: 5rem .65rem 3.85rem 1.2rem; }
+    .container.en .cont_sol .sol_contents #solution04 .section2 img { width: 100%; object-fit: contain; }
+    .container.en .cont_sol .sol_contents #solution04 .section3 img { width: 100%; object-fit: contain; }
+
 
 }
