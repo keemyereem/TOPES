@@ -278,7 +278,7 @@ br.br_t, br.br_m {display: none;}
 .footer .footer_wrap {position: relative; margin: 0 auto; max-width: 144rem; font-size: 1.5rem; color: #fff;}
 .footer .footer_wrap .footer_info > div {display: inline-block; line-height: 2.13; margin-right: 3rem; font-weight: 300;}
 .footer .footer_wrap .footer_info > div > span:first-of-type {color: #999; margin-right: 1rem; font-weight: 200;}
-.footer .footer_wrap .footer_info a {display: inline-block; color: #fff; width: 10.5rem; height: 2.4rem; border: 1px solid #fff; border-radius: .4rem; opacity: .5; text-align: center; line-height: 2.2rem; font-size: 1.2rem;}
+.footer .footer_wrap .footer_info a {display: inline-block; color: #fff; width: auto; height: 2.4rem; padding: 0 2rem; border: 1px solid #fff; border-radius: .4rem; opacity: .5; text-align: center; line-height: 2.2rem; font-size: 1.2rem;}
 .footer .footer_wrap .footer_contact {font-family: 'play'; padding-top: 4rem;}
 .footer .footer_wrap .footer_contact > div {display: inline-block;margin-right: 2.8rem;}
 .footer .footer_wrap .copyright {padding-top: 6rem;font-family: 'play'; font-weight: 200; opacity: .2; letter-spacing: .15rem;}

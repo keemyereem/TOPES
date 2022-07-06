@@ -168,7 +168,7 @@
     .footer .footer_wrap .footer_info > div {line-height: 2; margin-right: 0; display: block;}
     .footer .footer_wrap .footer_info > div:nth-of-type(2) {display: inline-block; margin-right: 1.5rem;}
     .footer .footer_wrap .footer_info > div > span:first-of-type {margin-right: 1rem;}
-    .footer .footer_wrap .footer_info a {width: 7.5rem; height: 2.1rem;border-radius: .2rem; line-height: 1.9rem; font-size: 1rem;}
+    .footer .footer_wrap .footer_info a { padding:0 1rem; height: 2.1rem;border-radius: .2rem; line-height: 1.9rem; font-size: 1rem;}
     .footer .footer_wrap .footer_contact {padding-top: 2.5rem;}
     .footer .footer_wrap .footer_contact > div {margin-right: 2.8rem; line-height: 1.76;}
     .footer .footer_wrap .copyright {padding-top: 2rem; letter-spacing: .125rem;}
