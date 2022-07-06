@@ -12,22 +12,22 @@
     </script><![endif]-->
 
     <meta charset="utf-8" /> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
     <meta name="author" content="TOPES">
     <meta name="robots" content="index, follow">
     <meta name="title" content="TOPES">
-    <meta name="description" content="“The guardian of happiness” 인류의 행복을 지키는 파수꾼 TOPES">
-    <meta name="keywords" content="교통단속시스템 , 교통정보시스템 , 방범시스템 , CCTV 시스템">
+    <meta name="description" content="“The guardian of happiness” A watchman who protects the happiness of mankind TOPES">
+    <meta name="keywords" content="Traffic Enforcement System , Traffic Information System , Crime Prevention System , CCTV System">
     <meta property="og:type" content="website" />
     <meta property="og:title" content="TOPES" />
-    <meta property="og:description" content="“The guardian of happiness” 인류의 행복을 지키는 파수꾼 TOPES" />
+    <meta property="og:description" content="“The guardian of happiness” A watchman who protects the happiness of mankind TOPES" />
     <meta property="og:site_name" content="TOPES">
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="TOPES" />
-    <meta name="twitter:description" content="“The guardian of happiness” 인류의 행복을 지키는 파수꾼 TOPES" />
+    <meta name="twitter:description" content="“The guardian of happiness” A watchman who protects the happiness of mankind TOPES" />
 
     <title>TOPES</title>
-    <link rel="icon" href="images/favicon.png" sizes="32x32">
+    <link rel="icon" href="../images/favicon.png" sizes="32x32">
     <link rel="canonical" href="http://dev.topes.4-m.co.kr/" />  
 
     <link type="text/css" href="../css/jquery.swiper.min.css" rel="stylesheet">
@@ -45,16 +45,13 @@
 
     <script>
         $(document).ready( function() {
-            //html용 include
+            // include
             $(".header").load("../include/en/header.html");
             $(".sitemap").load("../include/en/sitemap.html");
             $(".footer").load("../include/en/footer.html");
 
-            $(".tab_content01").load("include/FD-01-01-0001_tab01.html");
-            $(".tab_content02").load("include/FD-01-01-0001_tab02.html");
-            $(".tab_content03").load("include/FD-01-01-0001_tab03.html");
-
             commonEvent.init();
+            EnPage.init();
 
         });
     </script>
@@ -73,83 +70,308 @@
         <div class="sitemap"></div>
         <!-- //sitemap -->
         <div class="container en">
-            <div class="sub_visual ste_visual">
+            <div class="sub_visual sol_visual">
                 <div class="sub_visual_nav">
-                    <h2><span>Smart Traffic Enforcement</span>스마트 단속관리</h2>
+                    <h2>Solution</h2>
 
                     <div class="sub_visual_nav_prev">
-                        <a href="javascript:;" title="이전메뉴로 이동">
-                            <img src="images/common/sub_visual_nav_prev.png" alt="sub_visual_nav_prev">
+                        <a href="javascript:;" title="Previous">
+                            <img src="../images/common/sub_visual_nav_prev.png" alt="sub_visual_nav_prev">
                             <span>Previous</span>
                         </a>
                     </div>
                     <div class="sub_visual_nav_next">
-                        <a href="javascript:;" title="다음메뉴로 이동">
+                        <a href="javascript:;" title="Next">
                             <span>Next</span>
-                            <img src="images/common/sub_visual_nav_next.png" alt="sub_visual_nav_next">
+                            <img src="../images/common/sub_visual_nav_next.png" alt="sub_visual_nav_next">
                         </a>
                     </div>
                 </div>
 
                 <div class="sub_visual_menu">
                     <ul>
-                        <li class="on"><a href="javascript:;" title="페이지 이동">속도/신호위반/구간 단속 시스템</a></li>
-                        <li class="mobile"><a href="html/FD-01-01-0001.html" title="페이지 이동">속도/신호위반/구간 단속 시스템</a></li>
+                        <li class="solBtn01 on"><a href="javascript:;" title="Move to Smart Traffic Enforcement">Smart Traffic Enforcement</a></li>
+                        <li class="solBtn01 mobile"><a href="javascript:;" title="Move to Smart Traffic Enforcement">Smart Traffic Enforcement</a></li>
+                        
+                        <li class="solBtn02"><a href="javascript:;" title="Move to Intelligent Traffic Management">Intelligent Traffic Management</a></li>
 
-                        <li class=""><a href="html/FD-01-02-0001.html" title="페이지 이동">이륜차/헬멧 단속 시스템</a></li>
+                        <li class="solBtn03"><a href="javascript:;" title="Move to Industrial System">Industrial System</a></li>
 
-                        <li class=""><a href="html/FD-01-03-0001.html" title="페이지 이동">꼬리물기 단속 시스템</a></li>
-
-                        <li class=""><a href="html/FD-01-04-0001.html" title="페이지 이동">불법 주정차 단속 시스템</a></li>
+                        <li class="solBtn04"><a href="javascript:;" title="Move to Smart Traffic Management Platform">Smart Traffic Management Platform</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="contents cont_ste">
-                <div class="contents_inner srp_inner">
-                    <div class="sub_contents srp_contents">
-                        <!-- <div class="inner"> -->
+            <div class="contents cont_sol">
+                <div class="contents_inner">
+                    <div class="sub_contents sol_contents">
+
+                        <div class="inner" id="solution01">
+                            <a class="anchor" name="anchor_sol1"></a>
                             <div class="title" data-aos="fade-up">
-                                <h3>속도/신호위반/구간 단속 시스템</h3>
+                                <h3>Smart Traffic Enforcement</h3>
+                                <p>Applying TOPES’ excellent detection technology, TOPCAM2016 detects any objects (vehicles) violating traffic rules <br class="br_pc">
+                                    and relays the relevant images/videos to the center.</p>
                             </div>
                             
                             <section class="section1" data-aos="fade-up">
-                                <div class="txt">
-                                    <h3><img src="images/ste/topcam_2016.png" alt="TOPCAM 2016 로고"></h3>
-                                    <p>
-                                        토페스의 우수한 기술력이 집약된 단속 제어기로 <br class="br_pc">
-                                        속도위반/신호위반 및 구간교통 단속에 적용되는 시스템입니다.
+                                <div class="sec_tit"><h4>
+                                    Speed-Enforcement System<br>
+                                    Redlight-Enforcement System<br>
+                                    Point to Point Speed Enforcement System
+                                </h4></div>
+                                <div class="sec_cont">
+                                    <div class="img"><img src="../images/_en/sol01_img01.png" alt="Smart Traffic Enforcement Image"></div>
+                                    <p class="txt">
+                                        This system detects a vehicle’s speed and possible signal violations using detective sensors (Loop, Laser, Radar) and cameras installed on the road. The Point to Point Speed Enforcement 
+                                        System detects violations in a car’s average speed. It then sends out the vehicle’s information (vehicle number, time of passage, speed, and vehicle image) related to the violation, which is 
+                                        gathered at the jurisdiction center through the TOPES controller, <b>serving as the basis for issuing a ticket to the driver in question.</b>
                                     </p>
                                 </div>
-                                <!-- 영상 -->
-                                <div class="video">
-                                    <iframe src="https://www.youtube.com/embed/qoapYt5oR7I" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </section>
+                            <section class="section2" data-aos="fade-up">
+                                <div class="sec_tit"><h4>
+                                    Two-Wheeled Vehicle’s Speed<br>
+                                    Traffic-Signal Control
+                                </h4></div>
+                                <div class="sec_cont">
+                                    <div class="img"><img src="../images/_en/sol01_img02.png" alt="Smart Traffic Enforcement Image"></div>
+                                    <p class="txt">
+                                        This system <b>detects violations of traffic laws in terms of traffic-signal violations, not wearing a helmet,</b> and driving on areas reserved for pedestrians, and this is carried out using detective 
+                                        sensors (Loop, Laser, Radar) and cameras installed on the road.
+                                    </p>
                                 </div>
                             </section>
-                            
-                            <div class="tab_wrap">
-                                <div class="srs_tab" data-aos="fade-up">
-                                    <ul class="tabs">
-                                        <li class="on"><a href="javascript:;" title="속도위반 교통단속 시스템">속도위반 교통단속 시스템 </a></li>
-                                        <li class=""><a href="javascript:;" title="신호위반 교통단속 시스템">신호위반 교통단속 시스템</a></li>
-                                        <li class=""><a href="javascript:;" title="구간 교통단속 시스템">구간 교통단속 시스템</a></li>
-                                    </ul>
+                            <section class="section3" data-aos="fade-up">
+                                <div class="sec_tit"><h4>
+                                    Illegal Parking Enforcement System
+                                </h4></div>
+                                <div class="sec_cont">
+                                    <div class="img"><img src="../images/_en/sol01_img03.png" alt="Smart Traffic Enforcement Image"></div>
+                                    <p class="txt">
+                                        This system detects vehicles within a specific area using a camera. The system <b>is installed in specific areas that prohibit stopping or parking,</b> and, in the case of a violation, all information for the 
+                                        concerned vehicle (vehicle number, violation duration) is transmitted to the center. 
+                                    </p>
                                 </div>
-                                <div class="tab_cont_wrap">
-                                    <div class="tab_contents tab_content01 on">
-                                        <!-- 속도위반 교통단속 시스템 -->
-                                    </div>
+                            </section>
+                            <section class="section4" data-aos="fade-up">
+                                <div class="sec_tit"><h4>
+                                    Tailgating-Control System
+                                </h4></div>
+                                <div class="sec_cont">
+                                    <div class="img"><img src="../images/_en/sol01_img04.png" alt="Smart Traffic Enforcement Image"></div>
+                                    <p class="txt">
+                                        This system can be set to track tailgating at a busy intersection to record a vehicle stuck in the intersection as the light turns to green, resulting in blocked traffic, and <b>it saves the video to include 
+                                        the license plate number and other information for tracking.</b>
+                                    </p> 
+                                </div>
+                            </section>
+                        </div>
 
-                                    <div class="tab_contents tab_content02">
-                                        <!-- 신호위반 교통단속 시스템 -->
-                                    </div>
-                                    
-                                    <div class="tab_contents tab_content03">
-                                        <!-- 구간 교통단속 시스템 -->
-                                    </div>
+                        <div class="inner" id="solution02">
+                            <a class="anchor" name="anchor_sol2"></a>
+                            <div class="title" data-aos="fade-up">
+                                <h3>Intelligent Traffic Management</h3>
+                                <p>TOPES’ exclusive customized solutions offer optimized resolutions for various traffic problems, <br class="br_pc">
+                                    ranging from traffic information collected on the road to detailed specifications on the vehicles extracted.
+                                </p>
+                            </div>
+                            
+                            <section class="section1" data-aos="fade-up">
+                                <div class="sec_tit"><h4>
+                                    Traffic-Safety Integrated System
+                                </h4></div>
+                                <div class="sec_cont">
+                                    <div class="img"><img src="../images/_en/sol02_img01.png" alt="Intelligent Traffic Management Image"></div>
+                                    <p class="txt">
+                                        This system enhances traffic safety and management through detective CCTV cameras, weather-measuring sensors, and vehicle detectors installed on national highways, expressways, 
+                                        at both ends of tunnels, blind spots, parking lots at highway service areas, danger areas with falling rocks and soil, rest stops along the highway, etc. <b>by remotely controlling far-off traffic 
+                                        circumstances to check on traffic and weather-related information for active responses to the given traffic conditions.</b> A special feature of this system includes the user’s selective choice of 
+                                        modules to install and operate for use in linkage with various weather sensors and warning-display devices.
+                                    </p>
                                 </div>
+                            </section>
+                            <section class="section2" data-aos="fade-up">
+                                <div class="sec_tit"><h4>
+                                    Automatic Vehicle Identification System
+                                </h4></div>
+                                <div class="sec_cont">
+                                    <div class="img"><img src="../images/_en/sol02_img02.png" alt="Intelligent Traffic Management Image"></div>
+                                    <p class="txt">
+                                        This system uses a <b>device that detects vehicles running across multiple lanes</b> through high-definition video. This system can be installed on any type of road and sends all related information 
+                                        to the center, including the vehicle number, time of passage, speed, and an image of the vehicle.
+                                    </p>
+                                </div>
+                            </section>
+                            <section class="section3" data-aos="fade-up">
+                                <div class="sec_tit"><h4>
+                                    Old-Diesel-Vehicle Control System
+                                </h4></div>
+                                <div class="sec_cont">
+                                    <div class="img"><img src="../images/_en/sol02_img03.png" alt="Intelligent Traffic Management Image"></div>
+                                    <p class="txt">
+                                        This system uses pre-installed detective sensors (Loop, Laser, Radar) and cameras to detect vehicles before <b>sending the detected information (vehicle number, vehicle image, etc.) to the center.</b>
+                                    </p>
+                                </div>
+                            </section>
+                            <section class="section4" data-aos="fade-up">
+                                <div class="sec_tit"><h4>
+                                    Smart Road Surface Management System
+                                </h4></div>
+                                <div class="sec_cont">
+                                    <div class="img"><img src="../images/_en/sol02_img04.png" alt="Intelligent Traffic Management Image"></div>
+                                    <p class="txt">
+                                        This system aims to <b>prevent traffic accidents and fatal accidents by forecasting road-surface conditions,</b> such as freezing and blow-ups due to weather changes. 
+                                    </p> 
+                                </div>
+                            </section>
+                            <section class="section5" data-aos="fade-up">
+                                <div class="sec_tit"><h4>
+                                    Detailed Specification-Extraction System
+                                </h4></div>
+                                <div class="sec_cont">
+                                    <div class="img"><img src="../images/_en/sol02_img05.png" alt="Intelligent Traffic Management Image"></div>
+                                    <p class="txt">
+                                        Overcoming the drawbacks of AVC (Automatic Vehicle Classification), this system provides non-buried simplified construction, easy reinstallation, and maintenance by developing a new kind 
+                                        of AVC equipment that meets the cutting-edge advancements in the content of road-traffic statistics. Based on AI recognition technology, the system <b>provides detailed vehicle-classification 
+                                        information for 12 vehicle types, along with intelligent vehicle-classification information,</b> such as the specified type (taxi, compact car, etc.) and electric cars.
+                                    </p> 
+                                </div>
+                            </section>
+                            <section class="section6" data-aos="fade-up">
+                                <div class="sec_tit"><h4>
+                                    Axle-Manipulative Overloaded-Vehicle Control System
+                                </h4></div>
+                                <div class="sec_cont">
+                                    <div class="img"><img src="../images/_en/sol02_img06.png" alt="Intelligent Traffic Management Image"></div>
+                                    <p class="txt">
+                                        When controlling overloads at the tollgate, an overloaded vehicle with a lift axle can avoid checking in for weight measurement by unloading its axle. To prevent this occurrence, this system utilizes 
+                                        the front and side video-recognition technology of the axle-manipulative DB-detection system to <b>monitor overloaded vehicles and automatically classify axle-manipulative vehicles.</b>
+                                    </p> 
+                                </div>
+                            </section>
+                        </div>
+
+                        
+                        <div class="inner" id="solution03">
+                            <a class="anchor" name="anchor_sol3"></a>
+                            <div class="title" data-aos="fade-up">
+                                <h3>Industrial System</h3>
+                                <p>
+                                    The contributions of TOPES Solutions are remarkable not only in the automation of production lines at industrial sites, such as for steel-mill production lines <br class="br_pc">
+                                    and CCTV in heavy industry, but also for industrial safety.
+                                </p>
+                            </div>
+                            
+                            <section class="section1" data-aos="fade-up">
+                                <div class="sec_tit"><h4>
+                                    I-TV
+                                </h4></div>
+                                <div class="sec_cont">
+                                    <div class="img"><img src="../images/_en/sol03_img01.png" alt="Industrial System Image"></div>
+                                    <p class="txt">
+                                        By localizing the industrial I-TV system, we are consistently supplying steel-mill production lines, CCTV for monitoring logistics in heavy industry, and container-crane monitoring systems in port 
+                                        facilities, <b>with great contributions not only in terms of production-line automation but also industrial safety.</b>
+                                    </p>
+                                </div>
+                            </section>
+                            <section class="section2" data-aos="fade-up">
+                                <div class="sec_tit"><h4>
+                                    Video Content
+                                </h4></div>
+                                <div class="sec_cont">
+                                    <div class="img"><img src="../images/_en/sol03_img02.png" alt="Industrial System Image"></div>
+                                    <p class="txt">
+                                        Broadcasting equipment on a train is comprised of a video server, music server, and power server. This system provides not only videos for news, sports, weather forecasts, advertisements, 
+                                        and local information but also various genres of audio, such as music for all passengers on high-speed railroads, through LCD monitors and wireless earphones. Additionally, the system provides 
+                                        the latest audio and video content transmitted from content providers to users through wired and wireless networks in real time.
+                                    </p>
+                                </div>
+                            </section>
+                        </div>
+
+                        
+                        <div class="inner" id="solution04">
+                            <a class="anchor" name="anchor_sol4"></a>
+                            <div class="title" data-aos="fade-up">
+                                <h3>Smart Traffic Management Platform</h3>
+                                <p>
+                                    Four Individual modules detect and respond to the real time situation on the roads, including intersections, crosswalks, and sudden incidents.<br>
+                                    <b>You can experience the smarter traffic and intelligent road</b> with TOPES Platform
+                                </p>
+                            </div>
+                            <div class="grey_detail" data-aos="fade-up">
+                                <p>Site-Adaptive Solution with Intelligent Video-Analysis analyzes traffic data from the CCTV </p>
+                                <p>Customizable Module-Type Solution </p>
+                                <p>
+                                    Multi-object analysis for high-accuracy filtering to analyze dissimilar objects and diverse circumstances<br>
+                                    <span>- Provide a dashboard for major events and integrated dissimilar events for enhanced insights and follow up actions</span>
+                                </p>
                             </div>
 
-                        <!-- </div> -->
+                            <div class="top" data-aos="fade-up">
+                                <ul>
+                                    <li>
+                                        <img src="../images/stmp/stmp01_overview_icon01.png" alt="Counting icon">
+                                        <div class="tit">Counting</div>
+                                    </li>
+                                    <li>
+                                        <img src="../images/stmp/stmp01_overview_icon02.png" alt="Reverse driving icon">
+                                        <div class="tit">Reverse driving</div>
+                                    </li>
+                                    <li>
+                                        <img src="../images/stmp/stmp01_overview_icon03.png" alt="Illegal parking icon">
+                                        <div class="tit">Illegal parking</div>
+                                    </li>
+                                    <li>
+                                        <img src="../images/stmp/stmp01_overview_icon04.png" alt="Speeding icon">
+                                        <div class="tit">Speeding</div>
+                                    </li>
+                                    <li>
+                                        <img src="../images/stmp/stmp01_overview_icon05.png" alt="Location icon">
+                                        <div class="tit">Location</div>
+                                    </li>
+                                    <li>
+                                        <img src="../images/stmp/stmp01_overview_icon06.png" alt="Congestion icon">
+                                        <div class="tit">Congestion</div>
+                                    </li>
+                                    <li>
+                                        <img src="../images/stmp/stmp01_overview_icon07.png" alt="Accident icon">
+                                        <div class="tit">Accident</div>
+                                    </li>
+                                    <li>
+                                        <img src="../images/stmp/stmp01_overview_icon08.png" alt="Height icon">
+                                        <div class="tit">Height</div>
+                                    </li>
+                                    <li>
+                                        <img src="../images/stmp/stmp01_overview_icon09.png" alt="Loitering icon">
+                                        <div class="tit">Loitering</div>
+                                    </li>
+                                    <li>
+                                        <img src="../images/stmp/stmp01_overview_icon10.png" alt="Nighttime icon">
+                                        <div class="tit">Nighttime</div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <section class="section2" data-aos="fade-up">
+                                <div class="sec_cont">
+                                    <img src="../images/_en/sol04_img01.png" alt="Smart Traffic Management Platform Image" class="img_pc">
+                                </div>
+                            </section>
+
+                            <section class="section3" data-aos="fade-up">
+                                <div class="sec_cont">
+                                    <img src="../images/_en/sol04_img02.png" alt="Smart Traffic Management Platform Image" class="img_pc">
+                                    <div class="view">
+
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                            
+
+
+                       
                     </div>
                 </div>
             </div>

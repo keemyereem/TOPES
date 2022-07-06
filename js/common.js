@@ -336,7 +336,7 @@ var mainEvent = {
 
     floating:function() {
         $(window).scroll(function() {
-            var s3Top = $('.cont_main .section3').offset().top - $(window).outerHeight() + Number(266);
+            var s3Top = $('.cont_main section:last-child').offset().top - $(window).outerHeight() + Number(266);
             var pos = $('.footer').outerHeight() + Number(500);
 
             if($(this).scrollTop() > s3Top){
@@ -344,6 +344,7 @@ var mainEvent = {
 
             }else {
                 $('.floating_area').removeClass('on').css({'bottom':'4rem'});
+                
             }
         });
 
@@ -551,10 +552,67 @@ var supportEvent = {
 var EnPage = {
     init:function(){
         this.solutionTab();
+        // this.solutionScroll();
     },
 
     solutionTab: function(){
         // do something
+        var headerHeight = $('.header').outerHeight();
+        $('.container.en .sub_visual_menu .solBtn01').on('click', function(){
+            $('.container.en .sub_visual_menu li').removeClass('on');
+            $(this).addClass('on');
+            $('html, body').stop().animate({scrollTop: $('#solution01').offset().top - headerHeight }, 500);
+        })
+        $('.container.en .sub_visual_menu .solBtn02').on('click', function(){
+            $('.container.en .sub_visual_menu li').removeClass('on');
+            $(this).addClass('on');
+            $('html, body').stop().animate({scrollTop: $('#solution02').offset().top - headerHeight }, 500);
+        })
+        $('.container.en .sub_visual_menu .solBtn03').on('click', function(){
+            $('.container.en .sub_visual_menu li').removeClass('on');
+            $(this).addClass('on');
+            $('html, body').stop().animate({scrollTop: $('#solution03').offset().top - headerHeight }, 500);
+        })
+        $('.container.en .sub_visual_menu .solBtn04').on('click', function(){
+            $('.container.en .sub_visual_menu li').removeClass('on');
+            $(this).addClass('on');
+            $('html, body').stop().animate({scrollTop: $('#solution04').offset().top - headerHeight }, 500);
+        })
     },
+
+    // solutionScroll:function(){
+    //     $(window).scroll(function(){
+    //         var headerHeight = $('.header').outerHeight();
+    //         var solution01 = $('#solution01').offset().top - headerHeight;
+    //         var solution02 = $('#solution02').offset().top - headerHeight;
+    //         var solution03 = $('#solution03').offset().top - headerHeight;
+    //         var solution04 = $('#solution04').offset().top - headerHeight;
+    //         var btn = $('.container.en .sub_visual_menu li');
+    //         var btn01 = $('.container.en .sub_visual_menu .solBtn01');
+    //         var btn02 = $('.container.en .sub_visual_menu .solBtn02');
+    //         var btn03 = $('.container.en .sub_visual_menu .solBtn03');
+    //         var btn04 = $('.container.en .sub_visual_menu .solBtn04');
+
+    //         var windowTop = $(window).scrollTop()+headerHeight;
+    //         if(windowTop >= solution01) {
+    //             $(btn).removeClass('on');
+    //             $(btn01).addClass('on');
+    //         }
+    //         if(windowTop >= solution02) {
+    //             $(btn).removeClass('on');
+    //             $(btn02).addClass('on');
+    //         }
+    //         if(windowTop >= solution03) {
+    //             $(btn).removeClass('on');
+    //             $(btn03).addClass('on');
+    //         }
+    //         if(windowTop >= solution04) {
+    //             $(btn).removeClass('on');
+    //             $(btn04).addClass('on');
+    //         }
+
+    //     })
+    // },
+
 
 };
