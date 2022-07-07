@@ -556,9 +556,9 @@ var supportEvent = {
 var EnPage = {
     init:function(){
         this.solutionTab();
-        // this.fixedTab();
-        this.observeResizing();
-        // this.solutionScroll();
+        // this.observeResizing();
+        this.TabScrollfnc();
+        $('.header').css('position','absolute');
     },
 
     observeResizing: function() {
@@ -585,19 +585,19 @@ var EnPage = {
         var headerHeight = $('.header').outerHeight();
         var sub_visual_menu = $('.sub_visual_menu ul li').outerHeight();
 
-
         if ($(window).width() > 768) {
 
             // pc일 때
             $(".sub_visual_menu .mobile").remove();
             $('.sub_visual_menu li').on('click', function() {
                 idx = $(this).index() + 1;
-
-                $(this).addClass('on');
+                
+                // console.log('idx : ' + idx);
+                // $(this).addClass('on');
                 $('.container.en .sub_visual_menu li').not($(this)).removeClass('on');
 
                 if (idx > 0) {
-                    $('html, body').stop().animate({scrollTop: $('#solution0' + idx).offset().top - headerHeight - sub_visual_menu}, 500);
+                    $('html, body').stop().animate({scrollTop: $('#solution0' + idx).offset().top - headerHeight - sub_visual_menu + 30}, 500);
                 }
             });
         
@@ -611,6 +611,7 @@ var EnPage = {
 
                 $(this).not($('.on')).addClass('mobile')
                 $('.sub_visual_menu li').not($(this)).removeClass('mobile');
+                $('.sub_visual_menu ul').removeClass('on');
                 $(".sub_visual_menu ul .on a").text(txt);
 
                 $('html, body').stop().animate({scrollTop: $('#solution0' + idx).offset().top - headerHeight - sub_visual_menu}, 500);
@@ -619,30 +620,80 @@ var EnPage = {
 
         //스크롤시 sub_visual_menu 고정
         $(window).scroll(function() {
-            var headerHeight = $('.header').outerHeight();
             var sub_visual  = $('.sub_visual ').outerHeight();
             var sub_visual_menu = $('.sub_visual_menu ul li').outerHeight();
             var menuTop = sub_visual - sub_visual_menu;
             var menuTop_m = sub_visual - sub_visual_menu - Number(35);
-            var windowTop = $(this).scrollTop() + headerHeight;
-            if($(window).width() > 768 ){
-                if(windowTop >= menuTop){
+
+            
+            var windowTop = $(this).scrollTop();
+            $('.header').removeClass('fixed');
+
+            if($(window).width() > 768 ) {
+
+                if(windowTop >= menuTop) {
                     $('.sub_visual_menu').addClass('fixed');
-    
-                }else {
+                } else {
                     $('.sub_visual_menu').removeClass('fixed');
-                    
                 }
-            }else{
-                if(windowTop >= menuTop_m){
+            } else {
+
+                if(windowTop >= menuTop_m) {
                     $('.sub_visual_menu').addClass('fixed');
-    
-                }else {
+                } else {
                     $('.sub_visual_menu').removeClass('fixed');
-                    
                 }
+
+                // mobile 메뉴 네비게이터 open 상태에서 스크롤 또는 터치로 움직일 경우
+                $(document).on('mousewheel touchmove',function(e){
+                    var wheel = e.originalEvent.wheelDelta;
+                    //스크롤값을 가져온다.
+                    if(wheel !== 0){
+                        $('.sub_visual_menu ul').removeClass('on');
+                    } 
+                });
+
+                $('#topButton').on('click', function() { 
+                    $('.sub_visual_menu ul').removeClass('on'); 
+                });
             }
 
+        });
+
+        
+    },
+
+    TabScrollfnc: function() {
+
+        // Anchor Sub Nav  - Sticky Header
+        $(function() {
+
+            var anchorLink = $('.sub_visual_menu li'),
+                anchorNav = $('.sub_visual_menu');
+        
+            $(window).scroll(function() {
+                var windscroll = $(window).scrollTop();
+                if (windscroll >= 1) {
+                    $('.sol_contents .inner').each(function(i) {
+                        if ($(this).position().top <= windscroll) {
+
+                            if ($(window).width() > 768) {
+                                $('.sub_visual_menu li.on').removeClass('on');
+                                anchorLink.eq(i).addClass('on');
+                            } else {
+                                $('.sub_visual_menu li.mobile').removeClass('mobile');
+                                anchorLink.eq(i).addClass('mobile');
+                            }
+                            
+                        }
+                    });
+        
+                } else {
+                
+                // $('.sub_visual_menu li.on').removeClass('on');    
+                }
+        
+            }).scroll();
         });
 
         
