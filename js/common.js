@@ -556,81 +556,97 @@ var supportEvent = {
 var EnPage = {
     init:function(){
         this.solutionTab();
+        // this.fixedTab();
+        this.observeResizing();
         // this.solutionScroll();
     },
 
-    solutionTab: function(){
-        // do something
-        var headerHeight = $('.header').outerHeight();
+    observeResizing: function() {
+        var delta = 300;
+        var timer = null;
 
-        // 요소 내용을 배열로 만드는 함수
-        function elemArr(arr) {
-            var arrObj = [];
-
-            for (var i = 0; i < arr.length; i++) {
-                arrObj.push(arr[i].className);
-            }
-            return arrObj;
-        }
+        $('.en.container').prepend("<div class='resizeAlert'><span>A size change has been detected. &nbsp;It will refresh after a while.</span></div>");
         
-        var idx = $(".container.en .sub_visual_menu li").toArray();
-        console.log(elemArr(idx));
+        $(window).on('resize', function() {
+            clearTimeout(timer);
+            var timer = setTimeout(resizeDone, delta);
+        });
 
-        $('.container.en .sub_visual_menu .solBtn01').on('click', function(){
-            $('.container.en .sub_visual_menu li').removeClass('on');
-            $(this).addClass('on');
-            $('html, body').stop().animate({scrollTop: $('#solution01').offset().top - headerHeight }, 500);
-        })
-        $('.container.en .sub_visual_menu .solBtn02').on('click', function(){
-            $('.container.en .sub_visual_menu li').removeClass('on');
-            $(this).addClass('on');
-            $('html, body').stop().animate({scrollTop: $('#solution02').offset().top - headerHeight }, 500);
-        })
-        $('.container.en .sub_visual_menu .solBtn03').on('click', function(){
-            $('.container.en .sub_visual_menu li').removeClass('on');
-            $(this).addClass('on');
-            $('html, body').stop().animate({scrollTop: $('#solution03').offset().top - headerHeight }, 500);
-        })
-        $('.container.en .sub_visual_menu .solBtn04').on('click', function(){
-            $('.container.en .sub_visual_menu li').removeClass('on');
-            $(this).addClass('on');
-            $('html, body').stop().animate({scrollTop: $('#solution04').offset().top - headerHeight }, 500);
-        })
+        function resizeDone() {
+            $('.resizeAlert').css('top', '0');
+
+            setTimeout(function () {
+                location.reload();
+            }, 1000);
+        };
     },
 
-    // solutionScroll:function(){
-    //     $(window).scroll(function(){
-    //         var headerHeight = $('.header').outerHeight();
-    //         var solution01 = $('#solution01').offset().top - headerHeight;
-    //         var solution02 = $('#solution02').offset().top - headerHeight;
-    //         var solution03 = $('#solution03').offset().top - headerHeight;
-    //         var solution04 = $('#solution04').offset().top - headerHeight;
-    //         var btn = $('.container.en .sub_visual_menu li');
-    //         var btn01 = $('.container.en .sub_visual_menu .solBtn01');
-    //         var btn02 = $('.container.en .sub_visual_menu .solBtn02');
-    //         var btn03 = $('.container.en .sub_visual_menu .solBtn03');
-    //         var btn04 = $('.container.en .sub_visual_menu .solBtn04');
+    solutionTab: function() {
+        var headerHeight = $('.header').outerHeight();
+        var sub_visual_menu = $('.sub_visual_menu ul li').outerHeight();
 
-    //         var windowTop = $(window).scrollTop()+headerHeight;
-    //         if(windowTop >= solution01) {
-    //             $(btn).removeClass('on');
-    //             $(btn01).addClass('on');
-    //         }
-    //         if(windowTop >= solution02) {
-    //             $(btn).removeClass('on');
-    //             $(btn02).addClass('on');
-    //         }
-    //         if(windowTop >= solution03) {
-    //             $(btn).removeClass('on');
-    //             $(btn03).addClass('on');
-    //         }
-    //         if(windowTop >= solution04) {
-    //             $(btn).removeClass('on');
-    //             $(btn04).addClass('on');
-    //         }
 
-    //     })
-    // },
+        if ($(window).width() > 768) {
+
+            // pc일 때
+            $(".sub_visual_menu .mobile").remove();
+            $('.sub_visual_menu li').on('click', function() {
+                idx = $(this).index() + 1;
+
+                $(this).addClass('on');
+                $('.container.en .sub_visual_menu li').not($(this)).removeClass('on');
+
+                if (idx > 0) {
+                    $('html, body').stop().animate({scrollTop: $('#solution0' + idx).offset().top - headerHeight - sub_visual_menu}, 500);
+                }
+            });
+        
+        } else {
+
+            // mobile일 때
+            $(".sub_visual_menu .on").attr('class', 'on');
+            $('.sub_visual_menu li:not(:first-child)').on('click', function() {
+                idx = $(this).index();
+                txt = $(this).text();
+
+                $(this).not($('.on')).addClass('mobile')
+                $('.sub_visual_menu li').not($(this)).removeClass('mobile');
+                $(".sub_visual_menu ul .on a").text(txt);
+
+                $('html, body').stop().animate({scrollTop: $('#solution0' + idx).offset().top - headerHeight - sub_visual_menu}, 500);
+            });
+        }
+
+        //스크롤시 sub_visual_menu 고정
+        $(window).scroll(function() {
+            var headerHeight = $('.header').outerHeight();
+            var sub_visual  = $('.sub_visual ').outerHeight();
+            var sub_visual_menu = $('.sub_visual_menu ul li').outerHeight();
+            var menuTop = sub_visual - sub_visual_menu;
+            var menuTop_m = sub_visual - sub_visual_menu - Number(35);
+            var windowTop = $(this).scrollTop() + headerHeight;
+            if($(window).width() > 768 ){
+                if(windowTop >= menuTop){
+                    $('.sub_visual_menu').addClass('fixed');
+    
+                }else {
+                    $('.sub_visual_menu').removeClass('fixed');
+                    
+                }
+            }else{
+                if(windowTop >= menuTop_m){
+                    $('.sub_visual_menu').addClass('fixed');
+    
+                }else {
+                    $('.sub_visual_menu').removeClass('fixed');
+                    
+                }
+            }
+
+        });
+
+        
+    },
 
 
 };
