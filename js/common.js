@@ -556,20 +556,23 @@ var supportEvent = {
 var EnPage = {
     init:function(){
         this.solutionTab();
-        // this.observeResizing();
+        this.observeResizing();
         this.TabScrollfnc();
-        $('.header').css('position','absolute');
+        this.sitemap();
     },
 
     observeResizing: function() {
         var delta = 300;
         var timer = null;
+        var windowWidth = $(window).width();
 
         $('.en.container').prepend("<div class='resizeAlert'><span>A size change has been detected. &nbsp;It will refresh after a while.</span></div>");
         
         $(window).on('resize', function() {
-            clearTimeout(timer);
-            var timer = setTimeout(resizeDone, delta);
+            if(windowWidth != $(window).width()) {
+                clearTimeout(timer);
+                var timer = setTimeout(resizeDone, delta);
+            }
         });
 
         function resizeDone() {
@@ -586,38 +589,26 @@ var EnPage = {
         var sub_visual_menu = $('.sub_visual_menu ul li').outerHeight();
 
         if ($(window).width() > 768) {
-
             // pc일 때
             $(".sub_visual_menu .mobile").remove();
             $('.sub_visual_menu li').on('click', function() {
                 idx = $(this).index() + 1;
-                
-                // console.log('idx : ' + idx);
-                // $(this).addClass('on');
-                $('.container.en .sub_visual_menu li').not($(this)).removeClass('on');
-
                 if (idx > 0) {
-                    $('html, body').stop().animate({scrollTop: $('#solution0' + idx).offset().top - headerHeight - sub_visual_menu + 30}, 500);
+                    $('html, body').stop().animate({scrollTop: $('#solution0' + idx).offset().top - (headerHeight + sub_visual_menu)}, 500);
                 }
             });
         
         } else {
-
             // mobile일 때
             $(".sub_visual_menu .on").attr('class', 'on');
             $('.sub_visual_menu li:not(:first-child)').on('click', function() {
                 idx = $(this).index();
-                txt = $(this).text();
-
-                $(this).not($('.on')).addClass('mobile')
-                $('.sub_visual_menu li').not($(this)).removeClass('mobile');
                 $('.sub_visual_menu ul').removeClass('on');
-                $(".sub_visual_menu ul .on a").text(txt);
-
-                $('html, body').stop().animate({scrollTop: $('#solution0' + idx).offset().top - headerHeight - sub_visual_menu}, 500);
+                $('html, body').stop().animate({scrollTop: $('#solution0' + idx).offset().top - (headerHeight + sub_visual_menu + 30)}, 500);
             });
+            
         }
-
+        
         //스크롤시 sub_visual_menu 고정
         $(window).scroll(function() {
             var sub_visual  = $('.sub_visual ').outerHeight();
@@ -627,16 +618,19 @@ var EnPage = {
 
             
             var windowTop = $(this).scrollTop();
-            $('.header').removeClass('fixed');
-
+            
             if($(window).width() > 768 ) {
-
+                $('.header').not('.site').css('position','absolute');
+                $('.header').removeClass('fixed');
                 if(windowTop >= menuTop) {
                     $('.sub_visual_menu').addClass('fixed');
                 } else {
                     $('.sub_visual_menu').removeClass('fixed');
                 }
             } else {
+                windowTop = windowTop + $('.header_en .header_wrap').outerHeight();
+                txt = $('.sub_visual_menu li.mobile').text();
+                $(".sub_visual_menu ul .on a").text(txt);
 
                 if(windowTop >= menuTop_m) {
                     $('.sub_visual_menu').addClass('fixed');
@@ -647,7 +641,6 @@ var EnPage = {
                 // mobile 메뉴 네비게이터 open 상태에서 스크롤 또는 터치로 움직일 경우
                 $(document).on('mousewheel touchmove',function(e){
                     var wheel = e.originalEvent.wheelDelta;
-                    //스크롤값을 가져온다.
                     if(wheel !== 0){
                         $('.sub_visual_menu ul').removeClass('on');
                     } 
@@ -659,7 +652,6 @@ var EnPage = {
             }
 
         });
-
         
     },
 
@@ -667,12 +659,12 @@ var EnPage = {
 
         // Anchor Sub Nav  - Sticky Header
         $(function() {
-
-            var anchorLink = $('.sub_visual_menu li'),
-                anchorNav = $('.sub_visual_menu');
+            var anchorLink = $('.sub_visual_menu li')
+            // console.log(anchorLink.outerHeight());
         
-            $(window).scroll(function() {
-                var windscroll = $(window).scrollTop();
+            $(window).on('load scroll', function() {
+                var windscroll = $(window).scrollTop() + 30;
+
                 if (windscroll >= 1) {
                     $('.sol_contents .inner').each(function(i) {
                         if ($(this).position().top <= windscroll) {
@@ -681,23 +673,33 @@ var EnPage = {
                                 $('.sub_visual_menu li.on').removeClass('on');
                                 anchorLink.eq(i).addClass('on');
                             } else {
+                                anchorLink = $('.sub_visual_menu li:not(.on)');
+                                windscroll = windscroll + 25;
                                 $('.sub_visual_menu li.mobile').removeClass('mobile');
                                 anchorLink.eq(i).addClass('mobile');
                             }
-                            
                         }
                     });
-        
-                } else {
-                
-                // $('.sub_visual_menu li.on').removeClass('on');    
                 }
-        
+                
             }).scroll();
         });
 
-        
     },
 
+    sitemap: function(){
+        $(document).on('click', '.sitemap_wrap_en li .depth_box a', function() {
+            $('.sitemap, .top_sitemap').removeClass('on');   
+            $('.header').removeClass('site');
+
+            var str = $(this).attr('href').split('#')[1];
+
+            if ($('#' + str).length) {
+                $('html, body').stop().animate({scrollTop: $('#' + str).offset().top}, 500);
+            }
+
+        });
+
+    },
 
 };
