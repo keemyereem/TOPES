@@ -553,14 +553,11 @@ var supportEvent = {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////                                                         **영문**                                                                   ///////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-var EnPage = {
+var EnCommon = {
     init:function(){
-        this.solutionTab();
         this.observeResizing();
-        this.TabScrollfnc();
         this.sitemap();
     },
-
     observeResizing: function() {
         var delta = 300;
         var timer = null;
@@ -583,6 +580,33 @@ var EnPage = {
             }, 1000);
         };
     },
+    sitemap: function(){
+        $(document).on('click', '.sitemap_wrap_en li .depth_box a', function() {
+            $('.sitemap, .top_sitemap').removeClass('on');   
+            $('.header').removeClass('site');
+
+
+            var str = $(this).attr('href').split('#')[1];
+            if ($('#' + str).length) {
+                $('html, body').stop().animate({scrollTop: $('#' + str).offset().top}, 500);
+                
+            }
+
+
+        });
+        
+
+    },
+
+}
+
+var EnPage = {
+    init:function(){
+        this.solutionTab();
+        this.TabScrollfnc();
+    },
+
+
 
     solutionTab: function() {
         var headerHeight = $('.header').outerHeight();
@@ -666,6 +690,7 @@ var EnPage = {
                 var windscroll = $(window).scrollTop() + 30;
 
                 if (windscroll >= 1) {
+                    
                     $('.sol_contents .inner').each(function(i) {
                         if ($(this).position().top <= windscroll) {
 
@@ -677,9 +702,13 @@ var EnPage = {
                                 windscroll = windscroll + 25;
                                 $('.sub_visual_menu li.mobile').removeClass('mobile');
                                 anchorLink.eq(i).addClass('mobile');
+                                txt = $('.sub_visual_menu li.mobile').text();
+                                $(".sub_visual_menu ul .on a").text(txt);
                             }
                         }
                     });
+
+
                 }
                 
             }).scroll();
@@ -687,19 +716,6 @@ var EnPage = {
 
     },
 
-    sitemap: function(){
-        $(document).on('click', '.sitemap_wrap_en li .depth_box a', function() {
-            $('.sitemap, .top_sitemap').removeClass('on');   
-            $('.header').removeClass('site');
 
-            var str = $(this).attr('href').split('#')[1];
-
-            if ($('#' + str).length) {
-                $('html, body').stop().animate({scrollTop: $('#' + str).offset().top}, 500);
-            }
-
-        });
-
-    },
 
 };
