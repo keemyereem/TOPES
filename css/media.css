@@ -71,7 +71,8 @@
     .header .lang_select .lang_choice li { margin: 0 1.2rem; }
     .header .lang_select .lang_choice li:first-child:after { top: .3rem; right: -1.2rem; }
     .header .lang_select .lang_choice li a { font-size: 1.3rem; }
-    .header .top_sitemap > div {font-size: 1.2rem; display: none; }
+    .header .top_sitemap > div {font-size: 1.2rem; }
+    .header.site .top_sitemap > div { display: none; }
     .header .top_sitemap button{height: 1.45rem;}
     .header .top_sitemap button span{width: 2rem; height: .15rem; margin-bottom: .5rem; margin-left: 1.5rem; }
     .header .top_sitemap button span:nth-child(2) { width: 1.4rem; margin-left: 2.1rem; }
