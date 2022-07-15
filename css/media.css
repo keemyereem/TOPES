@@ -155,7 +155,7 @@
     .contents .contents_inner .inner .tb_view { font-size:1.3rem; }
     .contents .contents_inner .sec_cont .view { /* position: absolute; */ top: 50%; left: 50%; /* transform: translate(-50%, -50%); */ display: block;}
     .contents .contents_inner .sec_cont .view > img { /* width: 6rem; */ width: 100%; }
-    .contents .sub_contents .sec_tit { font-size: 2rem; margin: 0 0 3rem 0; }
+    .contents .sub_contents .sec_tit { font-size: 2rem; margin: 0 2rem 3rem; }
     .contents .sub_contents .sec_tit:before {width: 5rem; height: .2rem; margin-bottom: 1rem;}
     .contents .paging {margin-top: 4rem; display: flex; justify-content: space-between; align-items: center; }
     .contents .paging .prev {margin-left: 3vw; width: .7rem; height: 1.2rem;}
@@ -256,15 +256,15 @@
     .cont_main .section2 .section_inner .tab_content02 > ul li:nth-child(3) a .icon {background-image: url(../images/main/s2_contact_icon03.png); background-size: 3.5rem 3.35rem;}
     .cont_main .section2 .section_inner .tab_content02 > ul li:nth-child(4) a .icon {background-image: url(../images/main/s2_contact_icon04.png); background-size: 3.25rem 3.5rem;}
     .cont_main .section2 .section_inner .tab_content02 > ul li a .name {font-size: 1.3rem; margin-top: 1.5rem;}
-    .cont_main .section2 .section_inner .tab_content02 > .map_wrap {flex-direction: column; height: auto; box-shadow: 0px 2px 14.2px .9px rgba(0, 0, 0, 0.08);}
-    .cont_main .section2 .section_inner .tab_content02 > .map_wrap .map_txt {width: 100%; height: 29rem;}
+    .cont_main .section2 .section_inner .tab_content02 > .map_wrap {flex-direction: column; height: auto; box-shadow: 0px 2px 14.2px .9px rgba(0, 0, 0, 0.08); margin-top: 3.7rem;}
+    .cont_main .section2 .section_inner .tab_content02 > .map_wrap .map_txt {width: 100%; height: 34rem;}
     .cont_main .section2 .section_inner .tab_content02 > .map_wrap .map_txt .loc {height: 20.5rem; padding: 3rem 3.5rem;}
     .cont_main .section2 .section_inner .tab_content02 > .map_wrap .map_txt .loc h4 {font-size: 2rem;}
     .cont_main .section2 .section_inner .tab_content02 > .map_wrap .map_txt .loc > div {font-size: 1.5rem; margin: 1rem 0 .7rem;}
     .cont_main .section2 .section_inner .tab_content02 > .map_wrap .map_txt .loc > span {font-size: 1.3rem;}
     .cont_main .section2 .section_inner .tab_content02 > .map_wrap .map_txt .loc > a {height: 4rem; margin-top: 2.5rem; font-size: 1.2rem; line-height: 4rem; letter-spacing: .21rem;}
-    .cont_main .section2 .section_inner .tab_content02 > .map_wrap .map_txt .contact {padding: 2.5rem 3.5rem 3rem; height: 8.55rem; display: flex; justify-content: space-between;}
-    .cont_main .section2 .section_inner .tab_content02 > .map_wrap .map_txt .contact > div:first-of-type {margin-bottom: 0;}
+    .cont_main .section2 .section_inner .tab_content02 > .map_wrap .map_txt .contact {padding: 2.5rem 3.5rem 3rem; height: 13.55rem; display: flex; justify-content: space-between; flex-wrap: wrap; position: relative; }
+    .cont_main .section2 .section_inner .tab_content02 > .map_wrap .map_txt .contact > div:first-of-type { width: 100%; }
     .cont_main .section2 .section_inner .tab_content02 > .map_wrap .map_txt .contact > div > span {display: block;}
     .cont_main .section2 .section_inner .tab_content02 > .map_wrap .map_txt .contact > div > span:first-of-type {font-size: 1.3rem; margin-right: 0;}
     .cont_main .section2 .section_inner .tab_content02 > .map_wrap .map_txt .contact > div > span:last-of-type {font-size: 1.8rem;}
@@ -906,7 +906,8 @@
     /* 회사소개 - 채용안내 */
     .sub_visual.company_visual { background: url(../images/company/company_bg_m.png) no-repeat 50% 50%; background-size: cover; }
     .contents .contents_inner.recruit_wrap {margin: 8rem auto 0;}
-    .cont_company .recruit_contents .inner > .sec_tit  {padding: 0 2rem; margin-top: 6rem;}
+    .cont_company .recruit_contents .inner > .sec_tit {padding: 0 2rem; margin-top: 6rem;}
+    .cont_company .recruit_contents .inner > .sub_tit { padding: 0 2rem; }
     .cont_company .sub_tit {font-size: 1.5rem; font-weight: 200; line-height: 1.47;}
     .cont_company .recruit_contents ul {flex-wrap: wrap; margin-top: 6rem; padding: 0 2rem;}
     .cont_company .recruit_contents ul li {border: 1px solid #eee; border-radius: 4.5rem 0; width: calc(50% - 1.25rem); margin-right: 2.5rem; padding: 3.5rem 2rem 4rem;}

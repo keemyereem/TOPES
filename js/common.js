@@ -250,7 +250,7 @@ var mainEvent = {
             loop: true,
             loopedSlides: 4,
             autoplay: {
-                delay: 5000,
+                delay: 7000,
                 disableOnInteraction: false, 
             },
 

@@ -111,7 +111,7 @@
 .cont_main .section2 .section_inner .tab_content01 > ul li .hover {width: 100%; height: 100%; background: #050f5e; position: absolute; top: 0; left: 0; opacity: 0; box-shadow: 0px 0px 39.2px 0.8px rgba(0, 0, 0, 0.4);}
 .cont_main .section2 .section_inner .tab_content01 > ul li:hover .hover {opacity: .9; transition: opacity .3s;}
 .cont_main .section2 .section_inner .tab_content01 > ul li:hover > div:not(.hover) {z-index: 1;}
-.cont_main .section2 .section_inner .tab_content02 > ul {display: flex; justify-content: center; margin: 8rem 0 9rem;}
+.cont_main .section2 .section_inner .tab_content02 > ul {display: flex; justify-content: center; margin: 8rem 0 9rem; display: none;}
 .cont_main .section2 .section_inner .tab_content02 > ul li {padding: 0 8rem;}
 .cont_main .section2 .section_inner .tab_content02 > ul li a .icon {height: 4.5rem; background-repeat: no-repeat; background-position: 50% 50%;}
 .cont_main .section2 .section_inner .tab_content02 > ul li:nth-child(1) a .icon {background-image: url(../images/main/s2_contact_icon01.png); background-size: 4.7rem 3.4rem;}
@@ -119,15 +119,15 @@
 .cont_main .section2 .section_inner .tab_content02 > ul li:nth-child(3) a .icon {background-image: url(../images/main/s2_contact_icon03.png); background-size: 4.5rem 4.3rem;}
 .cont_main .section2 .section_inner .tab_content02 > ul li:nth-child(4) a .icon {background-image: url(../images/main/s2_contact_icon04.png); background-size: 4.2rem 4.5rem;}
 .cont_main .section2 .section_inner .tab_content02 > ul li a .name {font-family: 'play', 'NS'; font-size: 1.8rem; font-weight: 400; color: #222; letter-spacing: -.072rem; margin-top: 3.2rem;}
-.cont_main .section2 .section_inner .tab_content02 > .map_wrap {display: flex; width: 100%; height: 59.1rem; color: #fff; box-shadow: 0px 4px 28.2px 1.8px rgba(0, 0, 0, 0.08);}
+.cont_main .section2 .section_inner .tab_content02 > .map_wrap {display: flex; width: 100%; height: 59.1rem; color: #fff; box-shadow: 0px 4px 28.2px 1.8px rgba(0, 0, 0, 0.08); margin-top: 8rem;}
 .cont_main .section2 .section_inner .tab_content02 > .map_wrap .map_txt {width: 46rem; height: 100%;}
 .cont_main .section2 .section_inner .tab_content02 > .map_wrap .map_txt .loc {height: 40.3rem; background: #050f5e; padding: 8rem;}
 .cont_main .section2 .section_inner .tab_content02 > .map_wrap .map_txt .loc h4 {font-size: 3rem; font-weight: 400; letter-spacing: -.075rem;}
 .cont_main .section2 .section_inner .tab_content02 > .map_wrap .map_txt .loc > div {font-size: 2rem; font-weight: 400; margin: 4.5rem 0 1.5rem;}
 .cont_main .section2 .section_inner .tab_content02 > .map_wrap .map_txt .loc > span {font-size: 1.6rem; font-weight: 150; letter-spacing: -.04rem;}
 .cont_main .section2 .section_inner .tab_content02 > .map_wrap .map_txt .loc > a {display: block; width: 100%; height: 6rem; border: 1px solid #fff; margin-top: 5rem; font-family: 'play'; font-size: 1.4rem; line-height: 6rem; text-align: center; color: #fff; letter-spacing: .21rem;}
-.cont_main .section2 .section_inner .tab_content02 > .map_wrap .map_txt .contact {background: #02072f; padding: 5rem 8rem; height: calc(100% - 40.3rem);}
-.cont_main .section2 .section_inner .tab_content02 > .map_wrap .map_txt .contact > div:first-of-type {margin-bottom: 2.5rem;}
+.cont_main .section2 .section_inner .tab_content02 > .map_wrap .map_txt .contact {background: #02072f; padding: 3.5rem 8rem; height: calc(100% - 40.3rem);}
+.cont_main .section2 .section_inner .tab_content02 > .map_wrap .map_txt .contact > div {margin-bottom: 1rem;}
 .cont_main .section2 .section_inner .tab_content02 > .map_wrap .map_txt .contact > div > span {font-family: 'play'; font-weight: 400;}
 .cont_main .section2 .section_inner .tab_content02 > .map_wrap .map_txt .contact > div > span:first-of-type {font-size: 1.6rem; opacity: .4; margin-right: 2rem;}
 .cont_main .section2 .section_inner .tab_content02 > .map_wrap .map_txt .contact > div > span:last-of-type {font-size: 2.6rem; letter-spacing: -.065rem;}
@@ -862,7 +862,7 @@
 .cont_company p.sub_tit b { color:#000; font-weight: 400; }
 .contents .contents_inner.recruit_wrap { margin: 14rem auto 0; }
 .contents .contents_inner .recruit_contents .inner { max-width: 100%; }
-.cont_company .recruit_contents .title { margin: 0 auto 10rem; max-width: 144rem; }
+.cont_company .recruit_contents .title { margin: 0 auto 4rem; max-width: 144rem; }
 .cont_company .recruit_contents .title h3 { color:#e0006d; }
 .cont_company .recruit_contents .sec_tit {font-size: 3rem; font-weight: 400; letter-spacing: -.012rem; margin-bottom: 6rem; max-width: 144rem; margin: auto; }
 .cont_company .recruit_contents .sec_tit:before {content:''; display: block; width: 8rem; height: 0.4rem; background: #e0006d; margin-bottom: 1.2rem;}
