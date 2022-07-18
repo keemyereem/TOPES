@@ -258,7 +258,7 @@ br.br_t, br.br_m {display: none;}
 .contents .contents_inner .sub_contents {  margin: 0 auto;}
 .contents .contents_inner .sub_contents .inner {max-width: 144rem;}
 .contents .contents_inner .title { /* padding-bottom: 4rem; */ max-width: 144rem; margin: 0 auto 4rem; }
-.contents .contents_inner .title h3 { font-size: 4rem; font-weight: 400; letter-spacing: -.1rem; line-height: 1; }
+.contents .contents_inner .title h3 { font-size: 3.5rem; font-weight: 400; letter-spacing: -.1rem; line-height: 1; }
 .contents .contents_inner .title h3.upper_line:before { content: ''; display: block; height: .4rem; margin:0 0 2rem .3rem; }
 .contents .contents_inner .title p { padding-top: 4rem; font-size: 1.8rem; font-weight: 200; line-height: 1.7; color: #555555; letter-spacing: -.025rem; }
 .contents .contents_inner .title p > b {font-weight: 400; color: #000;}

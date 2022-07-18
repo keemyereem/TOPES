@@ -110,7 +110,7 @@ var commonEvent = {
     goTopEvent:function() {
         $(window).scroll(function() {
             // top button controll
-            if ($(this).scrollTop() > 500) {
+            if ($(this).scrollTop() > 1000) {
                 $('#topButton').fadeIn();
             } else {
                 $('#topButton').fadeOut();

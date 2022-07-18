@@ -17,7 +17,7 @@
 @media screen and (max-width:1480px) {
     .header .gnb {margin: 0 3rem; width: calc(100% - 47rem);}
     .sitemap {background: #fff url(../images/common/sitemap_bg.png) no-repeat calc(100% - 2.6vw) calc(100% - 18.5rem);}
-
+    
 }
 
 @media screen and (max-width:1440px) {
@@ -751,6 +751,7 @@
     .cont_stmp .solution_contents .inner { padding: 0 2rem; }
     .cont_stmp .solution_contents .title { width: 100%; }
     .cont_stmp .solution_contents .section1 .sec_cont { flex-direction: column; align-items: initial; }
+    .cont_stmp .solution_contents .section1 .img { width: 100%; }
     .cont_stmp .solution_contents .section1 {padding-top: 6rem;}
     .cont_stmp .solution_contents img { width: 100%; object-fit: contain; }
     .cont_stmp .solution_contents .section2 { padding-top: 9rem; }
