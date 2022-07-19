@@ -728,9 +728,10 @@
     .cont_is .video_contents .section2 .sec_cont ul li:before { top: .65rem;}
 
     /* 스마트 교통관리 플랫폼 - 개요 */   
-    .cont_stmp .overview_contents .grey_detail { width: calc(100% - 4rem); padding: 1.5rem 2rem; }
-    .cont_stmp .overview_contents .grey_detail p { font-size: 1.4rem; line-height: 1.57; padding-left: 1.6rem; }
-    .cont_stmp .overview_contents .grey_detail p:before { top: .7rem; }
+    .cont_stmp .overview_contents .grey_detail { width: calc(100% - 4rem); height: fit-content; padding: 3rem 2rem 2rem 2rem; flex-direction: column; position: relative; justify-content: normal; }
+    .cont_stmp .overview_contents .grey_detail .txt p { font-size: 1.4rem; line-height: 1.57; padding-left: 1.6rem; }
+    .cont_stmp .overview_contents .grey_detail .txt p:before { top: .7rem; }
+    .cont_stmp .overview_contents .grey_detail .video {width: 100%; height: auto; background: #fff; box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1); margin-top: 3rem; }
     .cont_stmp .overview_contents .top ul { width: calc(100% - 4rem); justify-content: initial; flex-wrap: wrap; margin: 0 auto 8.5rem;}
     .cont_stmp .overview_contents .top ul li { width: calc(100% / 4); height: 9.75rem; justify-content: flex-end; border-left: .1rem solid #eeeeee; margin-left: -1px; }
     .cont_stmp .overview_contents .top ul li:nth-child(n+5):nth-child(-n+10) { margin-top: -1px; }
