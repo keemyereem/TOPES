@@ -192,7 +192,7 @@ var mainEvent = {
             if (st>=100){
                 $('.header').addClass('fixed'); 
             }else{
-                $('.header').removeClass('fixed'); 
+                $('.header').removeClass('fixed');
             }
 
             $(".header, .sitemap").css("left",0-$(this).scrollLeft());
@@ -206,7 +206,6 @@ var mainEvent = {
             if ($('.sitemap').hasClass('on') && $(window).width() < 769) {
                 
             } 
-
         })
         
         if ($(window).width() > 768) {

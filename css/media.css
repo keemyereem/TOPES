@@ -3,14 +3,14 @@
 /* --------------------- Published by 4m Creative --------------------- */
 
 @media screen and (max-width:1780px) {
-    .header .header_wrap {display: flex; align-items: center; justify-content: space-between;}
+    /* .header .header_wrap {display: flex; align-items: center; justify-content: space-between;}
     .header h1 {padding-top: 0;}
     .header .gnb {position: absolute; }
     .header .gnb>ul {justify-content: space-around; padding-right: 0; margin-left: 15vw; width: 60%; }
     .header .gnb>ul>li {display: table; flex: auto; line-height: normal; height: 8rem;}
     .header .gnb>ul>li .gnb_tit {display: table-cell; vertical-align: middle; padding: 0 2rem;}
     .header .gnb_menu {float: none; display: flex; align-items: center; width: 29rem; justify-content: space-between; margin-left: auto;}
-    .header .top_sitemap {margin-left: 0;}
+    .header .top_sitemap {margin-left: 0;} */
 
 }
 
@@ -28,15 +28,8 @@
 }
 
 @media screen and (max-width:1400px) {
-    /* body {overflow-x: auto;}
-    .wrap {width: 140rem;} */
     html{overflow-x: auto; width: 140rem;}
-    /* .container {padding: 0 2rem;} */
     .header {width: 140rem;}
-    .header .gnb {flex-shrink: 0; flex-basis: 83rem;}
-    .header .gnb>ul { margin-left: 20rem; }
-    .header .gnb_menu {flex-shrink: 0;}
-    .header .top_sitemap {flex-shrink: 0;}
     .sitemap {width: 140rem;}
     .container .sub_visual .sub_visual_nav {width: 140rem; left: 0; transform: translateX(0);}
 
