@@ -5,7 +5,7 @@
 
 /* Common */
 .container.en .anchor { display: block; position: relative; top: -16rem; visibility: hidden; }
-.container.en .sub_visual_nav h2 { font-family: 'play'; font-weight:s 400; }
+.container.en .sub_visual_nav h2 { font-family: 'play'; font-weight:400; }
 .container.en .sub_visual.sol_visual:after { background: url(../images/_en/sol_bg.png) no-repeat 50% 50%; background-size: cover; }
 .container.en .sub_visual.contactus_visual:after { background: url(../images/_en/contactus_bg.png) no-repeat 50% 50%; background-size: cover; }
 .container.en .sub_visual .sub_visual_menu { transition:all ease .2s; left: 50%; transform: translateX(-50%); margin:initial; }
@@ -195,5 +195,7 @@
     .container.en .cont_sol .sol_contents #solution04 .section2 img { width: 100%; object-fit: contain; }
     .container.en .cont_sol .sol_contents #solution04 .section3 img { width: 100%; object-fit: contain; }
 
+    /* Contact Us */
+    .sub_visual.contactus_visual { background: url(../images/_en/contactus_bg.png) no-repeat 50% 50%; background-size: cover; }
 
 }

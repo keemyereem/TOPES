@@ -273,12 +273,8 @@
 .cont_ste .srp_contents .section4 .bot table tbody tr { border-bottom: .1rem solid #e8e8e8; }
 .cont_ste .srp_contents .section4 .bot table tbody tr td {height: 4.5rem; text-align: center; font-size: 1.6rem; color: #555; letter-spacing: -.04rem;}
 /* 구간 교통단속 */
-.cont_ste .srp_contents .tab_content03 .section4 .sec_cont {border: 1px solid #ccc; margin-top: 6rem;}
-.cont_ste .srp_contents .tab_content03 .section4 .sec_cont > img {display: block; margin: 6rem auto;}
-.cont_ste .srp_contents .tab_content03 .section4 .formula {display: flex; align-items: center; justify-content: center; background: #f9f9f9; padding: 5rem 0;}
-.cont_ste .srp_contents .tab_content03 .section4 .formula div {font-size: 2rem; font-weight: 400; color: #242f86; text-align: center;}
-.cont_ste .srp_contents .tab_content03 .section4 .formula > div:first-of-type {margin-right: 2rem;}
-.cont_ste .srp_contents .tab_content03 .section4 .formula > div:first-of-type > div:first-of-type:after {content:''; display: block; width: 100%; height: 1px; background: #242f86; margin: 1rem 0;}
+.cont_ste .srp_contents .tab_content03 .section4 .sec_cont {margin-top: 6rem;}
+.cont_ste .srp_contents .tab_content03 .section4 .sec_cont img {width: 100%;object-fit: contain;}
 
 .cont_ste .srp_contents .section5 {max-width: 100%;}
 .cont_ste .srp_contents .section5 .sec_cont {width: 100%; background: #f9f9f9; margin-top: 5.5rem; padding-bottom: 10rem;}

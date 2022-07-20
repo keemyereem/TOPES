@@ -138,7 +138,7 @@ br.br_t, br.br_m {display: none;}
 .header .lang_select .lang_choice li a {display: inline-block;font-weight: 400;font-size: 1.4rem;color: #fff;opacity: .5; transition:all ease .3s;font-family: 'play'; }
 .header .lang_select .lang_choice li.on a {opacity: 1;}
 .header.fixed .lang_select .lang_choice li a, .header.site .lang_select .lang_choice li a, .header.main_fixed .lang_select .lang_choice li a {color: #222; opacity: .3;}
-.header.fixed .lang_select .lang_choice li.on a, .header.site .lang_select .lang_choice li.on a, .header.main_fixed .lang_select .lang_choice li.on a {color: #e0006d; opacity: 1;}
+.header.fixed .lang_select .lang_choice li.on a, .header.site .lang_select .lang_choice li.on a, .header.main_fixed .lang_select .lang_choice li.on a {color: #222; opacity: 1;}
 .header .top_sitemap {display: inline-block;vertical-align: middle;margin-left: 5rem; cursor: pointer;}
 .header .top_sitemap > div{font-family: 'play'; font-size: 16px; font-weight: 400; color: #fff; display: inline-block; transform: translateY(0); transition: 0.5s transform; }
 .header.fixed .top_sitemap > div, 
@@ -249,8 +249,8 @@ br.br_t, br.br_m {display: none;}
 .container .sub_visual .sub_visual_menu.fixed ul { max-width: 144rem; margin: auto; }
 .container .sub_visual .sub_visual_menu.fixed ul li {background: none;}
 .container .sub_visual .sub_visual_menu ul { display: flex; justify-content: space-around; }
-.container .sub_visual .sub_visual_menu ul li { width: 100%; text-align: center; font-size: 2rem; height: 8rem; position:relative; background: rgba(0, 0, 0, 0.2); }
-.container .sub_visual .sub_visual_menu ul li:not(:last-child) { border-right: .1rem solid rgba(255, 255, 255, .2); }
+.container .sub_visual .sub_visual_menu ul li { width: 100%; text-align: center; font-size: 2rem; height: 8rem; position:relative; background: rgba(0, 0, 0, 0.3); border: .1rem solid rgba(255, 255, 255, .8); border-bottom: none; }
+.container .sub_visual .sub_visual_menu ul li:not(:last-child) { border-right: none; }
 .container .sub_visual .sub_visual_menu ul li a { display: block; color: #fff; position: absolute; top:0; bottom:0; left:0; right:0; margin:auto; height:fit-content; }
 .container .sub_visual .sub_visual_menu ul li.on { background: #fff; border-right: .1rem solid #fff; }
 .container .sub_visual .sub_visual_menu ul li.on a { color: #000; font-weight: 300; }
