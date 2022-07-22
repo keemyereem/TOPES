@@ -130,6 +130,7 @@ br.br_t, br.br_m {display: none;}
 .header .gnb>ul>li { flex: auto; } /* header 메뉴 ver1로 복구 시 삭제 */
 
 .header .gnb>ul>li.menu_solution { position: unset; }
+.header .gnb>ul>li.menu_solution .depth_box { background:#050f5e url(../images/main/header_hov_logo.png) no-repeat; background-position: 100% 115%; }
 .header .gnb>ul>li.menu_solution:hover .depth_box { padding: 4rem 0 0; }
 .header .gnb>ul>li.menu_solution .depth_box .depth_wrap { display: flex; justify-content: center; text-align: left; }
 .header .gnb>ul>li.menu_solution .depth_box .depth_wrap .depth_list { padding:0 0 2.5rem 2rem; width: 30rem; border-left: .1rem solid rgba(255, 255, 255, .2); }

@@ -135,8 +135,8 @@
 .cont_main .section2 .section_inner .tab_content02 > .map_wrap .map_txt .contact > div > span {font-family: 'play'; font-weight: 400;}
 .cont_main .section2 .section_inner .tab_content02 > .map_wrap .map_txt .contact > div > span:first-of-type {font-size: 1.6rem; opacity: .4; margin-right: 2rem;}
 .cont_main .section2 .section_inner .tab_content02 > .map_wrap .map_txt .contact > div > span:last-of-type {font-size: 2.6rem; letter-spacing: -.065rem;}
-.cont_main .section2 .section_inner .tab_content02 > .map_wrap .map {width: calc(100% - 46rem); height: 100%;}
-.cont_main .section2 .section_inner .tab_content02 > .map_wrap .map iframe { width: 100%; height: 100%; }
+.cont_main .section2 .section_inner .tab_content02 > .map_wrap .map {width: calc(100% - 46rem); height: 100%; background: #e8e8e8;}
+.cont_main .section2 .section_inner .tab_content02 > .map_wrap .map img {width: 100%; object-fit: contain; max-height: 56.9rem;}
 .cont_main .section3 {width: 100%; height: 62rem;}
 .cont_main .section3 .s3_top {height: 50rem; padding-top: 12.5rem; background: url(../images/main/s3_bg.png) no-repeat 50% 50%; background-size: cover; text-align: center; color: #fff;}
 .cont_main .section3 .tag {font-family: 'play'; font-weight: 400; font-size: 1.8rem; color: #e0006d; letter-spacing: .18rem;}
@@ -319,7 +319,7 @@
 .cont_ste .twowheel_contents section {margin-top: 12rem;}
 .cont_ste .twowheel_contents section .sec_tit {margin-bottom: 4rem;}
 .cont_ste .twowheel_contents .section1 {margin-top: 8rem;}
-.cont_ste .twowheel_contents .section1 .sec_tit { margin-bottom: 1rem; } 
+.cont_ste .twowheel_contents .section1 .sec_tit { margin-bottom: 2rem; } 
 .cont_ste .twowheel_contents .section1 .sec_cont > ul { display: flex; flex-direction: column; width: 64rem;}
 .cont_ste .twowheel_contents .section1 .sec_cont > ul li { border-bottom: .1rem solid #eeeeee; font-size: 1.6rem; line-height: 1.5; padding:1.5rem 0rem 1.5rem 22.5rem; position: relative; color: #777777; }
 .cont_ste .twowheel_contents .section1 .sec_cont > ul li:nth-child(2) { }
@@ -328,17 +328,25 @@
 .cont_ste .twowheel_contents .section2 .sec_tit { margin-bottom: 3.5rem; } 
 .cont_ste .twowheel_contents .section2 .sec_cont {display: flex; justify-content: space-between;}
 .cont_ste .twowheel_contents .section2 .sec_cont > div {width: 64rem;}
-.cont_ste .twowheel_contents .section2 .tit {position: relative;}
+.cont_ste .twowheel_contents .section2 .tit {position: relative; padding-bottom: 4.5rem; margin-bottom: 2.3rem; }
 .cont_ste .twowheel_contents .section2 .tit h4 {font-size: 3.2rem; font-weight: 400; color: #050f5e; letter-spacing: -.16rem; display: grid;}
 .cont_ste .twowheel_contents .section2 .tit h4 > span {font-family: 'play'; font-size: 2.2rem; color: #050f5e;}
-.cont_ste .twowheel_contents .section2 .tit .number {margin: 3.5rem 0 6rem;}
-.cont_ste .twowheel_contents .section2 .tit .number li:first-child {margin-bottom: 1.2rem;}
+.cont_ste .twowheel_contents .section2 .tit .number {margin: 3.5rem 0 0rem;}
 .cont_ste .twowheel_contents .section2 .tit .number li > div {display: inline-block; width: 10rem; height: 3rem; background: #555; border-radius: 1.5rem; font-size: 1.6rem; color: #fff; text-align: center; line-height: 3rem; letter-spacing: -.04rem; margin-right: 1.5rem;}
 .cont_ste .twowheel_contents .section2 .tit .number li > span {font-family: 'play'; font-weight: 400; font-size: 1.8rem; color: #222; letter-spacing: -.045rem;}
 .cont_ste .twowheel_contents .section2 .tit .speed_img {position: absolute; right: 0; bottom: 0;}
-.cont_ste .twowheel_contents .section3 {max-width: 100%; margin-top: 5.3rem;}
+.cont_ste .twowheel_contents .section2 .tb .tb_tit {font-size: 2rem; font-weight: 400; letter-spacing: -.05rem; padding-top: 3rem;}
+.cont_ste .twowheel_contents .section2 .tb .tb_tit:before {content:'·'; display: inline-block; color: #e0006d; margin-right: 1rem;}
+.cont_ste .twowheel_contents .section2 .tb .tb_tit > span {font-family: 'play'; font-weight: 200; color: #555; margin-left: 2rem;}
+.cont_ste .twowheel_contents .section2 .tb table {margin-top: 2rem;}
+.cont_ste .twowheel_contents .section2 .tb table thead tr {height: 4.4rem; background: #999;}
+.cont_ste .twowheel_contents .section2 .tb table thead tr th:nth-child(1) {width: 15rem;}
+.cont_ste .twowheel_contents .section2 .tb table thead tr th:nth-child(2) {width: 32rem;}
+.cont_ste .twowheel_contents .section2 .tb table thead tr th {font-size: 1.6rem; color: #fff; font-weight: 400;}
+.cont_ste .twowheel_contents .section2 .tb table tbody tr { border-bottom: .1rem solid #e8e8e8; }
+.cont_ste .twowheel_contents .section2 .tb table tbody tr td {height: 4.5rem; text-align: center; font-size: 1.6rem; color: #555; letter-spacing: -.04rem;}
+.cont_ste .twowheel_contents .section3 {max-width: 100%; margin-top: 12rem;}
 .cont_ste .twowheel_contents .section3 .sec_cont {background: #f9f9f9; text-align: center; padding: 6rem 0 3.7rem;}
-
 .cont_ste .twowheel_contents .section4 .sec_cont .txt { font-size: 1.6rem; color: #555555; line-height: 1.9; }
 .cont_ste .twowheel_contents .section4 .sec_cont .txt li { position: relative; padding-left: 2rem; }
 .cont_ste .twowheel_contents .section4 .sec_cont .txt li:before { content: ''; display: inline-block; width: .4rem; height: .4rem; border: .2rem solid #a6a6a6; border-radius: 100%; left: 0; top:1.2rem; position: absolute; }
