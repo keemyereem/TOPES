@@ -340,7 +340,7 @@ var mainEvent = {
     floating:function() {
         $(window).scroll(function() {
             var s3Top = $('.cont_main section:last-child').offset().top - $(window).outerHeight() + Number(266);
-            var pos = $('.footer').outerHeight() + Number(500);
+            var pos = $('.footer').outerHeight() + Number(400);
 
             if($(this).scrollTop() > s3Top){
                 $('.floating_area').addClass('on').css({'bottom': pos});
