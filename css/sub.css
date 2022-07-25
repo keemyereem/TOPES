@@ -844,19 +844,25 @@
 .cont_company .features_contents .section1 .patent_swiper .swiper-nav .swiper-pagination { display: flex; position: relative; }
 .cont_company .features_contents .section1 .patent_swiper .swiper-nav .swiper-pagination .swiper-pagination-bullet {width: 0.8rem; height: 0.8rem; background: #050f5e; margin: 0 1rem; position: relative;}
 .cont_company .features_contents .section1 .patent_swiper .swiper-nav .swiper-pagination .swiper-pagination-bullet-active:before {width: 2.8rem; height: 2.8rem; background: rgba(5, 15, 94, .1); border-radius: 50%; content:''; display: inline-block; position: absolute; top: -1rem; left: -1rem;}
-.cont_company .features_contents .section2 { background: #003668; padding: 12rem 0 10rem; }
+.cont_company .features_contents .section2 { background: #003668; padding: 12rem 0; }
 .cont_company .features_contents .section2 .sec_tit { max-width: 144rem; margin: auto; color: #fff; }
 .cont_company .features_contents .section2 .sec_tit .sub_tit { color: #fff; }
-.cont_company .features_contents .section2 .sec_cont { max-width: 144rem; margin: auto; margin-top: 6rem; }
-.cont_company .features_contents .section2 .sec_cont ul { display: flex; align-items: center; justify-content: flex-start; position: relative;}
-.cont_company .features_contents .section2 .sec_cont ul li { background: #fff; border-radius: 3rem; display: flex; position: relative; height: 43.8rem; }
-.cont_company .features_contents .section2 .sec_cont ul li:first-child { width: 55.69%; }
-.cont_company .features_contents .section2 .sec_cont ul li:first-child img { right: 15.09%; }
-.cont_company .features_contents .section2 .sec_cont ul li:last-child { width: 50.07%; right: 0; box-shadow: 5px 9px 29.4px 0.6px rgba(0, 0, 0, 0.16); position: absolute; }
-.cont_company .features_contents .section2 .sec_cont ul li dl { padding: 8.8rem 0 0 6rem; z-index: 1; letter-spacing: -.1rem; }
+.cont_company .features_contents .section2 .sec_cont { max-width: 144rem; margin: auto; margin-top: 6rem; display: flex; justify-content: space-between; }
+.cont_company .features_contents .section2 .sec_cont ul { width: 111.5rem; display: flex; align-items: center; justify-content: flex-start; position: relative;}
+.cont_company .features_contents .section2 .sec_cont ul li { background: #fff; border-radius: 3rem; display: flex; position: relative; height: 36.1rem; }
+.cont_company .features_contents .section2 .sec_cont ul li:first-child { width: 54.26%; flex-shrink: 0; border-radius: 3rem 0 0 3rem; }
+.cont_company .features_contents .section2 .sec_cont ul li:first-child img { right: 3.4rem; }
+.cont_company .features_contents .section2 .sec_cont ul li:last-child { width: 54.78%; right: 0; box-shadow: 5px 9px 29.4px 0.6px rgba(0, 0, 0, 0.16); /* position: absolute; */margin-left: -3.4rem; }
+.cont_company .features_contents .section2 .sec_cont ul li dl { padding: 6.2rem 0 0 5rem; z-index: 1; letter-spacing: -.1rem; }
 .cont_company .features_contents .section2 .sec_cont ul li dl dt { font-size: 2.4rem; font-weight: 400; color: #003668; }
 .cont_company .features_contents .section2 .sec_cont ul li dl dd { padding-top: 1.4rem; font-size: 1.6rem; color: #222222; line-height: 1.875; }
-.cont_company .features_contents .section2 .sec_cont ul li img { object-fit: none; width: fit-content; height: fit-content; position: absolute; top: 0; bottom: 0; right: 8.32%; margin: auto; transform: translateY(-2rem); }
+.cont_company .features_contents .section2 .sec_cont ul li img { object-fit: none; width: fit-content; height: fit-content; position: absolute; top: 0; bottom: 0; right: 1px; margin: auto; transform: translateY(-2rem); }
+/* .cont_company .features_contents .section2 .sec_cont02::before { content:''; display: block; width: 100%; height: 0.1rem; background: #fff; } */
+.cont_company .features_contents .section2 .sec_cont02 { border-top: 1px solid #fff; padding-top: 7rem; margin-top: 7rem; }
+.cont_company .features_contents .section2 .sec_cont02 .txt { position: relative; font-size: 1.8rem; color: #fff; line-height: 1.66; padding-left: 10.3rem; padding-top: 2.3rem; }
+.cont_company .features_contents .section2 .sec_cont02 .txt > img { position: absolute; top: 3rem; left: 0; }
+
+
 .cont_company .features_contents .section3 {width: 100%; height: 54.3rem; background: rgba(0, 54, 104, .1); display: flex; flex-direction: column; align-items: center; justify-content: center; margin-bottom: 12rem;}
 .cont_company .features_contents .section3 .logo {width: 9.6rem; height: 9.8rem; background: url(../images/ste/nara_logo.png) no-repeat; background-size: contain; margin-bottom: 5rem;}
 .cont_company .features_contents .section3 h3 {font-size: 3rem; font-weight: 100; color: #222; letter-spacing: -.075rem;}
@@ -874,7 +880,12 @@
 .cont_company .features_contents .section4, 
 .cont_company .features_contents .section5 { max-width: 144rem; margin: auto; }
 .cont_company .features_contents .section4 .sec_tit { margin-bottom: 0; }
-.cont_company .features_contents .section4 .img {width: 100%; height: 44rem; background: url(../images/company/features_img01.png) no-repeat 50% 50%; background-size: cover; margin: 4rem 0 12rem;}
+.cont_company .features_contents .section4 .img { width: 100%; height: 44rem; background: url(../images/company/features_img01.png) no-repeat 50% 50%; background-size: cover; margin: 4rem 0 6rem;}
+.cont_company .features_contents .section4 .video { width: 100%; height: 81rem; margin-bottom: 4rem; } 
+.cont_company .features_contents .section4 .video iframe { width: 100%; height: 100%; object-fit: contain; }
+.cont_company .features_contents .section4 .video + p { font-size: 20px; color: #555; margin-bottom: 12rem; }
+.cont_company .features_contents .section5 .img { width: 100%; height: fit-content; text-align: center; box-shadow: 3px 4px 29.4px 0.6px rgba(0, 0, 0, 0.05); border: 1px solid #e8e8e8; border-radius: 2rem; padding: 10rem 0; }
+.cont_company .features_contents .section5 .img > img { width: 100%; object-fit: contain; }
 
 /* 회사소개 - 채용안내 */
 .cont_company p.sub_tit {font-size: 2rem; font-weight: 200; color: #555; line-height: 1.7; letter-spacing: -.045rem; max-width: 144rem; margin: 0 auto;}

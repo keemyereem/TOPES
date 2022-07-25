@@ -303,6 +303,9 @@ br.br_t, br.br_m {display: none;}
 .footer .footer_wrap .footer_contact > div {display: inline-block;margin-right: 2.8rem;}
 .footer .footer_wrap .copyright {padding-top: 6rem;font-family: 'play'; font-weight: 200; opacity: .2; letter-spacing: .15rem;}
 .footer .footer_wrap .copyright b {color: #22591b;}
+.footer .footer_wrap .sns_link {position: absolute;top: 0;right: 0;}
+.footer .footer_wrap .sns_link a:first-of-type {margin-right: 1.7rem;}
+
 #topButton {position: fixed; right: 12rem; bottom: 6rem; display: none; z-index: 999; width: 8rem; height: 8rem; background: #02072f; border-radius: 50%; font-family: 'play'; font-size: 1.5rem; font-weight: 400; line-height: 8rem; color: #fff; letter-spacing: .075rem; text-align: center;}
 #topButton.on {position: absolute;}
 
