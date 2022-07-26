@@ -932,7 +932,7 @@
     .cont_company .about_contents .section2 .section-wrap .tab_contents .history-list .desc-info ul:first-child { padding: 0 0 3.3rem; }
 
     /* 회사소개 - 채용안내 */
-    .contents .contents_inner.recruit_wrap {margin: 8rem auto 0;}
+    .contents .contents_inner.recruit_wrap {margin: 8rem auto 15rem;}
     .cont_company .recruit_contents .inner > .sec_tit {padding: 0 2rem; margin-top: 6rem;}
     .cont_company .recruit_contents .inner > .sub_tit { padding: 0 2rem; }
     .cont_company .sub_tit {font-size: 1.5rem; font-weight: 200; line-height: 1.47;}
@@ -948,13 +948,59 @@
     .cont_company .recruit_contents ul li:nth-child(4) .icon {/* background-image: url(../images/company/recruit_icon04.png); */ background-size: contain;}
     .cont_company .recruit_contents ul li .tit {font-size: 1.6rem;}
     .cont_company .recruit_contents ul li .txt {font-size: 1.3rem; line-height: 1.3; margin-top: .5rem;}
-    .cont_company .recruit_contents .job_ad {padding: 5.7rem 2rem 20rem; margin-top: 8rem;}
+    .cont_company .recruit_contents .job_ad {padding: 5rem 2rem 5rem; margin-top: 8rem;}
     .cont_company .recruit_contents .job_ad h4 {font-size: 3rem;}
     .cont_company .recruit_contents .job_ad p {font-size: 1.5rem;}
     .cont_company .recruit_contents .job_ad .btn_wrap {max-width:100%; margin: 3.7rem auto 0; flex-direction: column; }
     .cont_company .recruit_contents .job_ad .btn_wrap a {width: 100%; max-width: 25rem; height: 5rem; margin: 0 auto; line-height: 5rem; border-radius: 2.5rem; font-size: 1.4rem;}
     .cont_company .recruit_contents .job_ad .btn_wrap a:first-of-type {margin-bottom: 2rem;}
-    .cont_company .recruit_contents .job_ad .btn_wrap a > span:after {width: 1.1rem; height: 1.1rem; margin-left: 1.1rem;}
+    .cont_company .recruit_contents .job_ad .btn_wrap a > span:after {width: 1.1rem; height: 1.1rem; margin-left: 1.1rem; background-size: contain;}
+
+    .cont_company .recruit_contents .recruit { margin: 8.5rem auto 0; padding: 0 2rem; }
+    .cont_company .recruit_contents .recruit table { margin-top: 5rem; }
+    .cont_company .recruit_contents .recruit table th { width: 8.35rem;font-size: 1.4rem; }
+    .cont_company .recruit_contents .recruit table td {font-size: 1.3rem;letter-spacing: -.04rem; line-height: 1.53; padding: 1rem 0 1rem 1.4rem;}
+    .cont_company .recruit_contents .recruit table td dl+dl { margin-top : 1rem; }
+    .cont_company .recruit_contents .recruit table td dl dt { width: 7rem; flex-shrink: 0; }
+    .cont_company .recruit_contents .recruit a { margin: 4rem auto 0; width: 25rem; height: 5rem; line-height: 5rem; border-radius: 2.5rem; font-size: 1.4rem; }
+    .cont_company .recruit_contents .recruit a > span::after { width: 1.1rem; height: 1.1rem; margin-left: 1.1rem; background-size: contain; }
+
+
+    /* 회사소개 - 오시는길 */
+    .cont_company .location_contents { padding: 0 2rem; }
+    .cont_company .location_contents .location_tab { flex-direction: column; padding-bottom: 3.3rem; }
+    .cont_company .location_contents .location_tab li { position: relative; text-align: center; }
+    .cont_company .location_contents .location_tab li+li { margin-top: 2.5rem; }
+    .cont_company .location_contents .location_tab li:not(:last-child):after { display: block; width: 2.5rem; height: .1rem; position: absolute; bottom: 0; left: 50%;}
+    .cont_company .location_contents .location_tab li a { font-size: 2.7rem; }
+    .cont_company .location_contents .tab_contents.on { flex-direction: column; }
+    .cont_company .location_contents .tab_contents .map {width: 100%; max-width:100%; box-shadow: 0px .2rem 2.412rem .09rem rgba(0, 0, 0, 0.08); border-top: 2px solid #050f5e;}
+    .cont_company .location_contents .tab_content03 .map {max-height: 142.9rem; height: 84.9rem;}
+    .cont_company .location_contents .tab_contents .map iframe { width: 100%; height: 100%; }
+    .cont_company .location_contents .tab_contents .locate { width: 100%; }
+    .cont_company .location_contents .tab_contents .locate > ul:not(:first-child) { padding: 3.8rem 0; }
+    .cont_company .location_contents .tab_contents .locate > ul li { flex-direction: column; font-size:1.4rem; color:#555; }
+    .cont_company .location_contents .tab_contents .locate > ul:nth-child(1) li {line-height: normal; }
+    .cont_company .location_contents .tab_contents .locate > ul:nth-child(1) li+li { margin-top: 1.6rem; }
+    .cont_company .location_contents .tab_contents .locate > ul:nth-of-type(2) li {line-height: normal; }
+    .cont_company .location_contents .tab_contents .locate > ul:nth-of-type(2) li+li { margin-top: 1.4rem; }
+    .cont_company .location_contents .tab_contents .locate > ul li a { top: 1.3rem; }
+    .cont_company .location_contents .tab_contents .locate > ul li a img { width: 2.5rem; }
+    .cont_company .location_contents .tab_contents .locate > ul li b { width: 100%; font-size: 1.5rem; margin-bottom: 1rem; }
+    .cont_company .location_contents .tab_contents .locate > ul:not(:nth-child(1)) li b {line-height: normal; margin-bottom: 2rem; } 
+    .cont_company .location_contents .tab_contents .locate > ul:nth-child(1) { padding: 5.5rem 0 3.8rem; }
+    .cont_company .location_contents .tab_contents .locate > ul:nth-child(1) li:not(:first-child) { font-size: 1.4rem; }
+    .cont_company .location_contents .tab_contents .locate > ul:nth-child(2) ul li .sub_tit,
+    .cont_company .location_contents .tab_contents .locate > ul:nth-child(3) ul li .sub_tit { font-size: 1.3rem; width: auto; margin-bottom: 1rem; }
+    .cont_company .location_contents .tab_contents .locate > ul:nth-child(2) ul li span { padding: 0; }
+    .cont_company .location_contents .tab_contents .locate > ul:nth-child(3) ul { width: 100%; }
+    .cont_company .location_contents .tab_contents .locate > ul:nth-child(3) ul li span { display: contents; }
+    .cont_company .location_contents .tab_contents .locate > ul:nth-child(3) ul li { font-size: 1.2rem; line-height: 1.5; padding-bottom: 1.5rem; }
+    .cont_company .location_contents .tab_contents .locate > ul:nth-child(3) ul li:last-child {padding-bottom: 0;}
+    .cont_company .location_contents .tab_contents .locate > ul:nth-child(3) ul li .sub_tit { width: auto; line-height: normal; }
+    .cont_company .location_contents .tab_contents .locate > img { margin-top: 3.5rem; width: 100%; }
+    .cont_company .location_contents .tab_content03 .locate > ul li ul li { font-size: 1.6rem; }
+        
 
 }
 @media screen and (max-width:654px) {
