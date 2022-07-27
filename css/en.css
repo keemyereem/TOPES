@@ -5,7 +5,7 @@
 
 /* Common */
 .container.en .anchor { display: block; position: relative; top: -16rem; visibility: hidden; }
-.container.en .sub_visual_nav h2 { font-family: 'play'; font-weight:400; }
+.container.en .sub_visual_nav h2 { font-family: 'play'; font-weight:400; top:50%; }
 .container.en .sub_visual.sol_visual:after { background: url(../images/_en/sol_bg.png) no-repeat 50% 50%; background-size: cover; }
 .container.en .sub_visual.contactus_visual:after { background: url(../images/_en/contactus_bg.png) no-repeat 50% 50%; background-size: cover; }
 .container.en .sub_visual .sub_visual_menu { transition:all ease .2s; left: 50%; transform: translateX(-50%); margin:initial; }
@@ -13,6 +13,7 @@
 .container.en .sub_visual .sub_visual_menu.fixed { left: 50%; transform: translateX(-50%); margin:initial; width: 100%; max-width: 100%; }
 .container.en .sub_visual .sub_visual_menu ul li:nth-child(2) a { border-top:none; }
 .container.en .sub_visual .sub_visual_menu.fixed ul.on li a { border-left: none; border-right: none; }
+.container.en .sub_visual .sub_visual_nav div { top:50%; }
 .header_en .header_wrap { width: calc(100% - 32rem); }
 .header_en .gnb { left: 0; width: 100% }
 .header_en .gnb>ul { padding-right: 3vw;  }
@@ -68,7 +69,7 @@
 .container.en .cont_company .location_contents .tab_contents .locate > ul:nth-child(1) li { line-height: normal; margin-bottom: 3rem; }
 .container.en .cont_company .location_contents .tab_contents .locate > ul:nth-child(1) li:nth-child(1) { line-height: 1.55; }
 .container.en .cont_company .location_contents .tab_contents .locate > ul:nth-child(2) li .sub_tit { width: 16rem; }
-
+.container.en .cont_company .location_contents .tab_content03 .map { height: 91rem; }
 
 /* Solution */
 .container.en .cont_sol .contents_inner { max-width: 100%; }
@@ -108,13 +109,15 @@
 @media screen and (max-width:1780px) {
     .header_en .header_wrap { justify-content: center; }
     .header_en .gnb { margin: 0; width: 100%;}
-    .header_en .gnb>ul { margin-left: 19vw; padding-right: 0; justify-content: space-evenly;  }
-    .header_en .gnb>ul>li { line-height: normal; height: 8rem; flex: initial;  }
-    /* .header_en .gnb>ul>li .gnb_tit { padding: 0 3.7rem; } */
+    .header_en .gnb>ul { margin-left: 19vw; padding-right: 0; justify-content: space-evenly; }
     .header_en .gnb_menu { width: auto; }
     .header_en .lang_select .lang_choice { width: 16.2rem;}
     .header_en .lang_select .lang_choice li { margin: 0; }
     .header_en .lang_select .lang_choice li:first-child:after { position: initial; margin: 0 2.5rem; }
+}
+
+@media screen and (max-width:1610px) {
+    .header_en .gnb>ul { width: 55%; margin-left: 22vw; }
 }
 
 @media screen and (max-width:1480px) {
@@ -126,7 +129,7 @@
 }
 
 @media screen and (max-width:1400px) { 
-    .header_en .gnb>ul { margin-left: 26rem; }
+    .header_en .gnb>ul { margin-left: 33rem; width: 50%; }
 }
 
 
@@ -198,5 +201,13 @@
 
     /* Contact Us */
     .sub_visual.contactus_visual { background: url(../images/_en/contactus_bg.png) no-repeat 50% 50%; background-size: cover; }
-
+    .container.en .cont_company .location_contents .tab_contents .locate > ul li b { width: auto; }
+    .container.en .cont_company .location_contents .tab_contents .locate > ul:nth-child(2) li b { line-height: normal; }
+    .container.en .cont_company .location_contents .tab_contents .locate > ul:nth-child(2) li { margin-bottom: 0 }
+    .container.en .cont_company .location_contents .tab_contents .locate > ul:first-child { padding: 5.5rem 0 3.8rem; }
+    .container.en .cont_company .location_contents .tab_contents .locate > ul:not(:first-child) { padding: 3.8rem 0; }
+    .container.en .cont_company .location_contents .tab_contents .locate > ul:nth-child(1) li { margin-bottom: 0; }
+    .container.en .cont_company .location_contents .tab_contents .locate > ul:nth-child(1) li:nth-child(1) { padding-right: 3rem; }
+    .container.en .cont_company .location_contents .tab_contents .locate > ul:nth-child(2) li .sub_tit { width: auto; }
+    .container.en .cont_company .location_contents .tab_content03 .map { max-height: 47.5rem; height: 47.5rem; }
 }

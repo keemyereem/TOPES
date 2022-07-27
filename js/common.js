@@ -393,7 +393,9 @@ var companyEvent={
 
             breakpoints: {
                 768: {
-                spaceBetween: 20,
+                spaceBetween: 15,
+                slidesPerView : 2,
+                slidesPerGroup : 1,
                 },
 
             }, 
