@@ -957,7 +957,7 @@
 
     /* 우수조달 */
     .cont_procure .contents_inner { margin: 8rem auto 0; }
-    .cont_procure .procure_contents .section2 { padding: 6rem 2rem; /* margin-top: 6rem; */ }
+    .cont_procure .procure_contents .section2 { padding: 6rem 2rem; margin-top: 6rem; }
     .cont_procure .procure_contents .sub_tit { font-size: 1.4rem; line-height: 1.42; margin-top: 3rem; align-items: initial; }
     .cont_procure .procure_contents .sub_tit img { width: 5rem; height: 5rem; padding-right: 0; margin-right: 2rem; }
     .cont_procure .procure_contents .section2 .sec_cont { flex-direction: column; }

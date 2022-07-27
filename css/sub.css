@@ -223,7 +223,8 @@
 
 .cont_ste .srp_contents .section3 {max-width: 100%;}
 .cont_ste .srp_contents .section3 .sec_cont {width: 100%; background: #f9f9f9; margin-top: 6rem; padding: 6rem 0 15.7rem; text-align: center;}
-/* .cont_ste .srp_contents .section3 .sec_cont .inner {display: flex; justify-content: space-between;}
+/* 
+.cont_ste .srp_contents .section3 .sec_cont .inner {display: flex; justify-content: space-between;}
 .cont_ste .srp_contents .section3 .sec_cont .name {width: 24rem; height: 4rem; line-height: 4rem; background: #febf00; border-radius: 1.9rem; text-align: center; font-size: 1.8rem; color: #fff; font-weight: 400; letter-spacing: -0.09rem;}
 .cont_ste .srp_contents .section3 .sec_cont ul {display: flex; justify-content: space-between; width: 112rem; height: 26.4rem; border-radius: 1rem; padding: 0 5rem; box-shadow: 4px 3px 24px 0px rgba(0, 0, 0, 0.16);}
 .cont_ste .srp_contents .section3 .sec_cont ul.name_box {height: auto; margin-bottom: 3rem; box-shadow: none; padding: 0;}
@@ -247,8 +248,8 @@
 .cont_ste .srp_contents .section3 .right > div:nth-of-type(3) .name {margin-bottom: 4.2rem;}
 .cont_ste .srp_contents .section3 .right > div:nth-of-type(1) .product {margin-bottom: 1rem;}
 .cont_ste .srp_contents .section3 .right > div:nth-of-type(2) .product {margin-bottom: 2.5rem;}
-.cont_ste .srp_contents .section3 .right > div:nth-of-type(3) .product {margin-bottom: 2rem;} */
-
+.cont_ste .srp_contents .section3 .right > div:nth-of-type(3) .product {margin-bottom: 2rem;} 
+*/
 .cont_ste .srp_contents .section4 .top {margin: 6rem 0 7rem;}
 .cont_ste .srp_contents .section4 .top ul li {height: 5rem; line-height: 5rem; border-bottom: 1px solid #eee; width: 64rem; }
 .cont_ste .srp_contents .section4 .top ul li > b {font-size: 1.8rem; font-weight: 400; color: #222; letter-spacing: -.09rem; display: inline-block; width: 22.4rem;}
