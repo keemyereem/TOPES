@@ -163,7 +163,7 @@
     .contents .contents_inner .inner .tb_view { font-size:1.3rem; }
     .contents .contents_inner .sec_cont .view { /* position: absolute; */ top: 50%; left: 50%; /* transform: translate(-50%, -50%); */ display: block;}
     .contents .contents_inner .sec_cont .view > img { /* width: 6rem; */ width: 100%; }
-    .contents .sub_contents .sec_tit { font-size: 2rem; /* margin: 0 2rem 5.5rem; */ }
+    .contents .sub_contents .sec_tit { font-size: 2rem; margin: 0 0 2rem; }
     .contents .sub_contents .sec_tit:before {width: 5rem; height: .2rem; margin-bottom: 1rem;}
     .contents .paging {margin-top: 4rem; display: flex; justify-content: space-between; align-items: center; }
     .contents .paging .prev {margin-left: 3vw; width: .7rem; height: 1.2rem;}
@@ -351,14 +351,17 @@
     .cont_ste .srp_contents .section4 .bot > div { width: 100%; }
     .cont_ste .srp_contents .section4 .bot > div:first-of-type { margin-bottom: 5rem; }
     .cont_ste .srp_contents .section4 .bot:after { display: none; }
+    .cont_ste .srp_contents .section4 .bot .tit { margin-bottom: 2rem; }
     .cont_ste .srp_contents .section4 .bot .tit h4 > div { font-size: 2.1rem; }
     .cont_ste .srp_contents .section4 .bot .tit h4 > span { font-size: 1.6rem; }
+    /*
     .cont_ste .srp_contents .section4 .bot .tit .number {margin: 1.7rem 0 3rem;}
     .cont_ste .srp_contents .section4 .bot .tit .number li:first-child {margin-bottom: 1.2rem;}
     .cont_ste .srp_contents .section4 .bot .tit .number li > div { width: 6.25rem; height: 2rem; border-radius: 1rem; font-size: 1.2rem; line-height: 2rem; margin-right: 2.5rem;}
     .cont_ste .srp_contents .section4 .bot .tit .number li > span { font-size: 1.3rem; }
     .cont_ste .srp_contents .section4 .bot .tit .speed_img {position: absolute; right: 0; bottom: 0;}
     .cont_ste .srp_contents .section4 .bot .tit .speed_img > img { width: 6.8rem; }
+    */
     .cont_ste .srp_contents .tab_content01 .section4 .bot .img { height: auto; position: relative; }
     .cont_ste .srp_contents .tab_content02 .section4 .bot .img { height: auto; position: relative; }
     .cont_ste .srp_contents .tab_content03 .section4 .bot .img { height: auto; position: relative; }
@@ -408,6 +411,7 @@
     .cont_ste .srp_contents .tab_content03 .section5 .sec_cont {/* padding-top: 6.3rem; */padding-top: 0; text-align: center;}
 
     .cont_ste .srp_contents .tab_content01 .section6 { margin-top: 9rem!important; }
+    .cont_ste .srp_contents .tab_content03 .section6 { margin-top: 9rem!important; }
     .cont_ste .srp_contents .section6 { height: 38rem; }
     .cont_ste .srp_contents .section6 .logo {width: 5.7rem; height: 5.8rem; margin-bottom: 3rem;}
     .cont_ste .srp_contents .section6 p {font-size: 2rem; letter-spacing: -.0035rem; text-align: center; }
@@ -967,7 +971,7 @@
     .cont_procure .procure_contents .section2 .sec_cont:not(.sec_cont02) .img > img { max-width: 16.4rem; box-shadow: 0px .25rem 20.79px 0.21px rgb(0 0 0 / 14%);}
     .cont_procure .procure_contents .section2 .sec_cont02 { margin-top: 2rem; margin-bottom: 9rem; }
     .cont_procure .procure_contents .section2 .sec_cont02 .img { height: fit-content; padding: 5rem 1.5rem; }
-    .cont_procure .procure_contents .section2 .sec_cont02 .img > img { width: 100%; max-width: 30.55rem; object-fit: contain; }
+    .cont_procure .procure_contents .section2 .sec_cont02 .img > img { width: 100%; max-width: 30.65rem; object-fit: contain; }
     .cont_procure .procure_contents .section2 .sec_cont03 { margin-top: 3rem; }
     .cont_procure .procure_contents .section2 .sec_cont03 .txt > img { width: 5.25rem; }
     .cont_procure .procure_contents .section2 .sec_cont03 .txt { padding-left: 7rem; margin-bottom: 5.5rem; font-size: 1.4rem; line-height: 1.42; }
