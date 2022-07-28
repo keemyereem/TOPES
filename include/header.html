@@ -9,7 +9,7 @@
     <div class="gnb">
         <ul>
             <li class="menu_solution">
-                <a href="html/FD-01-01-0001.html" class="gnb_tit" title="스마트 단속관리 페이지로 이동">솔루션</a>
+                <a href="html/FD-01-01-0001.html" class="gnb_tit" title="솔루션 페이지로 이동">솔루션</a>
                 <div class="depth_box">
                     <div class="depth_wrap">
                         <div class="depth_list">
@@ -45,7 +45,14 @@
                 </div>
             </li>
             <li>
-                <a href="html/FD-06-01-0001.html" class="gnb_tit" title=" 회사소개 페이지로 이동">우수조달</a>
+                <a href="html/FD-06-01-0001.html" class="gnb_tit" title=" 우수조달 페이지로 이동">우수조달</a>
+                <div class="depth_box">
+                    <div class="depth_wrap">
+                        <div class="depth_list">
+                            <a href="html/FD-06-01-0001.html" class="list_tit" title="우수조달 페이지로 이동">우수조달</a>
+                        </div>
+                    </div>
+                </div>
             </li>
             <li>
                 <a href="html/FD-04-01-0001.html" class="gnb_tit" title="고객지원 페이지로 이동">고객지원</a>
@@ -97,3 +104,34 @@
     <!-- //right menu -->
     <!-- mobile GNB -->
 </div>
+
+<script>
+    $(function(){
+        $('.header .menu_solution').hover(function(){
+            $(this).parents('.header').addClass('menu');
+        }, function(){
+            $(this).parents('.header').removeClass('menu');
+        });       
+        $(window).on('scroll',function(){
+            const st = $(window).scrollTop();
+
+            if (st>=100){
+                $('.header .menu_solution').hover(function(){
+                    $(this).parents('.header').removeClass('fixed').addClass('menu');
+                }, function(){
+                    $(this).parents('.header').removeClass('menu').addClass('fixed');
+                });
+            }else{
+                $('.header .menu_solution').hover(function(){
+                    $(this).parents('.header').addClass('menu');
+                }, function(){
+                    $(this).parents('.header').removeClass('menu, fixed');
+                });
+            }
+
+        });
+
+
+
+    })
+</script>
