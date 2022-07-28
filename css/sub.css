@@ -223,6 +223,7 @@
 
 .cont_ste .srp_contents .section3 {max-width: 100%;}
 .cont_ste .srp_contents .section3 .sec_cont {width: 100%; background: #f9f9f9; margin-top: 6rem; padding: 6rem 0 15.7rem; text-align: center;}
+.cont_ste .srp_contents .tab_content02 .section3 .sec_cont { padding: 6rem 0 3.7rem; }
 /* 
 .cont_ste .srp_contents .section3 .sec_cont .inner {display: flex; justify-content: space-between;}
 .cont_ste .srp_contents .section3 .sec_cont .name {width: 24rem; height: 4rem; line-height: 4rem; background: #febf00; border-radius: 1.9rem; text-align: center; font-size: 1.8rem; color: #fff; font-weight: 400; letter-spacing: -0.09rem;}
@@ -377,7 +378,7 @@
 .cont_ste .tailgate_contents .section4 {margin: 0 8rem 0 0;}
 .cont_ste .tailgate_contents .section4 .sec_cont {width: 64rem; position: relative;}
 .cont_ste .tailgate_contents .section4 .sec_cont:after {content:''; display: block; width: 1px; height: calc(100% - 10.5rem); background: #e8e8e8; position: absolute; top: 0; right: -8rem;}
-.cont_ste .tailgate_contents .section4 .tit {position: relative;}
+.cont_ste .tailgate_contents .section4 .tit {position: relative; margin-bottom: 4rem;}
 .cont_ste .tailgate_contents .section4 .tit h4 {font-size: 3.2rem; font-weight: 400; color: #050f5e; letter-spacing: -.16rem; display: grid;}
 .cont_ste .tailgate_contents .section4 .tit h4 > span {font-family: 'play'; font-size: 2.2rem; color: #050f5e;}
 .cont_ste .tailgate_contents .section4 .tit .number {margin: 3.5rem 0 6rem;}

@@ -342,6 +342,7 @@
     .cont_ste .srp_contents .section3 { width: 100%; }
     .cont_ste .srp_contents .section3 .sec_tit { margin-left: 2rem; }
     .cont_ste .srp_contents .section3 .sec_cont { margin-top: 0; padding: 0; position: relative; }
+    .cont_ste .srp_contents .tab_content02 .section3 .sec_cont { padding: 0; }
 
     .cont_ste .srp_contents .section4 .top { margin: 0 0 5rem; }
     .cont_ste .srp_contents .section4 .top ul li { height: 3.3rem; line-height: 3.3rem; width: 100%; }
