@@ -434,7 +434,7 @@
     .cont_ste .twowheel_contents .section2 .sec_cont {width: 100%; flex-direction: column; }
     .cont_ste .twowheel_contents .section2 .sec_cont:after { display: none; }
     .cont_ste .twowheel_contents .section2 .sec_cont > div { width: 100%; margin-bottom: 5rem; }
-    .cont_ste .twowheel_contents .section2 .tit { padding-bottom: 3rem; margin-bottom: 2rem; }
+    .cont_ste .twowheel_contents .section2 .tit { padding-bottom: 3rem; margin-bottom: 0; }
     .cont_ste .twowheel_contents .section2 .tit h4 {font-size: 2.1rem; }
     .cont_ste .twowheel_contents .section2 .tit h4 > span { font-size: 1.6rem; }
     .cont_ste .twowheel_contents .section2 .tit .number {margin: 2rem 0 0;}
