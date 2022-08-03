@@ -951,7 +951,7 @@
     .cont_company .features_contents .section1 .patent_swiper .swiper-nav { margin: 4rem auto 0; width: 12.75rem; }
     .cont_company .features_contents .section1 .patent_swiper .swiper-nav .arrow { width: 3.5rem; height: 3.5rem; }
     .cont_company .features_contents .section4 .sec_tit { margin: 0 2rem; }
-    .cont_company .features_contents .section4 .img { width: auto; height: 27vw; margin: 5rem 2rem 2.5rem; }
+    .cont_company .features_contents .section4 .img { width: auto; height: 41vw; margin: 5rem 2rem 2.5rem; background: url(../images/company/features_img01_m.png) no-repeat 50% 50%; background-size: cover; }
     .cont_company .features_contents .section4 .video { width: auto; margin: 0 2rem 2rem; height: 50vw; }
     .cont_company .features_contents .section4 .video + p { font-size: 1.4rem; margin: 0 2rem 9rem 2rem; }
     .cont_company .features_contents .section5 { padding: 0 2rem; }
