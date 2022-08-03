@@ -626,6 +626,7 @@
     .cont_its .roadsurface_contents .section2 .sec_cont > div ul h5 { font-size: 1.4rem; margin-bottom: 1.2rem;}
     .cont_its .roadsurface_contents .section2 .sec_cont > div ul ol li { font-size: 1.25rem; margin-bottom: .5rem;}
     .cont_its .roadsurface_contents .section2 .sec_cont > div ul ol li > b { margin-right: 1.3rem; letter-spacing: -.0625rem; flex-shrink: 0; }
+    .cont_its .roadsurface_contents .section2 .sec_cont > div:first-of-type ul li:last-child ol li > b {width: 8.8rem;}
     .cont_its .roadsurface_contents .section3, .cont_its .roadsurface_contents .section4 { padding: 0; }
     .cont_its .roadsurface_contents .section3 .sec_tit, .cont_its .roadsurface_contents .section4 .sec_tit { margin: 0 0 3rem 2rem;}
     .cont_its .roadsurface_contents .section3 .sec_cont {  padding: 0; margin-bottom: 0; }

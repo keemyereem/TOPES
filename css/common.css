@@ -140,7 +140,7 @@ br.br_t, br.br_m {display: none;}
 .header .gnb>ul>li.menu_solution .depth_box .depth_wrap .depth_list p { font-size: 1.8rem; font-weight: 300; padding-bottom: 1.5rem; line-height: 1; color: #fff; }
 .header .gnb>ul>li.menu_solution .depth_box .depth_wrap .depth_list p:before { content: ''; display: inline-block; width: .2rem; height: 1.5rem; background: #fff; position: absolute; left: -.1rem; } 
 .header .gnb>ul>li > a:after {content:'';display: inline-block; width: calc(100% - 4rem);height: .4rem;background: #fff;opacity: 0;position:absolute; bottom:0; left:0; right:0; margin: auto; }
-
+.header .gnb>ul>li.menu_solution > a:after {width: 100%;}
 
 /********** 사이트맵 클릭 시 transition 모음 **********/
 .header .lang_select .lang_choice.on li a {color: #222; opacity: .3;}
