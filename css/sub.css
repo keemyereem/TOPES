@@ -222,8 +222,8 @@
 .cont_ste .srp_contents .tab_content03 .section2 .sec_cont > ul li {padding:0 0rem 0 29rem;}
 
 .cont_ste .srp_contents .section3 {max-width: 100%;}
-.cont_ste .srp_contents .section3 .sec_cont {width: 100%; background: #f9f9f9; margin-top: 6rem; padding: 6rem 0 15.7rem; text-align: center;}
-.cont_ste .srp_contents .tab_content02 .section3 .sec_cont { padding: 6rem 0 3.7rem; }
+.cont_ste .srp_contents .section3 .sec_cont {width: 100%; background: #f9f9f9; margin-top: 6rem; padding: 6rem 0 7.7rem; text-align: center;}
+.cont_ste .srp_contents .tab_content02 .section3 .sec_cont { padding: 6rem 0 10rem; }
 /* 
 .cont_ste .srp_contents .section3 .sec_cont .inner {display: flex; justify-content: space-between;}
 .cont_ste .srp_contents .section3 .sec_cont .name {width: 24rem; height: 4rem; line-height: 4rem; background: #febf00; border-radius: 1.9rem; text-align: center; font-size: 1.8rem; color: #fff; font-weight: 400; letter-spacing: -0.09rem;}
