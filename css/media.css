@@ -108,7 +108,11 @@
     .sitemap .sitemap_wrap li .depth_box { width: 100%; max-height: 0; position: initial; background: none; box-shadow: none; display: block; overflow: hidden; }
     .sitemap .sitemap_wrap li .depth_box.on { width: 100%; height: auto; max-height: 50rem; position: initial; background: none; box-shadow: none; transition:max-height 1s ease; }
     .sitemap .sitemap_wrap li .depth_wrap { display: block; padding-left: 2rem; }
-    .sitemap .sitemap_wrap li .depth_wrap .depth_list a { display: inline-block; font-size: 1.5rem; line-height: 1; padding: 1rem 0; }
+    .sitemap .sitemap_wrap li .depth_wrap .depth_list > a { font-size: 1.5rem; line-height: 1; padding: 1rem 0; }
+    .sitemap .sitemap_wrap li.sitemap_solution .depth_wrap .depth_list > a:after { margin-left: 1.5rem; width: 1.1rem; height: .7rem; }
+    .sitemap .sitemap_wrap li .depth_wrap .depth_list .depth_list_box .depth3_list { font-size: 1.3rem; font-weight: 200; }
+    .sitemap .sitemap_wrap li .depth_wrap .depth_list .depth_list_box .depth3_list+.depth3_list {margin-top: 1.2rem;}
+    .sitemap .sitemap_wrap li .depth_wrap .depth_list.on .depth_list_box {padding: 1rem 0;}
     
     /* input */
     .input_row { border-bottom: none;}

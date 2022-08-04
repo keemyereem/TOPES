@@ -49,18 +49,21 @@ var commonEvent = {
             $('.header').toggleClass('site');
             $('.sitemap').toggleClass('on');
         });
-        
+
+
         if ($(window).width() > 768) {
             // pc버전 마우스 오버시
             $(document).on({
                 mouseover: function () {
                     // let sitemapIdx = $(this).index();
-                    $(this).siblings().find('h2 a').addClass('col_g');
+                    $(this).siblings().find('h2 a').addClass('col_g')
                 },
                 mouseleave: function () {
                     $(this).siblings().find('h2 a').removeClass('col_g');
+                    $(this).find('.depth_box .depth_list').removeClass('on');
                 }
-            }, ".sitemap ul li"); 
+            }, ".sitemap ul li");
+
         } else {
             // 모바일버전 터치시
             $(document).on('click', '.sitemap ul li h2', function() {
@@ -72,12 +75,19 @@ var commonEvent = {
                     $(this).parent().siblings().find('.depth_box').removeClass('on');
                     $(this).parent().siblings().find('a').addClass('col_g');
                     $(this).find('a').removeClass('col_g');
-                    
+                    $(".sitemap ul .sitemap_solution .depth_list").removeClass('on');
+
                 } else if (!$('.sitemap ul li h2 a').hasClass('on')) {
                     $('.sitemap ul li h2 a').removeClass('col_g');
+                    $(".sitemap ul .sitemap_solution .depth_list").removeClass('on');
                 }
             });
         }
+
+        $(document).on('click', ".sitemap ul .sitemap_solution .depth_list > a", function() {
+            $(this).parent('.depth_list').toggleClass('on');
+            $(".sitemap ul .sitemap_solution .depth_list > a").not($(this)).parent('.depth_list').removeClass('on');
+        });
         
     },
 
@@ -217,6 +227,7 @@ var mainEvent = {
                 },
                 mouseleave: function () {
                     $(this).siblings().find('h2 a').removeClass('col_g');
+                    $(this).find('.depth_box .depth_list').removeClass('on');
                 }
             }, ".sitemap ul li"); 
         } else {
@@ -230,13 +241,19 @@ var mainEvent = {
                     $(this).parent().siblings().find('.depth_box').removeClass('on');
                     $(this).parent().siblings().find('a').addClass('col_g');
                     $(this).find('a').removeClass('col_g');
+                    $(".sitemap ul .sitemap_solution .depth_list").removeClass('on');
 
                 } else if (!$('.sitemap ul li h2 a').hasClass('on')) {
                     $('.sitemap ul li h2 a').removeClass('col_g');
+                    $(".sitemap ul .sitemap_solution .depth_list").removeClass('on');
                 }
             });
         }
-        
+
+        $(document).on('click', ".sitemap ul .sitemap_solution .depth_list", function() {
+            $(this).toggleClass('on');
+            $(".sitemap ul .sitemap_solution .depth_list").not($(this)).removeClass('on');
+        });
 
     },
 
